@@ -2,6 +2,7 @@ package de.tuberlin.dima.dbt.exercises.bplustree;
 
 import org.junit.Test;
 
+//import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import static de.tuberlin.dima.dbt.grading.BPlusTreeMatcher.isTree;
 import static de.tuberlin.dima.dbt.exercises.bplustree.BPlusTreeUtilities.*;
 import static org.hamcrest.CoreMatchers.is;
@@ -88,11 +89,9 @@ public class BPlusTreeTest {
                       newLeaf(keys(3, 4), values("c", "d")),
                       newLeaf(keys(5, 6, 7), values("e", "f", "g")))))));
     }
-    
 
-//   remove remark for test
-    
-/*
+    //Deletion tests
+
     @Test
     public void deleteFromLeaf() {
         // given
@@ -119,38 +118,37 @@ public class BPlusTreeTest {
                 keys(4), nodes(newLeaf(keys(2, 3), values("b", "c")),
                                newLeaf(keys(4, 5), values("d", "e")))))));
     }
-
-    @Test
-    public void deleteFromChildStealFromSibling() {
-        // given
-        tree = newTree(newNode(
-                keys(3), nodes(newLeaf(keys(1, 2), values("a", "b")),
-                               newLeaf(keys(3, 4, 5), values("c", "d", "e")))));
-        // when
-        String value = tree.delete(1);
-        // then
-        assertThat(value, is("a"));
-        assertThat(tree, isTree(newTree(newNode(
-                keys(4), nodes(newLeaf(keys(2, 3), values("b", "c")),
-                               newLeaf(keys(4, 5), values("d", "e")))))));
-
-    }
-
-    @Test
-    public void deleteFromChildMergeWithSibling() {
-        // given
-        tree = newTree(newNode(keys(3, 5),
-                               nodes(newLeaf(keys(1, 2), values("a", "b")),
-                                     newLeaf(keys(3, 4), values("c", "d")),
-                                     newLeaf(keys(5, 6), values("e", "f")))));
-        // when
-        String value = tree.delete(2);
-        // then
-        assertThat(value, is("b"));
-        assertThat(tree, isTree(newTree(newNode(
-                keys(5), nodes(newLeaf(keys(1, 3, 4), values("a", "c", "d")),
-                               newLeaf(keys(5, 6), values("e", "f")))))));
-    }
-*/
+//
+//    @Test
+//    public void deleteFromChildStealFromSibling() {
+//        // given
+//        tree = newTree(newNode(
+//                keys(3), nodes(newLeaf(keys(1, 2), values("a", "b")),
+//                               newLeaf(keys(3, 4, 5), values("c", "d", "e")))));
+//        // when
+//        String value = tree.delete(1);
+//        // then
+//        assertThat(value, is("a"));
+//        assertThat(tree, isTree(newTree(newNode(
+//                keys(4), nodes(newLeaf(keys(2, 3), values("b", "c")),
+//                               newLeaf(keys(4, 5), values("d", "e")))))));
+//
+//    }
+//
+//    @Test
+//    public void deleteFromChildMergeWithSibling() {
+//        // given
+//        tree = newTree(newNode(keys(3, 5),
+//                               nodes(newLeaf(keys(1, 2), values("a", "b")),
+//                                     newLeaf(keys(3, 4), values("c", "d")),
+//                                     newLeaf(keys(5, 6), values("e", "f")))));
+//        // when
+//        String value = tree.delete(2);
+//        // then
+//        assertThat(value, is("b"));
+//        assertThat(tree, isTree(newTree(newNode(
+//                keys(5), nodes(newLeaf(keys(1, 3, 4), values("a", "c", "d")),
+//                               newLeaf(keys(5, 6), values("e", "f")))))));
+//    }
 
 }
