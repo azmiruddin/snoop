@@ -1,0 +1,2615 @@
+DIMA Evaluation Tool
+Current Courses 
+Signed in as azmiruddin 
+Home WS2018 - DBT-PROGRAMMING Implementation of a B+ tree.
+× Submission saved!
+Implementation of a B+ tree.
+Description
+In this exercise, students should implement a B+ tree. English: By clicking the Submit button you certify that your solution is an independent work in terms of §51 AllgStuPo. The assignment is a relevant for evaluation in terms of §45 AllgStuPo. German: Mit Betätigung des Submit-Buttos bestätigen Sie, dass Sie die Hausaufgabe selbstständig im Sinne von §51 AllgStuPo verfasst haben. Die Hausaufgabe ist ein bewertungsrelevantes Prüfungselement nach §45 AllgStuPo.
+
+Grade
+The maximum possible grade for this submission is 8.00.
+
+Current maximum grade 1.00 was achieved at submission #026523. Next evaluated submission will be penalized with a penalty factor of 1.
+
+Submissions
+Submission ID	Status	Submission Time	Evaluation Time	Evaluation Grade	Penalty Factor	EffectiveGrade	Actions
+#026322	ready	2018-12-01 08:58:27	2018-12-01 08:58:28	0.00	1.00	0.00	
+#026323	ready	2018-12-01 11:07:31	2018-12-01 11:07:32	0.00	1.00	0.00	
+#026523	ready	2018-12-02 20:37:42	2018-12-02 20:37:44	1.00	1.00	1.00	
+
+×
+Evaluation Feedback for Submission #026523
+********************************************************************************
+* STDOUT output of JUnit run
+********************************************************************************
+
+JUnit version 4.11
+.findLeafNode here...
+key 63 is LESS than 71
+LeafNode Function end -- > [57,71,,] => [PBo,ppJ,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+.lookupInLeafNode here...
+lookupInLeafNode value --> null
+.findLeafNode here...
+key 117 is LESS than 132
+key 117 is LESS than 151
+LeafNode Function end -- > [132,137,,] => [EbR,qlI,,]
+I started with the tree:
+[132,151,,] =>
+  [111,117,,] => [YRJ,nWi,,]
+  [132,137,,] => [EbR,qlI,,]
+  [151,156,,] => [Opp,EAY,,]
+I tried to delete the key: 117
+I expected the returned value to be: nWi
+However, the actual value was: null
+
+E..findLeafNode here...
+key 15 is LESS than 78
+findLeafNode here...
+key 15 is LESS than 44
+key 15 is LESS than 59
+LeafNode Function end -- > [44,54,,] => [map,NFX,,]
+LeafNode Function end -- > keys: [44, 59, null, null]; children: [[15,26,,] => [mrD,Ubv,,], [44,54,,] => [map,NFX,,], [59,72,,] => [JzH,uOI,,], null, null]
+I started with the tree:
+[78,,,] =>
+  [44,59,,] =>
+    [15,26,,] => [mrD,Ubv,,]
+    [44,54,,] => [map,NFX,,]
+    [59,72,,] => [JzH,uOI,,]
+  [96,119,,] =>
+    [78,94,,] => [nuC,hqh,,]
+    [96,110,,] => [iZC,JVF,,]
+    [119,126,,] => [lMi,ZaC,,]
+I tried to delete the key: 15
+
+E.findLeafNode here...
+LeafNode Function end -- > [106,114,,] => [yuF,afH,,]
+I started with the tree:
+[106,,,] =>
+  [76,89,97,] => [mSY,Hwz,YLB,]
+  [106,114,,] => [yuF,afH,,]
+I tried to delete the key: 106
+I expected the resulting tree to be:
+[97,,,] =>
+  [76,89,,] => [mSY,Hwz,,]
+  [97,114,,] => [YLB,afH,,]
+However, the actual tree was:
+[106,,,] =>
+  [76,89,97,] => [mSY,Hwz,YLB,]
+  [114,,,] => [afH,,,]
+
+E.findLeafNode here...
+findLeafNode here...
+LeafNode Function end -- > [194,202,,] => [nyH,cll,,]
+LeafNode Function end -- > keys: [172, 194, null, null]; children: [[156,161,,] => [QzG,KCs,,], [172,190,,] => [uEW,uaO,,], [194,202,,] => [nyH,cll,,], null, null]
+I started with the tree:
+[156,,,] =>
+  [117,131,,] =>
+    [100,109,,] => [hwh,AQW,,]
+    [117,130,,] => [IfJ,raM,,]
+    [131,149,,] => [LAZ,OIu,,]
+  [172,194,,] =>
+    [156,161,,] => [QzG,KCs,,]
+    [172,190,,] => [uEW,uaO,,]
+    [194,202,,] => [nyH,cll,,]
+I tried to delete the key: 202
+
+E.findLeafNode here...
+LeafNode Function end -- > [131,145,,] => [NCV,cGy,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+.lookupInLeafNode here...
+lookupInLeafNode value --> FdE
+.findLeafNode here...
+LeafNode Function end -- > [147,163,,] => [fFs,yzx,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+I started with the tree:
+[87,115,136,147] =>
+  [67,81,,] => [evD,jdi,,]
+  [87,104,,] => [Ikn,iLr,,]
+  [115,123,,] => [Xij,QaH,,]
+  [136,146,,] => [KVx,CFV,,]
+  [147,163,,] => [fFs,yzx,,]
+I tried to lookup the key: 163
+I expected the value to be: yzx
+However, the actual value was: null
+
+E.findLeafNode here...
+key 92 is LESS than 112
+LeafNode Function end -- > [92,99,,] => [gDL,Hyg,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> gDL
+.lookupInLeafNode here...
+lookupInLeafNode value --> kmZ
+.findLeafNode here...
+key 125 is LESS than 135
+LeafNode Function end -- > [101,120,,] => [mCP,tTQ,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+..lookupInLeafNode here...
+lookupInLeafNode value --> MCM
+..lookupInLeafNode here...
+lookupInLeafNode value --> BgX
+..findLeafNode here...
+key 72 is LESS than 102
+LeafNode Function end -- > [54,83,,] => [rUS,yKb,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+.findLeafNode here...
+key 116 is LESS than 132
+LeafNode Function end -- > [110,116,,] => [GHf,JWm,,]
+I started with the tree:
+[132,,,] =>
+  [110,116,,] => [GHf,JWm,,]
+  [132,142,,] => [Ckk,Pwf,,]
+I tried to delete the key: 116
+I expected the resulting tree to be:
+[110,132,142,] => [GHf,Ckk,Pwf,]
+However, the actual tree was:
+[132,,,] =>
+  [110,,,] => [GHf,,,]
+  [132,142,,] => [Ckk,Pwf,,]
+
+E.findLeafNode here...
+LeafNode Function end -- > [71,78,,] => [gWk,sSK,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> gWk
+.lookupInLeafNode here...
+lookupInLeafNode value --> null
+.lookupInLeafNode here...
+lookupInLeafNode value --> null
+.findLeafNode here...
+findLeafNode here...
+key 169 is LESS than 186
+LeafNode Function end -- > [162,176,,] => [pjv,xTU,,]
+LeafNode Function end -- > keys: [162, 186, null, null]; children: [[138,149,,] => [SIh,PvE,,], [162,176,,] => [pjv,xTU,,], [186,201,,] => [Hsl,BEb,,], null, null]
+I started with the tree:
+[138,,,] =>
+  [102,117,,] =>
+    [73,89,,] => [GlG,Xhr,,]
+    [102,111,,] => [rkG,ZsN,,]
+    [117,126,,] => [Ewy,Zmj,,]
+  [162,186,,] =>
+    [138,149,,] => [SIh,PvE,,]
+    [162,176,,] => [pjv,xTU,,]
+    [186,201,,] => [Hsl,BEb,,]
+I tried to lookup the key: 169
+
+E.findLeafNode here...
+findLeafNode here...
+key 213 is LESS than 220
+LeafNode Function end -- > [204,213,,] => [NXq,vyD,,]
+LeafNode Function end -- > keys: [204, 220, null, null]; children: [[179,187,,] => [KtN,dXm,,], [204,213,,] => [NXq,vyD,,], [220,234,,] => [Kaj,wdu,,], null, null]
+I started with the tree:
+[179,,,] =>
+  [118,140,163,] =>
+    [106,114,,] => [URx,eFC,,]
+    [118,127,,] => [SIS,ANi,,]
+    [140,148,,] => [MNg,uJu,,]
+    [163,169,,] => [UKQ,Sna,,]
+  [204,220,,] =>
+    [179,187,,] => [KtN,dXm,,]
+    [204,213,,] => [NXq,vyD,,]
+    [220,234,,] => [Kaj,wdu,,]
+I tried to delete the key: 213
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 77
+insertIntoLeafNode create a new array for all keys included the new key --> 77
+I started with the tree:
+[77,,,] => [jbI,,,]
+I tried to insert the pair: 64 => kPe
+
+E.lookupInLeafNode here...
+lookupInLeafNode value --> null
+.findLeafNode here...
+key 121 is LESS than 138
+LeafNode Function end -- > [121,130,,] => [TcQ,Idk,,]
+I started with the tree:
+[121,138,,] =>
+  [93,111,,] => [nCU,vAM,,]
+  [121,130,,] => [TcQ,Idk,,]
+  [138,149,,] => [aGj,Rye,,]
+I tried to delete the key: 121
+I expected the resulting tree to be:
+[121,,,] =>
+  [93,111,,] => [nCU,vAM,,]
+  [130,138,149,] => [Idk,aGj,Rye,]
+However, the actual tree was:
+[121,138,,] =>
+  [93,111,,] => [nCU,vAM,,]
+  [130,,,] => [Idk,,,]
+  [138,149,,] => [aGj,Rye,,]
+
+E.findLeafNode here...
+findLeafNode here...
+LeafNode Function end -- > [147,156,,] => [hEu,YPq,,]
+LeafNode Function end -- > keys: [128, 147, null, null]; children: [[102,121,,] => [ZJN,NaU,,], [128,140,,] => [bYh,UHB,,], [147,156,,] => [hEu,YPq,,], null, null]
+I started with the tree:
+[102,,,] =>
+  [64,83,,] =>
+    [44,55,,] => [rbk,eGN,,]
+    [64,79,,] => [zJA,caB,,]
+    [83,92,,] => [PkB,Fqu,,]
+  [128,147,,] =>
+    [102,121,,] => [ZJN,NaU,,]
+    [128,140,,] => [bYh,UHB,,]
+    [147,156,,] => [hEu,YPq,,]
+I tried to lookup the key: 170
+
+E.findLeafNode here...
+LeafNode Function end -- > [102,107,114,130] => [xmD,Adg,gCj,WZX]
+insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 102
+insertIntoLeafNode create a new array for all keys included the new key --> 102
+insertIntoLeafNode create a new array for all keys included the new key --> 102
+insertIntoLeafNode create a new array for all keys included the new key --> 102
+insertIntoLeafNode create a new array for all keys included the new key --> 102
+calculate the median of the newKeysArray else ... 114
+split the new array to two arrays2
+split the new array to two arrays[Ljava.lang.Integer;@6d9c638
+split the new array to two arrays3
+split the new array to two arrays[Ljava.lang.Integer;@6d9c638
+split the new array to two arrays4
+split the new array to two arrays[Ljava.lang.Integer;@6d9c638
+split the new array to two arrays5
+loop in parents ... 4
+loop in parents ... 4
+loop in parents ... 4
+loop in parents ... 4
+I started with the tree:
+[39,55,73,102] =>
+  [16,28,,] => [llS,Nvp,,]
+  [39,43,,] => [Guf,taB,,]
+  [55,65,,] => [YuS,UkA,,]
+  [73,86,,] => [xTI,ERo,,]
+  [102,107,114,130] => [xmD,Adg,gCj,WZX]
+I tried to insert the pair: 139 => Gry
+I expected the resulting tree to be:
+[73,,,] =>
+  [39,55,,] =>
+    [16,28,,] => [llS,Nvp,,]
+    [39,43,,] => [Guf,taB,,]
+    [55,65,,] => [YuS,UkA,,]
+  [102,114,,] =>
+    [73,86,,] => [xTI,ERo,,]
+    [102,107,,] => [xmD,Adg,,]
+    [114,130,139,] => [gCj,WZX,Gry,]
+However, the actual tree was:
+[39,55,73,102] =>
+  [16,28,,] => [llS,Nvp,,]
+  [39,43,,] => [Guf,taB,,]
+  [55,65,,] => [YuS,UkA,,]
+  [73,86,,] => [xTI,ERo,,]
+  [102,107,,] => [xmD,Adg,,]
+
+E.findLeafNode here...
+LeafNode Function end -- > [39,55,,] => [MWF,Cwv,,]
+I started with the tree:
+[39,,,] =>
+  [23,33,,] => [Nob,MWa,,]
+  [39,55,,] => [MWF,Cwv,,]
+I tried to delete the key: 55
+I expected the resulting tree to be:
+[23,33,39,] => [Nob,MWa,MWF,]
+However, the actual tree was:
+[39,,,] =>
+  [23,33,,] => [Nob,MWa,,]
+  [39,,,] => [MWF,,,]
+
+E.I started with the tree:
+[37,48,66,] => [ZMj,pua,eKe,]
+I tried to delete the key: 37
+I expected the resulting tree to be:
+[48,66,,] => [pua,eKe,,]
+However, the actual tree was:
+[48,,66,] => [pua,,eKe,]
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 67
+insertIntoLeafNode create a new array for all keys included the new key --> 67
+insertIntoLeafNode create a new array for all keys included the new key --> 67
+I started with the tree:
+[67,,,] => [YJN,,,]
+I tried to insert the pair: 86 => IVF
+
+E.findLeafNode here...
+key 43 is LESS than 62
+LeafNode Function end -- > [43,56,,] => [oSP,MVT,,]
+I started with the tree:
+[62,,,] =>
+  [43,56,,] => [oSP,MVT,,]
+  [62,77,82,] => [JUp,vPR,Yff,]
+I tried to delete the key: 43
+I expected the resulting tree to be:
+[77,,,] =>
+  [56,62,,] => [MVT,JUp,,]
+  [77,82,,] => [vPR,Yff,,]
+However, the actual tree was:
+[62,,,] =>
+  [56,,,] => [MVT,,,]
+  [62,77,82,] => [JUp,vPR,Yff,]
+
+E.findLeafNode here...
+key 92 is LESS than 122
+findLeafNode here...
+key 92 is LESS than 100
+LeafNode Function end -- > [80,92,,] => [YPP,aoQ,,]
+LeafNode Function end -- > keys: [80, 100, null, null]; children: [[63,66,,] => [Qxo,CJi,,], [80,92,,] => [YPP,aoQ,,], [100,114,,] => [uRV,XXz,,], null, null]
+I started with the tree:
+[122,,,] =>
+  [80,100,,] =>
+    [63,66,,] => [Qxo,CJi,,]
+    [80,92,,] => [YPP,aoQ,,]
+    [100,114,,] => [uRV,XXz,,]
+  [144,156,177,] =>
+    [122,131,,] => [cCM,QNI,,]
+    [144,153,,] => [GHO,GEA,,]
+    [156,171,,] => [HCe,qSH,,]
+    [177,188,,] => [PtO,Mmo,,]
+I tried to delete the key: 92
+
+E.findLeafNode here...
+key 104 is LESS than 161
+findLeafNode here...
+key 104 is LESS than 125
+key 104 is LESS than 142
+LeafNode Function end -- > [125,130,,] => [dch,Qxb,,]
+LeafNode Function end -- > keys: [125, 142, null, null]; children: [[104,118,,] => [UVx,Pkh,,], [125,130,,] => [dch,Qxb,,], [142,153,,] => [rQe,CyM,,], null, null]
+I started with the tree:
+[161,,,] =>
+  [125,142,,] =>
+    [104,118,,] => [UVx,Pkh,,]
+    [125,130,,] => [dch,Qxb,,]
+    [142,153,,] => [rQe,CyM,,]
+  [189,208,,] =>
+    [161,173,,] => [sMw,wwr,,]
+    [189,199,,] => [KPX,jDO,,]
+    [208,211,,] => [tNW,pRQ,,]
+I tried to delete the key: 104
+
+E.findLeafNode here...
+LeafNode Function end -- > [85,104,,] => [igk,rMP,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+..findLeafNode here...
+LeafNode Function end -- > [102,124,,] => [Uhj,cFp,,]
+.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 2
+I started with the tree:
+[,] => [,]
+I tried to insert the pair: 109 => MHD
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+I started with the tree:
+[,,,] => [,,,]
+I tried to insert the pair: 82 => bwe
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 6
+I started with the tree:
+[,,,,,] => [,,,,,]
+I tried to insert the pair: 55 => rTN
+
+E...findLeafNode here...
+LeafNode Function end -- > [193,196,,] => [JGv,Hmh,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+.findLeafNode here...
+findLeafNode here...
+key 111 is LESS than 126
+LeafNode Function end -- > [111,115,,] => [Iel,qwK,,]
+LeafNode Function end -- > keys: [111, 126, null, null]; children: [[87,100,,] => [muH,uov,,], [111,115,,] => [Iel,qwK,,], [126,140,,] => [WwG,asX,,], null, null]
+I started with the tree:
+[87,,,] =>
+  [47,66,,] =>
+    [28,38,,] => [VDl,Not,,]
+    [47,60,,] => [WOi,xNM,,]
+    [66,82,,] => [UZM,iwn,,]
+  [111,126,,] =>
+    [87,100,,] => [muH,uov,,]
+    [111,115,,] => [Iel,qwK,,]
+    [126,140,,] => [WwG,asX,,]
+I tried to delete the key: 111
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 114
+insertIntoLeafNode create a new array for all keys included the new key --> 114
+I started with the tree:
+[114,117,125,139] => [yLD,ejG,dDb,auL]
+I tried to insert the pair: 95 => jZw
+
+E.findLeafNode here...
+LeafNode Function end -- > [100,105,,] => [vDh,pvU,,]
+I started with the tree:
+[72,100,,] =>
+  [61,69,,] => [hBM,MaN,,]
+  [72,83,,] => [QOh,ZGP,,]
+  [100,105,,] => [vDh,pvU,,]
+I tried to delete the key: 105
+I expected the resulting tree to be:
+[72,,,] =>
+  [61,69,,] => [hBM,MaN,,]
+  [72,83,100,] => [QOh,ZGP,vDh,]
+However, the actual tree was:
+[72,100,,] =>
+  [61,69,,] => [hBM,MaN,,]
+  [72,83,,] => [QOh,ZGP,,]
+  [100,,,] => [vDh,,,]
+
+E.findLeafNode here...
+findLeafNode here...
+key 139 is LESS than 158
+LeafNode Function end -- > [139,153,,] => [pgI,fKy,,]
+LeafNode Function end -- > keys: [139, 158, null, null]; children: [[119,125,,] => [bXW,Jyw,,], [139,153,,] => [pgI,fKy,,], [158,169,,] => [dKq,evV,,], null, null]
+I started with the tree:
+[119,,,] =>
+  [76,102,,] =>
+    [62,69,,] => [WKv,wit,,]
+    [76,93,,] => [HrL,GpP,,]
+    [102,105,,] => [REz,cgd,,]
+  [139,158,,] =>
+    [119,125,,] => [bXW,Jyw,,]
+    [139,153,,] => [pgI,fKy,,]
+    [158,169,,] => [dKq,evV,,]
+I tried to lookup the key: 139
+
+E.I started with the tree:
+[106,120,130,140] => [Soa,Mqj,sJS,VGg]
+I tried to delete the key: 140
+I expected the returned value to be: VGg
+However, the actual value was: null
+
+E.lookupInLeafNode here...
+lookupInLeafNode value --> ycy
+.findLeafNode here...
+key 58 is LESS than 61
+LeafNode Function end -- > [38,47,,] => [anS,jSh,,]
+.findLeafNode here...
+key 28 is LESS than 51
+LeafNode Function end -- > [28,36,46,] => [fHM,UCX,pCf,]
+I started with the tree:
+[51,,,] =>
+  [28,36,46,] => [fHM,UCX,pCf,]
+  [51,67,,] => [DRA,uSh,,]
+I tried to delete the key: 28
+I expected the resulting tree to be:
+[51,,,] =>
+  [36,46,,] => [UCX,pCf,,]
+  [51,67,,] => [DRA,uSh,,]
+However, the actual tree was:
+[51,,,] =>
+  [36,,46,] => [UCX,,pCf,]
+  [51,67,,] => [DRA,uSh,,]
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 99
+insertIntoLeafNode create a new array for all keys included the new key --> 99
+insertIntoLeafNode create a new array for all keys included the new key --> 99
+insertIntoLeafNode create a new array for all keys included the new key --> 99
+I started with the tree:
+[99,119,,] => [ayy,EgG,,]
+I tried to insert the pair: 110 => gkj
+
+E.findLeafNode here...
+key 58 is LESS than 70
+LeafNode Function end -- > [33,50,,] => [XvZ,QAo,,]
+insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 33
+insertIntoLeafNode create a new array for all keys included the new key --> 33
+insertIntoLeafNode create a new array for all keys included the new key --> 33
+insertIntoLeafNode create a new array for all keys included the new key --> 33
+I started with the tree:
+[70,,,] =>
+  [33,50,,] => [XvZ,QAo,,]
+  [70,80,,] => [khl,zMB,,]
+I tried to insert the pair: 58 => Oll
+
+E.findLeafNode here...
+findLeafNode here...
+LeafNode Function end -- > [200,212,,] => [NgC,PoR,,]
+LeafNode Function end -- > keys: [181, 200, null, null]; children: [[165,172,,] => [Ade,tgO,,], [181,198,,] => [pTR,rTd,,], [200,212,,] => [NgC,PoR,,], null, null]
+I started with the tree:
+[165,,,] =>
+  [102,122,142,] =>
+    [89,91,,] => [hma,kfO,,]
+    [102,117,,] => [pxK,KfU,,]
+    [122,136,,] => [xuS,StU,,]
+    [142,153,,] => [Zmi,Ufx,,]
+  [181,200,,] =>
+    [165,172,,] => [Ade,tgO,,]
+    [181,198,,] => [pTR,rTd,,]
+    [200,212,,] => [NgC,PoR,,]
+I tried to delete the key: 200
+
+E.findLeafNode here...
+findLeafNode here...
+key 139 is LESS than 169
+key 139 is LESS than 189
+LeafNode Function end -- > [169,180,,] => [LDT,lsS,,]
+LeafNode Function end -- > keys: [169, 189, null, null]; children: [[150,164,,] => [AXI,Ytw,,], [169,180,,] => [LDT,lsS,,], [189,208,,] => [gFf,QpK,,], null, null]
+I started with the tree:
+[139,,,] =>
+  [100,127,,] =>
+    [80,91,,] => [qrN,BLz,,]
+    [100,110,,] => [Iyg,kHj,,]
+    [127,137,,] => [DYs,BZK,,]
+  [169,189,,] =>
+    [150,164,,] => [AXI,Ytw,,]
+    [169,180,,] => [LDT,lsS,,]
+    [189,208,,] => [gFf,QpK,,]
+I tried to lookup the key: 139
+
+E.findLeafNode here...
+LeafNode Function end -- > [79,84,95,104] => [ToS,EHV,Ebj,rlA]
+insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+calculate the median of the newKeysArray else ... 95
+split the new array to two arrays2
+split the new array to two arrays[Ljava.lang.Integer;@7dc5e7b4
+split the new array to two arrays3
+split the new array to two arrays[Ljava.lang.Integer;@7dc5e7b4
+split the new array to two arrays4
+split the new array to two arrays[Ljava.lang.Integer;@7dc5e7b4
+split the new array to two arrays5
+loop in parents ... 4
+loop in parents ... 4
+loop in parents J ... 1
+loop in parents H ... 0
+loop in parents H ... 95
+new leaf node here ... [Lde.tuberlin.dima.dbt.exercises.bplustree.Node;@1ee0005
+I started with the tree:
+[79,,,] =>
+  [57,65,,] => [gRF,RfH,,]
+  [79,84,95,104] => [ToS,EHV,Ebj,rlA]
+I tried to insert the pair: 120 => xfC
+I expected the resulting tree to be:
+[79,95,,] =>
+  [57,65,,] => [gRF,RfH,,]
+  [79,84,,] => [ToS,EHV,,]
+  [95,104,120,] => [Ebj,rlA,xfC,]
+However, the actual tree was:
+[79,95,,] =>
+  [57,65,,] => [gRF,RfH,,]
+  [79,84,,] => [ToS,EHV,,]
+  [95,104,120,] => [Ebj,rlA,xfC,]
+
+E..insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+I started with the tree:
+[,,,] => [,,,]
+I tried to insert the pair: 35 => ccy
+
+E.findLeafNode here...
+LeafNode Function end -- > [130,148,,] => [ugC,EUi,,]
+I started with the tree:
+[130,,,] =>
+  [107,112,122,] => [Vdg,YtJ,amW,]
+  [130,148,,] => [ugC,EUi,,]
+I tried to delete the key: 148
+I expected the returned value to be: EUi
+However, the actual value was: null
+
+E.findLeafNode here...
+LeafNode Function end -- > [32,51,,] => [SBV,SNU,,]
+insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 32
+insertIntoLeafNode create a new array for all keys included the new key --> 32
+insertIntoLeafNode create a new array for all keys included the new key --> 32
+insertIntoLeafNode create a new array for all keys included the new key --> 32
+I started with the tree:
+[32,,,] =>
+  [16,29,,] => [Mmm,oIC,,]
+  [32,51,,] => [SBV,SNU,,]
+I tried to insert the pair: 41 => Sxs
+
+E.lookupInLeafNode here...
+lookupInLeafNode value --> oRH
+.findLeafNode here...
+findLeafNode here...
+key 170 is LESS than 198
+key 170 is LESS than 219
+LeafNode Function end -- > [198,204,,] => [cmZ,Bja,,]
+LeafNode Function end -- > keys: [198, 219, null, null]; children: [[170,189,,] => [mYZ,zxE,,], [198,204,,] => [cmZ,Bja,,], [219,226,,] => [DFZ,wzQ,,], null, null]
+I started with the tree:
+[170,,,] =>
+  [110,130,151,] =>
+    [92,102,,] => [Pxb,rTa,,]
+    [110,123,,] => [Mtc,BYI,,]
+    [130,145,,] => [gDB,Wfl,,]
+    [151,168,,] => [rhU,JSo,,]
+  [198,219,,] =>
+    [170,189,,] => [mYZ,zxE,,]
+    [198,204,,] => [cmZ,Bja,,]
+    [219,226,,] => [DFZ,wzQ,,]
+I tried to delete the key: 170
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 33
+insertIntoLeafNode create a new array for all keys included the new key --> 33
+insertIntoLeafNode create a new array for all keys included the new key --> 33
+insertIntoLeafNode create a new array for all keys included the new key --> 33
+insertIntoLeafNode create a new array for all keys included the new key --> 33
+calculate the median of the newKeysArray else ... 51
+split the new array to two arrays2
+split the new array to two arrays[Ljava.lang.Integer;@75a1cd57
+split the new array to two arrays3
+split the new array to two arrays[Ljava.lang.Integer;@75a1cd57
+split the new array to two arrays4
+split the new array to two arrays[Ljava.lang.Integer;@75a1cd57
+split the new array to two arrays5
+I started with the tree:
+[33,37,51,60] => [xSF,AQw,vBC,HpZ]
+I tried to insert the pair: 69 => MUA
+
+E.findLeafNode here...
+LeafNode Function end -- > [67,83,89,] => [BKI,xnn,Icq,]
+I started with the tree:
+[67,,,] =>
+  [45,61,,] => [Rxx,PiS,,]
+  [67,83,89,] => [BKI,xnn,Icq,]
+I tried to delete the key: 67
+I expected the resulting tree to be:
+[67,,,] =>
+  [45,61,,] => [Rxx,PiS,,]
+  [83,89,,] => [xnn,Icq,,]
+However, the actual tree was:
+[67,,,] =>
+  [45,61,,] => [Rxx,PiS,,]
+  [83,,89,] => [xnn,,Icq,]
+
+E.insertIntoLeafNode here...
+insertIntoLeafNode 1st loop i < leafNode.getKeys() --> 4
+insertIntoLeafNode there is no space, then split and propagate --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+insertIntoLeafNode create a new array for all keys included the new key --> 79
+calculate the median of the newKeysArray else ... 101
+split the new array to two arrays2
+split the new array to two arrays[Ljava.lang.Integer;@3d012ddd
+split the new array to two arrays3
+split the new array to two arrays[Ljava.lang.Integer;@3d012ddd
+split the new array to two arrays4
+split the new array to two arrays5
+I started with the tree:
+[79,83,107,120] => [rWE,jwv,JNM,ZKW]
+I tried to insert the pair: 101 => abj
+
+E.findLeafNode here...
+key 92 is LESS than 147
+findLeafNode here...
+key 92 is LESS than 109
+key 92 is LESS than 135
+LeafNode Function end -- > [109,118,,] => [Vmz,xNx,,]
+LeafNode Function end -- > keys: [109, 135, null, null]; children: [[92,99,,] => [vmI,fAq,,], [109,118,,] => [Vmz,xNx,,], [135,145,,] => [pux,pIv,,], null, null]
+I started with the tree:
+[147,,,] =>
+  [109,135,,] =>
+    [92,99,,] => [vmI,fAq,,]
+    [109,118,,] => [Vmz,xNx,,]
+    [135,145,,] => [pux,pIv,,]
+  [167,186,208,] =>
+    [147,157,,] => [sXD,Tbn,,]
+    [167,177,,] => [XZW,wef,,]
+    [186,205,,] => [hck,prF,,]
+    [208,218,,] => [blF,qQw,,]
+I tried to delete the key: 92
+
+E.findLeafNode here...
+key 123 is LESS than 134
+LeafNode Function end -- > [108,123,,] => [WuR,GuK,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> GuK
+.findLeafNode here...
+key 66 is LESS than 88
+findLeafNode here...
+LeafNode Function end -- > [66,80,,] => [azJ,wGQ,,]
+LeafNode Function end -- > keys: [47, 66, null, null]; children: [[28,31,,] => [kri,qbC,,], [47,54,,] => [Mrj,Jcv,,], [66,80,,] => [azJ,wGQ,,], null, null]
+I started with the tree:
+[88,,,] =>
+  [47,66,,] =>
+    [28,31,,] => [kri,qbC,,]
+    [47,54,,] => [Mrj,Jcv,,]
+    [66,80,,] => [azJ,wGQ,,]
+  [104,123,143,] =>
+    [88,94,,] => [CRx,OlE,,]
+    [104,117,,] => [tLz,Srd,,]
+    [123,131,,] => [Xeo,mre,,]
+    [143,157,,] => [ZiY,GqF,,]
+I tried to delete the key: 66
+
+E.findLeafNode here...
+key 127 is LESS than 152
+LeafNode Function end -- > [127,143,,] => [ISJ,XFx,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> ISJ
+.lookupInLeafNode here...
+lookupInLeafNode value --> null
+.findLeafNode here...
+LeafNode Function end -- > [116,119,,] => [EbA,gdt,,]
+I started with the tree:
+[116,,,] =>
+  [86,92,107,] => [ZyE,voL,YMr,]
+  [116,119,,] => [EbA,gdt,,]
+I tried to delete the key: 116
+I expected the resulting tree to be:
+[107,,,] =>
+  [86,92,,] => [ZyE,voL,,]
+  [107,119,,] => [YMr,gdt,,]
+However, the actual tree was:
+[116,,,] =>
+  [86,92,107,] => [ZyE,voL,YMr,]
+  [119,,,] => [gdt,,,]
+
+E.findLeafNode here...
+LeafNode Function end -- > [189,207,,] => [GSs,Wkt,,]
+lookupInLeafNode here...
+lookupInLeafNode value --> null
+.findLeafNode here...
+LeafNode Function end -- > [103,119,121,] => [OvH,EFH,VIZ,]
+.lookupInLeafNode here...
+lookupInLeafNode value --> null
+Lookup in leaves: OK
+Lookup in inner nodes: FAILED
+Insertion: FAILED
+Insertion with splits: FAILED
+Deletion: FAILED
+Deletion with stealing: FAILED
+Deletion with merging: FAILED
+Multiple operations with different capacities: FAILED
+
+Group achieved 1 points.
+
+
+Time: 0.138
+There were 42 failures:
+1) deleteFromFirstChildMergeWithRightSibling(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:201)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromFirstChildMergeWithRightSibling(BPlusTreeGradingTest.java:1240)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+2) deleteFromLeftLeafMergeUpToRoot(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromLeftLeafMergeUpToRoot(BPlusTreeGradingTest.java:1410)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+3) deleteFirstFromSecondChildStealAtEndFromLeftSibling(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [97,,,] =>
+  [76,89,,] => [mSY,Hwz,,]
+  [97,114,,] => [YLB,afH,,]
+     but: was <[106,,,] =>
+  [76,89,97,] => [mSY,Hwz,YLB,]
+  [114,,,] => [afH,,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFirstFromSecondChildStealAtEndFromLeftSibling(BPlusTreeGradingTest.java:1056)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+4) deleteFromRightMostLeafMergeInnerNodes(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromRightMostLeafMergeInnerNodes(BPlusTreeGradingTest.java:1321)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+5) findKeyInLastLeafOfFullInnerNode(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyLookupResult(BPlusTreeGradingTest.java:173)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.findKeyInLastLeafOfFullInnerNode(BPlusTreeGradingTest.java:481)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+6) deleteFromFirstChildMergeWithRightSiblingSetAsRoot(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [110,132,142,] => [GHf,Ckk,Pwf,]
+     but: was <[132,,,] =>
+  [110,,,] => [GHf,,,]
+  [132,142,,] => [Ckk,Pwf,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromFirstChildMergeWithRightSiblingSetAsRoot(BPlusTreeGradingTest.java:1302)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+7) findNoKeyInMiddleLeafAtThirdLevel(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:287)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.lookup(BPlusTree.java:239)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.lookup(BPlusTreeGradingTest.java:140)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.findNoKeyInMiddleLeafAtThirdLevel(BPlusTreeGradingTest.java:572)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+8) deleteFromMiddleLeafInRightInnerNodeStealFromLeftInnerNode(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromMiddleLeafInRightInnerNodeStealFromLeftInnerNode(BPlusTreeGradingTest.java:1111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+9) insertAtBeginning(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:135)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insertAtBeginning(BPlusTreeGradingTest.java:650)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+10) deleteFromMiddleChildMergeWithRightSibling(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [121,,,] =>
+  [93,111,,] => [nCU,vAM,,]
+  [130,138,149,] => [Idk,aGj,Rye,]
+     but: was <[121,138,,] =>
+  [93,111,,] => [nCU,vAM,,]
+  [130,,,] => [Idk,,,]
+  [138,149,,] => [aGj,Rye,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromMiddleChildMergeWithRightSibling(BPlusTreeGradingTest.java:1256)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+11) findNoKeyInLastLeafAtThirdLevel(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:287)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.lookup(BPlusTree.java:239)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.lookup(BPlusTreeGradingTest.java:140)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.findNoKeyInLastLeafAtThirdLevel(BPlusTreeGradingTest.java:593)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+12) splitFullInnerRootNodeOverflowInLastLeaf(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [73,,,] =>
+  [39,55,,] =>
+    [16,28,,] => [llS,Nvp,,]
+    [39,43,,] => [Guf,taB,,]
+    [55,65,,] => [YuS,UkA,,]
+  [102,114,,] =>
+    [73,86,,] => [xTI,ERo,,]
+    [102,107,,] => [xmD,Adg,,]
+    [114,130,139,] => [gCj,WZX,Gry,]
+     but: was <[39,55,73,102] =>
+  [16,28,,] => [llS,Nvp,,]
+  [39,43,,] => [Guf,taB,,]
+  [55,65,,] => [YuS,UkA,,]
+  [73,86,,] => [xTI,ERo,,]
+  [102,107,,] => [xmD,Adg,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyInsertionResult(BPlusTreeGradingTest.java:182)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.splitFullInnerRootNodeOverflowInLastLeaf(BPlusTreeGradingTest.java:780)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+13) deleteFromLastChildMergeWithLeftSiblingSetAsRoot(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [23,33,39,] => [Nob,MWa,MWF,]
+     but: was <[39,,,] =>
+  [23,33,,] => [Nob,MWa,,]
+  [39,,,] => [MWF,,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromLastChildMergeWithLeftSiblingSetAsRoot(BPlusTreeGradingTest.java:1289)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+14) deleteFromLeafBeginning(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [48,66,,] => [pua,eKe,,]
+     but: was <[48,,66,] => [pua,,eKe,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromLeafBeginning(BPlusTreeGradingTest.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+15) insertAtEnd(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.NullPointerException
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:129)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insertAtEnd(BPlusTreeGradingTest.java:639)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+16) deleteFromFirstChildStealFromRightSibling(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [77,,,] =>
+  [56,62,,] => [MVT,JUp,,]
+  [77,82,,] => [vPR,Yff,,]
+     but: was <[62,,,] =>
+  [56,,,] => [MVT,,,]
+  [62,77,82,] => [JUp,vPR,Yff,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromFirstChildStealFromRightSibling(BPlusTreeGradingTest.java:1009)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+17) deleteFromMiddleLeafInLeftInnerNodeStealFromRightInnerNode(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromMiddleLeafInLeftInnerNodeStealFromRightInnerNode(BPlusTreeGradingTest.java:1176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+18) deleteFromLeftMostLeafMergeInnerNodes(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromLeftMostLeafMergeInnerNodes(BPlusTreeGradingTest.java:1351)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+19) complexOperationsCapacity2(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:98)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.complexOperationsCapacity2(BPlusTreeGradingTest.java:1460)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+20) complexOperationsCapacity4(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:98)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.complexOperationsCapacity4(BPlusTreeGradingTest.java:1501)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+21) complexOperationsCapacity6(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:98)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.complexOperationsCapacity6(BPlusTreeGradingTest.java:1537)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+22) deleteFromRightLeafMergeUpToRoot(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromRightLeafMergeUpToRoot(BPlusTreeGradingTest.java:1437)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+23) splitIntoTwoNodesBeginning(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:135)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.splitIntoTwoNodesBeginning(BPlusTreeGradingTest.java:708)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+24) deleteFromLastChildMergeWithLeftSibling(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [72,,,] =>
+  [61,69,,] => [hBM,MaN,,]
+  [72,83,100,] => [QOh,ZGP,vDh,]
+     but: was <[72,100,,] =>
+  [61,69,,] => [hBM,MaN,,]
+  [72,83,,] => [QOh,ZGP,,]
+  [100,,,] => [vDh,,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromLastChildMergeWithLeftSibling(BPlusTreeGradingTest.java:1273)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+25) findKeyInLeafAtThirdLevel(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:287)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.lookup(BPlusTree.java:239)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.lookup(BPlusTreeGradingTest.java:140)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.findKeyInLeafAtThirdLevel(BPlusTreeGradingTest.java:551)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+26) deleteFromFullLeafEnd(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:201)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromFullLeafEnd(BPlusTreeGradingTest.java:901)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+27) deleteFromFirstChild(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [51,,,] =>
+  [36,46,,] => [UCX,pCf,,]
+  [51,67,,] => [DRA,uSh,,]
+     but: was <[51,,,] =>
+  [36,,46,] => [UCX,,pCf,]
+  [51,67,,] => [DRA,uSh,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromFirstChild(BPlusTreeGradingTest.java:927)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+28) insertAtMiddle(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.NullPointerException
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:129)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insertAtMiddle(BPlusTreeGradingTest.java:662)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+29) insertIntoRightLeaf(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.NullPointerException
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:129)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insertIntoRightLeaf(BPlusTreeGradingTest.java:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+30) deleteFromRightMostLeafStealFromLeftInnerNode(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromRightMostLeafStealFromLeftInnerNode(BPlusTreeGradingTest.java:1379)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+31) findNoKeyInBetweenInnerNodesAtSecondLevel(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:287)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.lookup(BPlusTree.java:239)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.lookup(BPlusTreeGradingTest.java:140)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.findNoKeyInBetweenInnerNodesAtSecondLevel(BPlusTreeGradingTest.java:614)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+32) splitSecondLeafIntoTwoLeafs(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [79,95,,] =>
+  [57,65,,] => [gRF,RfH,,]
+  [79,84,,] => [ToS,EHV,,]
+  [95,104,120,] => [Ebj,rlA,xfC,]
+     but: was <[79,95,,] =>
+  [57,65,,] => [gRF,RfH,,]
+  [79,84,,] => [ToS,EHV,,]
+  [95,104,120,] => [Ebj,rlA,xfC,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyInsertionResult(BPlusTreeGradingTest.java:182)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.splitSecondLeafIntoTwoLeafs(BPlusTreeGradingTest.java:758)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+33) insertIntoEmptyTree(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:98)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insertIntoEmptyTree(BPlusTreeGradingTest.java:628)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+34) deleteLastFromSecondChildStealAtEndFromLeftSibling(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:201)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteLastFromSecondChildStealAtEndFromLeftSibling(BPlusTreeGradingTest.java:1040)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+35) insertIntoLeftLeaf(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.NullPointerException
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:129)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insertIntoLeftLeaf(BPlusTreeGradingTest.java:689)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+36) deleteFromFirstLeafInRightInnerNodeStealFromLeftInnerNode(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromFirstLeafInRightInnerNodeStealFromLeftInnerNode(BPlusTreeGradingTest.java:1078)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+37) splitIntoTwoNodesEnd(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.util.NoSuchElementException
+	at java.util.LinkedList.getFirst(LinkedList.java:244)
+	at java.util.LinkedList.element(LinkedList.java:663)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:168)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.splitIntoTwoNodesEnd(BPlusTreeGradingTest.java:723)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+38) deleteFromSecondChildFirstValue(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [67,,,] =>
+  [45,61,,] => [Rxx,PiS,,]
+  [83,89,,] => [xnn,Icq,,]
+     but: was <[67,,,] =>
+  [45,61,,] => [Rxx,PiS,,]
+  [83,,89,] => [xnn,,Icq,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromSecondChildFirstValue(BPlusTreeGradingTest.java:989)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+39) splitIntoTwoNodesMiddle(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.util.NoSuchElementException
+	at java.util.LinkedList.getFirst(LinkedList.java:244)
+	at java.util.LinkedList.element(LinkedList.java:663)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insertIntoLeafNode(BPlusTree.java:168)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.insert(BPlusTree.java:249)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.insert(BPlusTreeGradingTest.java:148)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.splitIntoTwoNodesMiddle(BPlusTreeGradingTest.java:738)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+40) deleteFromFirstLeafInLeftInnerNodeStealFromRightInnerNode(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromFirstLeafInLeftInnerNodeStealFromRightInnerNode(BPlusTreeGradingTest.java:1143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+41) deleteFromLastLeafInLeftInnerNodeStealFromRightInnerNode(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.ClassCastException: de.tuberlin.dima.dbt.exercises.bplustree.InnerNode cannot be cast to de.tuberlin.dima.dbt.exercises.bplustree.LeafNode
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.findLeafNode(BPlusTree.java:59)
+	at de.tuberlin.dima.dbt.exercises.bplustree.BPlusTree.delete(BPlusTree.java:258)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.delete(BPlusTreeGradingTest.java:154)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromLastLeafInLeftInnerNodeStealFromRightInnerNode(BPlusTreeGradingTest.java:1209)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+42) deleteFromSecondChildStealAtBeginningFromLeftSibling(de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest)
+java.lang.AssertionError: 
+Expected: [107,,,] =>
+  [86,92,,] => [ZyE,voL,,]
+  [107,119,,] => [YMr,gdt,,]
+     but: was <[116,,,] =>
+  [86,92,107,] => [ZyE,voL,YMr,]
+  [119,,,] => [gdt,,,]>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.verifyDeletionResult(BPlusTreeGradingTest.java:204)
+	at de.tuberlin.dima.dbt.grading.BPlusTreeGradingTest.deleteFromSecondChildStealAtBeginningFromLeftSibling(BPlusTreeGradingTest.java:1025)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+
+FAILURES!!!
+Tests run: 76,  Failures: 42
+
+
+********************************************************************************
+* STDERR output of JUnit run 
+********************************************************************************
+
+(empty)
+
+© DIMA Labs 2013 - 2018 | Imprint & Data Privacy | Help
+

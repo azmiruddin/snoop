@@ -36,6 +36,7 @@ public class BPlusTree {
                 parents.push(innerNode);
             }
             // TODO: traverse inner nodes to find leaf node
+            System.out.println("findLeafNode here...");
             Integer[] keys = innerNode.getKeys();
             Node[] children = innerNode.getChildren();
             for (int i = 0; i < keys.length; i++) {
@@ -54,11 +55,23 @@ public class BPlusTree {
                 }
             }
         }
+        System.out.println("LeafNode Function end -- > " +foundNode.toString());
         return (LeafNode) foundNode;
+        
     }
 
-    private String lookupInLeafNode(Integer key, LeafNode node) {
-        // TODO: lookup value in leaf node
+    /*public LeafNode<K, V> find(K key) {
+		Node<K> c = root;
+		while (c instanceof NonLeafNode) {
+			c = ((NonLeafNode<K>) c).child(key);
+		}
+		return (LeafNode<K, V>) c;
+	}*/
+    
+    
+    private String lookupInLeafNode(Integer key, LeafNode node) {        
+    	
+    	System.out.println("lookupInLeafNode here...");
         String value = null;
         for (int i = 0; i < node.getValues().length; i++) {
             if (node.keys[i] != null) {
@@ -67,23 +80,28 @@ public class BPlusTree {
                 }
             }
         }
+        System.out.println("lookupInLeafNode value --> " +value);
         return value;
     }
 
-    @SuppressWarnings("unused")
+    
 	private void insertIntoLeafNode(Integer key, String value,
                                     LeafNode node, Deque<InnerNode> parents) {
         // TODO: insert value into leaf node (and propagate changes up)
         LeafNode leafNode = findLeafNode(key, node);
+        System.out.println("insertIntoLeafNode here...");
         for (int i = 0; i < leafNode.getKeys().length; i++) {
+        	System.out.println("insertIntoLeafNode 1st loop i < leafNode.getKeys() --> " + leafNode.getKeys().length);
             String[] leafNodeValues = leafNode.getValues();
             Integer[] leafNodeKeys = leafNode.getKeys();
             if (leafNode.getKeys()[i] == null) { //to make sure there is space
                 if (key > leafNode.getKeys()[i-1]){
+                	System.out.println("insertIntoLeafNode leafNode.getKeys()[i] condition --> " + leafNode.getKeys()[i]);
                     leafNodeValues[i] = value;
                     leafNodeKeys[i] = key;
                     break;
                 } else {
+                	System.out.println("insertIntoLeafNode leafNode.getKeys()[i] condition else --> " + leafNode.getKeys()[i]);
                     String tempVal;
                     Integer tempKey;
                     tempVal = leafNodeValues[i-1];
@@ -93,8 +111,10 @@ public class BPlusTree {
                     leafNodeValues[i-1] = value;
                     leafNodeKeys[i-1] = key;
                     break;
+                    
                 }
             } else { //there is no space, then split and propagate
+            	System.out.println("insertIntoLeafNode there is no space, then split and propagate --> " + leafNode.getKeys()[i]);
                 Integer[] newKeysArray = new Integer[capacity+1];
                 String[] newValuesArray = new String[capacity+1];
                 Integer[] newKeysForNewNode = new Integer[capacity];
@@ -103,6 +123,7 @@ public class BPlusTree {
                 int median;
                 //create a new array for all keys included the new key and sort them
                 for (int x = 0; x < newKeysArray.length - 1; x++) {
+                	System.out.println("insertIntoLeafNode create a new array for all keys included the new key --> " + leafNode.getKeys()[i]);
                     newKeysArray[x] = leafNodeKeys[x];
                     newValuesArray[x] = leafNodeValues[x];
                     if (key > newKeysArray[x]) {
@@ -122,13 +143,17 @@ public class BPlusTree {
                 //calculate the median of the newKeysArray
                 if (newKeysArray.length % 2 == 0){
                     median = (newKeysArray[newKeysArray.length/2] + newKeysArray[newKeysArray.length/2 - 1])/2;
+                   System.out.println("calculate the median of the newKeysArray"); 
                 } else {
                     median = (newKeysArray[newKeysArray.length/2]);
+                    System.out.println("calculate the median of the newKeysArray else ... " +median);
                 }
                 //split the new array to two arrays and push the half keys to both, then update the original leafNode and the new one
                 for (int y = 0,count=capacity/2; y < newKeysForNewNode.length; y++,count++) {
+                	System.out.println("split the new array to two arrays" +count);
                     if (count <= newKeysForNewNode.length) {
                         if (newKeysArray[count] != null) {
+                        	System.out.println("split the new array to two arrays" +newKeysForNewNode);
                             newKeysForNewNode[y] = newKeysArray[count];
                             newValuesForNewNode[y] = newValuesArray[count];
                             newKeysArray[count] = null;
@@ -141,22 +166,28 @@ public class BPlusTree {
                     }
                 }
                 for (int j = 0; j < parents.element().keys.length; j++) {
+                	System.out.println("loop in parents ... " +parents.element().keys.length);
                     if (parents.element().keys[j] == null) {
+                    	System.out.println("loop in parents J ... " +j);
                         Integer[] parentKeys = parents.element().getKeys();
                         for (int h = 0; h < parentKeys.length; h++) {
+                        	System.out.println("loop in parents H ... " +h);
                             if (median > parentKeys[h]) {
+                            	System.out.println("loop in parents H ... " +median);
                                 parentKeys[h+1] = median;
                                 break;
-                            } else {
+                            } else {                            	
                                 Integer tempKey;
                                 tempKey = parentKeys[h-1];
                                 parentKeys[h] = tempKey;
                                 parentKeys[h-1] = median;
+                                System.out.println("loop in parents H ... " +tempKey);
                                 break;
                             }
                         }
                         parents.element().setKeys(parentKeys);
                         Node [] newLeafNodes = parents.element().getChildren();
+                        System.out.println("new leaf node here ... " +newLeafNodes);
                         for (int m = 0; m < newLeafNodes.length; m++) {
                             if (newLeafNodes[m] == null) {
                                 newLeafNodes[m] = newLeafNode;
