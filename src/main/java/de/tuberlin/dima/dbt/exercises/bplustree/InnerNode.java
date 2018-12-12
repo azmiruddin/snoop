@@ -42,5 +42,36 @@ public class InnerNode extends Node {
                                     .collect(Collectors.joining(", "));
         return "keys: [" + keyList + "]; " + "children: [" + childrenList + "]";
     }
+    
+	public void updateKeys() {
+		for (int i = 0; i < children.length; i++) {
+			if (i == 0) {
+				if (children[i] != null) {
+					if (keys[i] != null && children[i].getKeys()[0] >= keys[i]) {
+						if (children[i + 1] != null) {
+							keys[i] = children[i + 1].getKeys()[0];
+						}
+					} else
+						keys[i] = children[i].getKeys()[0];
+
+				} else {
+					keys[i] = null;
+				}
+			} else if (children[i] != null) {
+				keys[i - 1] = children[i].getKeys()[0];
+			} else {
+				keys[i - 1] = null;
+			}
+		}
+	}
+    
+    public void updateChildren() {
+        for (int i = 1; i < children.length; i++) {
+            if (children[i - 1] == null) {
+                children[i - 1] = children[i];
+                children[i] = null;
+            }
+        }
+    }
 
 }

@@ -2,6 +2,7 @@ package de.tuberlin.dima.dbt.exercises.bplustree;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Objects;
 
 /**
  * Implementation of a B+ tree.
@@ -25,183 +26,184 @@ public class BPlusTree {
 
     ///// Implement these methods
 
-    private LeafNode findLeafNode(Integer key, Node node,
-                                  Deque<InnerNode> parents) {
-        Node foundNode = node;
-        if (node instanceof LeafNode) {
-            return (LeafNode) node;
-        } else {
-            InnerNode innerNode = (InnerNode) node;
-            if (parents != null) {
-                parents.push(innerNode);
-            }
-            // TODO: traverse inner nodes to find leaf node
-            System.out.println("findLeafNode here...");
-            Integer[] keys = innerNode.getKeys();
-            Node[] children = innerNode.getChildren();
-            for (int i = 0; i < keys.length; i++) {
-                if (keys[i] != null) {
-                    if (key < keys[i]){
-                        if (children[i].keys[i] != null) {
-                            System.out.println("key " + key + " is LESS than " + keys[i]);
-                            //parents.push((InnerNode) children[i]);
-                            findLeafNode(key, children[i], parents);
-                            foundNode = children[i];
-                        }
-                    } else {
-                        findLeafNode(key, children[i+1], parents);
-                        foundNode = children[i+1];
-                    }
-                }
-            }
-        }
-        System.out.println("LeafNode Function end -- > " +foundNode.toString());
-        return (LeafNode) foundNode;
-        
-    }
+	private LeafNode findLeafNode(Integer key, Node node, Deque<InnerNode> parents) {
+		if (node instanceof LeafNode) {
+			return (LeafNode) node;
+		} else {
+			InnerNode innerNode = (InnerNode) node;
+			if (parents != null) {
+				parents.push(innerNode);
+			}
+			// TODO: traverse inner nodes to find leaf node
+			Integer[] keys = innerNode.getKeys();
 
-    /*public LeafNode<K, V> find(K key) {
-		Node<K> c = root;
-		while (c instanceof NonLeafNode) {
-			c = ((NonLeafNode<K>) c).child(key);
+			Node[] children = innerNode.getChildren();
+
+			if (key < keys[0])
+				return findLeafNode(key, children[0], parents);
+
+			for (int i = 0; i < keys.length; i++) {
+				if (keys[i] != null) {
+					if (key < keys[i]) {
+						return findLeafNode(key, children[i], parents);						
+					} 
+				} else
+					return findLeafNode(key, children[i], parents);
+			}
+			return findLeafNode(key, children[children.length - 1], parents);
 		}
-		return (LeafNode<K, V>) c;
-	}*/
+	}  
     
     
-    private String lookupInLeafNode(Integer key, LeafNode node) {        
-    	
-    	System.out.println("lookupInLeafNode here...");
-        String value = null;
-        for (int i = 0; i < node.getValues().length; i++) {
-            if (node.keys[i] != null) {
-                if (key == node.keys[i]) {
-                    value = node.getValues()[i];
-                }
-            }
-        }
-        System.out.println("lookupInLeafNode value --> " +value);
-        return value;
-    }
+	private String lookupInLeafNode(Integer key, LeafNode node) {
+
+		if (node == null) {
+//			System.out.println("null find leaf");
+			return null;
+		}
+//		System.out.println(node);
+		// TODO: lookup value in leaf node
+		String value = null;
+		for (int i = 0; i < node.getValues().length; i++) {
+			if (node.keys[i] != null) {
+				if (Objects.equals(key, node.keys[i])) {
+					value = node.getValues()[i];
+				}
+			} else
+				break;
+		}
+		return value;
+	}
 
     
-	private void insertIntoLeafNode(Integer key, String value,
-                                    LeafNode node, Deque<InnerNode> parents) {
-        // TODO: insert value into leaf node (and propagate changes up)
-        LeafNode leafNode = findLeafNode(key, node);
-        System.out.println("insertIntoLeafNode here...");
-        for (int i = 0; i < leafNode.getKeys().length; i++) {
-        	System.out.println("insertIntoLeafNode 1st loop i < leafNode.getKeys() --> " + leafNode.getKeys().length);
-            String[] leafNodeValues = leafNode.getValues();
-            Integer[] leafNodeKeys = leafNode.getKeys();
-            if (leafNode.getKeys()[i] == null) { //to make sure there is space
-                if (key > leafNode.getKeys()[i-1]){
-                	System.out.println("insertIntoLeafNode leafNode.getKeys()[i] condition --> " + leafNode.getKeys()[i]);
-                    leafNodeValues[i] = value;
-                    leafNodeKeys[i] = key;
-                    break;
-                } else {
-                	System.out.println("insertIntoLeafNode leafNode.getKeys()[i] condition else --> " + leafNode.getKeys()[i]);
-                    String tempVal;
-                    Integer tempKey;
-                    tempVal = leafNodeValues[i-1];
-                    tempKey = leafNodeKeys[i-1];
-                    leafNodeValues[i] = tempVal;
-                    leafNodeKeys[i] = tempKey;
-                    leafNodeValues[i-1] = value;
-                    leafNodeKeys[i-1] = key;
-                    break;
-                    
-                }
-            } else { //there is no space, then split and propagate
-            	System.out.println("insertIntoLeafNode there is no space, then split and propagate --> " + leafNode.getKeys()[i]);
-                Integer[] newKeysArray = new Integer[capacity+1];
-                String[] newValuesArray = new String[capacity+1];
-                Integer[] newKeysForNewNode = new Integer[capacity];
-                String[] newValuesForNewNode = new String[capacity];
-                LeafNode newLeafNode = new LeafNode(capacity);
-                int median;
-                //create a new array for all keys included the new key and sort them
-                for (int x = 0; x < newKeysArray.length - 1; x++) {
-                	System.out.println("insertIntoLeafNode create a new array for all keys included the new key --> " + leafNode.getKeys()[i]);
-                    newKeysArray[x] = leafNodeKeys[x];
-                    newValuesArray[x] = leafNodeValues[x];
-                    if (key > newKeysArray[x]) {
-                        newKeysArray[x+1] = key;
-                        newValuesArray[x+1] = value;
-                    } else {
-                        String tempVal;
-                        Integer tempKey;
-                        tempVal = leafNodeValues[x-1];
-                        tempKey = newKeysArray[x-1];
-                        newKeysArray[x] = tempKey;
-                        newValuesArray[x] = tempVal;
-                        newKeysArray[x-1] = key;
-                        newValuesArray [x-1] = value;
-                    }
-                }
-                //calculate the median of the newKeysArray
-                if (newKeysArray.length % 2 == 0){
-                    median = (newKeysArray[newKeysArray.length/2] + newKeysArray[newKeysArray.length/2 - 1])/2;
-                   System.out.println("calculate the median of the newKeysArray"); 
-                } else {
-                    median = (newKeysArray[newKeysArray.length/2]);
-                    System.out.println("calculate the median of the newKeysArray else ... " +median);
-                }
-                //split the new array to two arrays and push the half keys to both, then update the original leafNode and the new one
-                for (int y = 0,count=capacity/2; y < newKeysForNewNode.length; y++,count++) {
-                	System.out.println("split the new array to two arrays" +count);
-                    if (count <= newKeysForNewNode.length) {
-                        if (newKeysArray[count] != null) {
-                        	System.out.println("split the new array to two arrays" +newKeysForNewNode);
-                            newKeysForNewNode[y] = newKeysArray[count];
-                            newValuesForNewNode[y] = newValuesArray[count];
-                            newKeysArray[count] = null;
-                            newValuesArray[count] = "";
-                            leafNode.setKeys(newKeysArray);
-                            leafNode.setValues(newValuesArray);
-                            newLeafNode.setKeys(newKeysForNewNode);
-                            newLeafNode.setValues(newValuesForNewNode);
-                        }
-                    }
-                }
-                for (int j = 0; j < parents.element().keys.length; j++) {
-                	System.out.println("loop in parents ... " +parents.element().keys.length);
-                    if (parents.element().keys[j] == null) {
-                    	System.out.println("loop in parents J ... " +j);
-                        Integer[] parentKeys = parents.element().getKeys();
-                        for (int h = 0; h < parentKeys.length; h++) {
-                        	System.out.println("loop in parents H ... " +h);
-                            if (median > parentKeys[h]) {
-                            	System.out.println("loop in parents H ... " +median);
-                                parentKeys[h+1] = median;
-                                break;
-                            } else {                            	
-                                Integer tempKey;
-                                tempKey = parentKeys[h-1];
-                                parentKeys[h] = tempKey;
-                                parentKeys[h-1] = median;
-                                System.out.println("loop in parents H ... " +tempKey);
-                                break;
-                            }
-                        }
-                        parents.element().setKeys(parentKeys);
-                        Node [] newLeafNodes = parents.element().getChildren();
-                        System.out.println("new leaf node here ... " +newLeafNodes);
-                        for (int m = 0; m < newLeafNodes.length; m++) {
-                            if (newLeafNodes[m] == null) {
-                                newLeafNodes[m] = newLeafNode;
-                                break;
-                            }
-                        }
-                        parents.element().setChildren(newLeafNodes);
-                        break;
-                    }
-                }
-            }
-            break;
-        }
-    }
+	private void insertIntoLeafNode(Integer key, String value, LeafNode node, Deque<InnerNode> parents) {
+		
+		constructParentChildRelation(parents);
+
+		if (node != null) {
+			Integer tempKey;
+			Object tempValue;
+
+			// System.out.println("Going to insert [" + key + ", " + value + "] into node "
+			// + node.toString() + " in tree\n" + this.toString());
+
+			for (int i = 0; i < node.getKeys().length; i++) {
+				// System.out.println("i = " + i);
+				if (node.getKeys()[i] != null) {
+					if (key > node.getKeys()[i]) { // look for bigger key if any
+						if (keyNotNull(node, i) && key < node.getKeys()[i + 1]) {
+							tempKey = node.getKeys()[i + 1];
+							tempValue = node.getValues()[i + 1];
+							node.getKeys()[i + 1] = key;
+							node.getValues()[i + 1] = value;							
+							relocateEntries(node, tempKey, tempValue, i + 2);
+							break;
+						} else if (i + 1 == node.getKeys().length) { 
+							
+							LeafNode newNode = new LeafNode(node.getKeys().length);
+							int newNodeCounter = 0;
+							for (int originNodeCounter = newNode.getKeys().length / 2; originNodeCounter < newNode
+									.getKeys().length; originNodeCounter++) {
+								newNode.getKeys()[newNodeCounter] = node.getKeys()[originNodeCounter];
+								newNode.getValues()[newNodeCounter++] = node.getValues()[originNodeCounter];
+								node.getKeys()[originNodeCounter] = null;
+								node.getValues()[originNodeCounter] = null;
+							}
+							newNode.getKeys()[newNodeCounter] = key;
+							newNode.getValues()[newNodeCounter] = value;
+							if (node.getParent() == null) { // I am the root, need to create a new root
+								InnerNode newParent = new InnerNode(node.getKeys().length);
+								newParent.getChildren()[0] = node;
+								newParent.getChildren()[1] = newNode;
+								node.setParent(newParent);
+								newNode.setParent(newParent);
+								newParent.updateChildren();
+								newParent.updateKeys();
+								root = newParent;
+								break;
+							}
+							// add new node to parent
+							InnerNode parent = node.getParent();
+							Integer nextNullIndexInParent = findNextNull(parent);
+
+							if (nextNullIndexInParent != null) {
+								parent.getKeys()[nextNullIndexInParent] = newNode.getKeys()[0];
+								parent.getChildren()[nextNullIndexInParent + 1] = newNode;
+							} else { // need to split parent
+								InnerNode newInnerNode = new InnerNode(node.getKeys().length);
+								newInnerNode.setParent(parent.getParent());
+
+								Integer newRootKey = null;
+								// take half of the parent's keys and children into a new node
+								for (int j = parent.getKeys().length / 2; j < parent.getKeys().length; j++) {
+									if (j - parent.getKeys().length / 2 != 0)
+										newInnerNode.getKeys()[j - 1 - parent.getKeys().length / 2] = parent
+												.getKeys()[j];
+									else
+										newRootKey = parent.getKeys()[j];
+									newInnerNode.getChildren()[j - parent.getKeys().length / 2] = parent.getChildren()[j + 1];
+
+									parent.getKeys()[j] = null;
+									parent.getChildren()[j + 1] = null;
+								}
+
+								// TODO place neInnerNode in the right place in the parent's parent and shift
+								// others if needed
+								int newInnerNodeIndex = parent.getIndexInParent() + 1;
+								if (parent.getParent() != null) {
+									insertIntoInnerNode(newInnerNode.getKeys()[0], newInnerNode, parent.getParent(),
+											parents);
+									// TODO might be wrong tempKey and tempValue
+									relocateEntriesIndex(parent.getParent(),
+											parent.getParent().getKeys()[newInnerNodeIndex + 1],
+											parent.getParent().getChildren()[newInnerNodeIndex + 1],
+											newInnerNodeIndex + 1);
+								} else { // parent is root create a new root
+									InnerNode newRoot = new InnerNode(node.getKeys().length);
+									newRoot.getKeys()[0] = newRootKey;
+									newRoot.getChildren()[0] = parent;
+									newRoot.getChildren()[1] = newInnerNode;
+
+									newNode.setParent(newInnerNode);
+									newInnerNode.setParent(newRoot);
+
+									root = newRoot;
+								}
+
+								parents = getNewParentsList(newNode);
+								constructParentChildRelation(parents);
+
+								// update new node into new inner node
+								nextNullIndexInParent = searchNullIndex(newInnerNode);
+								newInnerNode.getKeys()[nextNullIndexInParent] = newNode.getKeys()[0];
+								newInnerNode.getChildren()[nextNullIndexInParent + 1] = newNode;
+
+							}
+							break;
+						}
+					} else { // key < node.getKeys()[i]
+						tempKey = node.getKeys()[i];
+						tempValue = node.getValues()[i];
+						node.getKeys()[i] = key;
+						node.getValues()[i] = value;
+						// shift following keys and values
+						relocateEntriesIndex(node, tempKey, tempValue, i + 1);
+						break;
+					}
+				} else { // node.getKeys()[i] == null
+					node.getKeys()[i] = key;
+					node.getValues()[i] = value;
+					break;
+				}
+			}
+			// System.out.println("Resulting tree:\n" + this.toString());
+
+			if (node.getParent() != null) {
+				node.getParent().updateChildren();
+				node.getParent().updateKeys();
+			}
+		}
+	}
 
     private String deleteFromLeafNode(Integer key, LeafNode node,
                                       Deque<InnerNode> parents) {
@@ -227,6 +229,133 @@ public class BPlusTree {
         }
         return value;
     }
+    
+    private void insertIntoInnerNode(Integer keyToInsert, Node childToInsert, InnerNode node,
+			Deque<InnerNode> parents) {
+
+		constructParentChildRelation(parents);
+
+		if (node != null) {
+			Integer tempKey = null;
+			Node tempValue = null;
+
+			for (int i = 0; i < node.getKeys().length; i++) {
+				if (node.getKeys()[i] != null) {
+					if (node.getKeys()[i] > keyToInsert) {
+						tempKey = node.getKeys()[i];
+						node.getKeys()[i] = keyToInsert;
+
+						if (i == 0) {
+							tempValue = node.getChildren()[i];
+							node.getChildren()[i] = childToInsert;
+						} else {
+							tempValue = node.getChildren()[i + 1];
+							node.getChildren()[i + 1] = childToInsert;
+						}
+
+						relocateEntriesIndex(node, tempKey, tempValue, i + 1);
+						break;
+					}
+				} else if (node.getKeys()[i] == null) {
+					node.getKeys()[i] = keyToInsert;
+					node.getChildren()[i + 1] = childToInsert;
+
+					relocateEntriesIndex(node, tempKey, tempValue, i + 1);
+					break;
+				} else if (i == node.getKeys().length - 1) { // split
+					throw new RuntimeException("Split area of the code reached.");
+
+				} else {
+					throw new RuntimeException("Unexpected area of the code reached.");
+				}
+
+			}
+
+			if (node.getParent() != null) {
+				node.getParent().updateChildren();
+				node.getParent().updateKeys();
+			}
+		}
+
+	}
+    
+//    Object Helper 
+    
+	private void constructParentChildRelation(Deque<InnerNode> parents) {
+		for (InnerNode parentNode : parents) {
+			for (Node childNode : parentNode.getChildren())
+				if (childNode != null)
+					childNode.setParent(parentNode);
+		}
+	}
+	
+	private boolean keyNotNull(LeafNode node, int i) {
+        return i + 1 < node.getKeys().length && node.getKeys()[i + 1] != null;
+    }
+	
+	private void relocateEntries(Node node, Integer tempKey, Object tempValue, int index) {
+        Integer key;
+        Object value;
+        for (int j = index; j < node.getKeys().length; j++) {
+            //System.out.println("j = " + j);
+            key = node.getKeys()[j];
+            value = node.getPayload()[j];
+            node.getKeys()[j] = tempKey;
+            node.getPayload()[j] = tempValue;
+            // prepare for next round
+            tempKey = key;
+            tempValue = value;
+        }
+    }
+	
+	private Integer findNextNull(Node node) {
+        if (node != null) {
+            for (int i = 0; i < node.getKeys().length; i++) {
+                if (node.getKeys()[i] == null)
+                    return i;
+            }
+        }
+        return null;
+    }
+	
+	 private void relocateEntriesIndex(Node node, Integer tempKey, Object tempValue, int index) {
+	        Integer key;
+	        Object value;
+	        for (int j = index; j < node.getKeys().length; j++) {
+	            //System.out.println("j = " + j);
+	            key = node.getKeys()[j];
+	            value = node.getPayload()[j];
+	            node.getKeys()[j] = tempKey;
+	            node.getPayload()[j] = tempValue;
+	            // prepare for next round
+	            tempKey = key;
+	            tempValue = value;
+	        }
+	    }
+	 
+	 private Integer searchNullIndex(Node node) {
+	        if (node != null) {
+	            for (int i = 0; i < node.getKeys().length; i++) {
+	                if (node.getKeys()[i] == null)
+	                    return i;
+	            }
+	        }
+	        return null;
+	    }
+	
+    
+//  End Object Helper   
+	 
+	private Deque<InnerNode> getNewParentsList(LeafNode newNode) {
+		Deque<InnerNode> newParentsList = new LinkedList<>();
+
+		InnerNode node = newNode.getParent();
+		while (node != null) {
+			newParentsList.add(node);
+			node = node.getParent();
+		}
+		return newParentsList;
+	}
 
     ///// Public API
     ///// These can be left unchanged
