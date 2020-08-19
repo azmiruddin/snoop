@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  redis-master:
+    build: master
+    container_name: redis-master
+    ports:
+      - "6379:6379"
+      - "16379:16379"
+    volumes:
+      - "./data/redis-master:/data"
+
+  redis-slave:
+    container_name: redis-slave
+    image: redis:latest
+    command: redis-server --slaveof redis-master 6379
+    volumes:
+      - "./data/redis-slave:/data"
+    links:
+      - redis-master
+  redis-sentinel:
+    container_name: redis-sentinel
+    build: redis-sentinel
+    links:
+      - redis-master
+

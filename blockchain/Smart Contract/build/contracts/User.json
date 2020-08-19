@@ -1,0 +1,754 @@
+{
+  "contractName": "User",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_digest",
+          "type": "string"
+        }
+      ],
+      "name": "setEntry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_digest\",\"type\":\"string\"}],\"name\":\"setEntry\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"setEntry(string)\":{\"details\":\"associate a multihash entry with the sender address\",\"params\":{\"_digest\":\"hash digest produced by hashing content using hash function\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/User.sol\":\"User\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/User.sol\":{\"keccak256\":\"0x300b880f225fe7e3c45aeb1a64454334b601633c1fc720e0fec92a9596b45093\",\"urls\":[\"bzz-raw://a51017ef1017558312e61b7e80a9b8a69c5f379ff7594436ada9843fcbaf1e23\",\"dweb:/ipfs/QmWJUE8mRxcnT4nWpksuYxX5JHVR3yNG5PSmxTguuRpWjC\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061024f806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80634b36982014610030575b600080fd5b6100d66004803603602081101561004657600080fd5b81019060208101813564010000000081111561006157600080fd5b82018360208201111561007357600080fd5b8035906020019184600183028401116401000000008311171561009557600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506100d8945050505050565b005b6100e061016c565b6040518060200160405280838152509050806000836040518082805190602001908083835b602083106101245780518252601f199092019160209182019101610105565b51815160209384036101000a60001901801990921691161790529201948552506040519384900381019093208451805191946101659450859350019061017f565b5050505050565b6040518060200160405280606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101c057805160ff19168380011785556101ed565b828001600101855582156101ed579182015b828111156101ed5782518255916020019190600101906101d2565b506101f99291506101fd565b5090565b61021791905b808211156101f95760008155600101610203565b9056fea265627a7a72315820ede922a6e7454da6ef3edb681e46d83d9bd19f6bf3b7dc282bfc9388929e2adc64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80634b36982014610030575b600080fd5b6100d66004803603602081101561004657600080fd5b81019060208101813564010000000081111561006157600080fd5b82018360208201111561007357600080fd5b8035906020019184600183028401116401000000008311171561009557600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506100d8945050505050565b005b6100e061016c565b6040518060200160405280838152509050806000836040518082805190602001908083835b602083106101245780518252601f199092019160209182019101610105565b51815160209384036101000a60001901801990921691161790529201948552506040519384900381019093208451805191946101659450859350019061017f565b5050505050565b6040518060200160405280606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101c057805160ff19168380011785556101ed565b828001600101855582156101ed579182015b828111156101ed5782518255916020019190600101906101d2565b506101f99291506101fd565b5090565b61021791905b808211156101f95760008155600101610203565b9056fea265627a7a72315820ede922a6e7454da6ef3edb681e46d83d9bd19f6bf3b7dc282bfc9388929e2adc64736f6c63430005100032",
+  "sourceMap": "34:427:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:427:4;;;;;;;",
+  "deployedSourceMap": "34:427:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:427:4;;;;;;;;;;;;;;;;;;;307:152;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;307:152:4;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;307:152:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;307:152:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;307:152:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;307:152:4;;-1:-1:-1;307:152:4;;-1:-1:-1;;;;;307:152:4:i;:::-;;;362:18;;:::i;:::-;383:41;;;;;;;;410:7;383:41;;;362:62;;450:4;431:7;439;431:16;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;176:10;;164:23;;-1:-1;;139:12;;;;98:2;89:12;;;;114;36:153;;;299:10;344;;263:2;259:12;;;254:3;250:22;-1:-1;;246:30;311:9;;295:26;;;340:21;;377:20;365:33;;431:16:4;;;;;-1:-1:-1;431:16:4;;;;;;;;;;;:23;;;;:16;;:23;;-1:-1:-1;431:16:4;;-1:-1:-1;431:23:4;;;:::i;:::-;-1:-1:-1;;;;;307:152:4:o;34:427::-;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;34:427:4;;;-1:-1:-1;34:427:4;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\n\ncontract User {\n\n    struct Triple {\n        string ipfsHash;\n    }\n\n  mapping (string => Triple) private entries;\n\n  /**\n   * @dev associate a multihash entry with the sender address\n   * @param _digest hash digest produced by hashing content using hash function\n   */\n\n  function setEntry(string memory _digest) public {\n\n    Triple memory data = Triple({\n        ipfsHash: _digest\n    });\n\n    entries[_digest] = data;\n  }\n}\n",
+  "sourcePath": "D:\\dev\\resTh\\Semantic2019-master\\blockchain\\Smart Contract\\contracts\\User.sol",
+  "ast": {
+    "absolutePath": "/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/User.sol",
+    "exportedSymbols": {
+      "User": [
+        269
+      ]
+    },
+    "id": 270,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 243,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 269,
+        "linearizedBaseContracts": [
+          269
+        ],
+        "name": "User",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "User.Triple",
+            "id": 246,
+            "members": [
+              {
+                "constant": false,
+                "id": 245,
+                "name": "ipfsHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 246,
+                "src": "79:15:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 244,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "79:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Triple",
+            "nodeType": "StructDefinition",
+            "scope": 269,
+            "src": "55:46:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 250,
+            "name": "entries",
+            "nodeType": "VariableDeclaration",
+            "scope": 269,
+            "src": "105:42:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Triple_$246_storage_$",
+              "typeString": "mapping(string => struct User.Triple)"
+            },
+            "typeName": {
+              "id": 249,
+              "keyType": {
+                "id": 247,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "114:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "105:26:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Triple_$246_storage_$",
+                "typeString": "mapping(string => struct User.Triple)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 248,
+                "name": "Triple",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 246,
+                "src": "124:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Triple_$246_storage_ptr",
+                  "typeString": "struct User.Triple"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 267,
+              "nodeType": "Block",
+              "src": "355:104:4",
+              "statements": [
+                {
+                  "assignments": [
+                    256
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 256,
+                      "name": "data",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 267,
+                      "src": "362:18:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$246_memory_ptr",
+                        "typeString": "struct User.Triple"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 255,
+                        "name": "Triple",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 246,
+                        "src": "362:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Triple_$246_storage_ptr",
+                          "typeString": "struct User.Triple"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 260,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 258,
+                        "name": "_digest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 252,
+                        "src": "410:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 257,
+                      "name": "Triple",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 246,
+                      "src": "383:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Triple_$246_storage_ptr_$",
+                        "typeString": "type(struct User.Triple storage pointer)"
+                      }
+                    },
+                    "id": 259,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "ipfsHash"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "383:41:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$246_memory",
+                      "typeString": "struct User.Triple memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "362:62:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 265,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 261,
+                        "name": "entries",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 250,
+                        "src": "431:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Triple_$246_storage_$",
+                          "typeString": "mapping(string memory => struct User.Triple storage ref)"
+                        }
+                      },
+                      "id": 263,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 262,
+                        "name": "_digest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 252,
+                        "src": "439:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "431:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$246_storage",
+                        "typeString": "struct User.Triple storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 264,
+                      "name": "data",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 256,
+                      "src": "450:4:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$246_memory_ptr",
+                        "typeString": "struct User.Triple memory"
+                      }
+                    },
+                    "src": "431:23:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$246_storage",
+                      "typeString": "struct User.Triple storage ref"
+                    }
+                  },
+                  "id": 266,
+                  "nodeType": "ExpressionStatement",
+                  "src": "431:23:4"
+                }
+              ]
+            },
+            "documentation": "@dev associate a multihash entry with the sender address\n@param _digest hash digest produced by hashing content using hash function",
+            "id": 268,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEntry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 253,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 252,
+                  "name": "_digest",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 268,
+                  "src": "325:21:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 251,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "325:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "324:23:4"
+            },
+            "returnParameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "355:0:4"
+            },
+            "scope": 269,
+            "src": "307:152:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 270,
+        "src": "34:427:4"
+      }
+    ],
+    "src": "0:462:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/User.sol",
+    "exportedSymbols": {
+      "User": [
+        269
+      ]
+    },
+    "id": 270,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 243,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 269,
+        "linearizedBaseContracts": [
+          269
+        ],
+        "name": "User",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "User.Triple",
+            "id": 246,
+            "members": [
+              {
+                "constant": false,
+                "id": 245,
+                "name": "ipfsHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 246,
+                "src": "79:15:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 244,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "79:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Triple",
+            "nodeType": "StructDefinition",
+            "scope": 269,
+            "src": "55:46:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 250,
+            "name": "entries",
+            "nodeType": "VariableDeclaration",
+            "scope": 269,
+            "src": "105:42:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Triple_$246_storage_$",
+              "typeString": "mapping(string => struct User.Triple)"
+            },
+            "typeName": {
+              "id": 249,
+              "keyType": {
+                "id": 247,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "114:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "105:26:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Triple_$246_storage_$",
+                "typeString": "mapping(string => struct User.Triple)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 248,
+                "name": "Triple",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 246,
+                "src": "124:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Triple_$246_storage_ptr",
+                  "typeString": "struct User.Triple"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 267,
+              "nodeType": "Block",
+              "src": "355:104:4",
+              "statements": [
+                {
+                  "assignments": [
+                    256
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 256,
+                      "name": "data",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 267,
+                      "src": "362:18:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$246_memory_ptr",
+                        "typeString": "struct User.Triple"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 255,
+                        "name": "Triple",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 246,
+                        "src": "362:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Triple_$246_storage_ptr",
+                          "typeString": "struct User.Triple"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 260,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 258,
+                        "name": "_digest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 252,
+                        "src": "410:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 257,
+                      "name": "Triple",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 246,
+                      "src": "383:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Triple_$246_storage_ptr_$",
+                        "typeString": "type(struct User.Triple storage pointer)"
+                      }
+                    },
+                    "id": 259,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "ipfsHash"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "383:41:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$246_memory",
+                      "typeString": "struct User.Triple memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "362:62:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 265,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 261,
+                        "name": "entries",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 250,
+                        "src": "431:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Triple_$246_storage_$",
+                          "typeString": "mapping(string memory => struct User.Triple storage ref)"
+                        }
+                      },
+                      "id": 263,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 262,
+                        "name": "_digest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 252,
+                        "src": "439:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "431:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$246_storage",
+                        "typeString": "struct User.Triple storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 264,
+                      "name": "data",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 256,
+                      "src": "450:4:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$246_memory_ptr",
+                        "typeString": "struct User.Triple memory"
+                      }
+                    },
+                    "src": "431:23:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$246_storage",
+                      "typeString": "struct User.Triple storage ref"
+                    }
+                  },
+                  "id": 266,
+                  "nodeType": "ExpressionStatement",
+                  "src": "431:23:4"
+                }
+              ]
+            },
+            "documentation": "@dev associate a multihash entry with the sender address\n@param _digest hash digest produced by hashing content using hash function",
+            "id": 268,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEntry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 253,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 252,
+                  "name": "_digest",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 268,
+                  "src": "325:21:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 251,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "325:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "324:23:4"
+            },
+            "returnParameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "355:0:4"
+            },
+            "scope": 269,
+            "src": "307:152:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 270,
+        "src": "34:427:4"
+      }
+    ],
+    "src": "0:462:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "4224": {
+      "events": {},
+      "links": {},
+      "address": "0x67F13c8c689274d4c1E825353bEefC8b02479b06",
+      "transactionHash": "0x395a4cd8d9fb12e1d59ddd3c377fa3c927c27ef37a5275f866f98b03558377bf"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-04-06T07:16:53.794Z",
+  "devdoc": {
+    "methods": {
+      "setEntry(string)": {
+        "details": "associate a multihash entry with the sender address",
+        "params": {
+          "_digest": "hash digest produced by hashing content using hash function"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

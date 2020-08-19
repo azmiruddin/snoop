@@ -1,0 +1,1918 @@
+{
+  "contractName": "StoreTripleData",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_triple",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "_digest",
+          "type": "string"
+        }
+      ],
+      "name": "insertIPFS",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_triple",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address payable",
+          "name": "receiver",
+          "type": "address"
+        }
+      ],
+      "name": "buyData",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_triple",
+          "type": "bytes32"
+        }
+      ],
+      "name": "fetchIPFS",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "ipfsHash",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_triple\",\"type\":\"bytes32\"},{\"internalType\":\"address payable\",\"name\":\"receiver\",\"type\":\"address\"}],\"name\":\"buyData\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_triple\",\"type\":\"bytes32\"}],\"name\":\"fetchIPFS\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"ipfsHash\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_triple\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"_digest\",\"type\":\"string\"}],\"name\":\"insertIPFS\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"buyData(bytes32,address)\":{\"details\":\"retrieve multihash entry associated with an ipfs hash digest\",\"params\":{\"_triple\":\"address used as key\"}},\"insertIPFS(bytes32,string)\":{\"details\":\"associate a multihash entry with the sender address\",\"params\":{\"_digest\":\"hash digest produced by hashing content using hash function\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/StoreTripleData.sol\":\"StoreTripleData\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/StoreTripleData.sol\":{\"keccak256\":\"0x8c74d2694da871ae5f6b4b3ddcf7130ab24f643cbb9b9a631c859e5f3203fa5a\",\"urls\":[\"bzz-raw://ce45d1046895c84d1298de88c5b20f46a12ece4b2fdc3c633e0eecb2cd07018b\",\"dweb:/ipfs/QmZeo1CdPAjm1TmXJxy13LbPrNWE3ks7mV5cSRrMfV7SvE\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506103e7806100206000396000f3fe6080604052600436106100345760003560e01c80636c0602de1461003957806394450d48146100d8578063eedbedc214610194575b600080fd5b34801561004557600080fd5b506100636004803603602081101561005c57600080fd5b50356101c0565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561009d578181015183820152602001610085565b50505050905090810190601f1680156100ca5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100e457600080fd5b50610192600480360360408110156100fb57600080fd5b8135919081019060408101602082013564010000000081111561011d57600080fd5b82018360208201111561012f57600080fd5b8035906020019184600183028401116401000000008311171561015157600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610268945050505050565b005b610192600480360360408110156101aa57600080fd5b50803590602001356001600160a01b03166102b8565b60008181526020818152604091829020600180820180548551600293821615610100026000190190911692909204601f810185900485028301850190955284825260609492939192909183018282801561025b5780601f106102305761010080835404028352916020019161025b565b820191906000526020600020905b81548152906001019060200180831161023e57829003601f168201915b5050505050915050919050565b6102706102ff565b50604080518082018252838152602080820184815260008681528083529390932082518155925180519293849390926102b0926001850192910190610317565b505050505050565b600034116102c557600080fd5b6040516001600160a01b038216903480156108fc02916000818181858888f193505050501580156102fa573d6000803e3d6000fd5b505050565b60408051808201909152600081526060602082015290565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061035857805160ff1916838001178555610385565b82800160010185558215610385579182015b8281111561038557825182559160200191906001019061036a565b50610391929150610395565b5090565b6103af91905b80821115610391576000815560010161039b565b9056fea265627a7a7231582007596e6754ce105768814ea76fe5a3c5d679fc3b30e28346f656b77265ebabf064736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c80636c0602de1461003957806394450d48146100d8578063eedbedc214610194575b600080fd5b34801561004557600080fd5b506100636004803603602081101561005c57600080fd5b50356101c0565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561009d578181015183820152602001610085565b50505050905090810190601f1680156100ca5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100e457600080fd5b50610192600480360360408110156100fb57600080fd5b8135919081019060408101602082013564010000000081111561011d57600080fd5b82018360208201111561012f57600080fd5b8035906020019184600183028401116401000000008311171561015157600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610268945050505050565b005b610192600480360360408110156101aa57600080fd5b50803590602001356001600160a01b03166102b8565b60008181526020818152604091829020600180820180548551600293821615610100026000190190911692909204601f810185900485028301850190955284825260609492939192909183018282801561025b5780601f106102305761010080835404028352916020019161025b565b820191906000526020600020905b81548152906001019060200180831161023e57829003601f168201915b5050505050915050919050565b6102706102ff565b50604080518082018252838152602080820184815260008681528083529390932082518155925180519293849390926102b0926001850192910190610317565b505050505050565b600034116102c557600080fd5b6040516001600160a01b038216903480156108fc02916000818181858888f193505050501580156102fa573d6000803e3d6000fd5b505050565b60408051808201909152600081526060602082015290565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061035857805160ff1916838001178555610385565b82800160010185558215610385579182015b8281111561038557825182559160200191906001019061036a565b50610391929150610395565b5090565b6103af91905b80821115610391576000815560010161039b565b9056fea265627a7a7231582007596e6754ce105768814ea76fe5a3c5d679fc3b30e28346f656b77265ebabf064736f6c63430005100032",
+  "sourceMap": "34:968:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:968:3;;;;;;;",
+  "deployedSourceMap": "34:968:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;830:168;;8:9:-1;5:2;;;30:1;27;20:12;5:2;830:168:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;830:168:3;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;830:168:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;347:196;;8:9:-1;5:2;;;30:1;27;20:12;5:2;347:196:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;347:196:3;;;;;;;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;347:196:3;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;347:196:3;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;347:196:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;347:196:3;;-1:-1:-1;347:196:3;;-1:-1:-1;;;;;347:196:3:i;:::-;;673:151;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;673:151:3;;;;;;-1:-1:-1;;;;;673:151:3;;:::i;830:168::-;923:19;945:16;;;;;;;;;;;;978:13;;;;971:20;;;;;;;;;;;-1:-1:-1;;971:20:3;;;;;;;;;;;;;;;;;;;;;;;;;;889:22;;945:16;;971:20;;978:13;;971:20;;978:13;971:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;830:168;;;:::o;347:196::-;421:18;;:::i;:::-;-1:-1:-1;442:66:3;;;;;;;;;;;;;;;;;;-1:-1:-1;515:16:3;;;;;;;;;;:23;;;;;;;;442:66;;;;515:16;;:23;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;;347:196:3:o;673:151::-;777:1;765:9;:13;757:22;;;;;;789:28;;-1:-1:-1;;;;;789:17:3;;;807:9;789:28;;;;;;;;;807:9;789:17;:28;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;789:28:3;673:151;;:::o;34:968::-;;;;;;;;;;-1:-1:-1;34:968:3;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;34:968:3;;;-1:-1:-1;34:968:3;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\n\ncontract StoreTripleData {\n\n    struct Triple {\n        bytes32 triple;\n        string ipfsHash;\n    }\n\n    mapping (bytes32 => Triple) private entries;\n\n\n\n  /**\n   * @dev associate a multihash entry with the sender address\n   * @param _digest hash digest produced by hashing content using hash function\n   */\n\n  function insertIPFS(bytes32 _triple, string memory _digest) public {\n\n    Triple memory data = Triple({\n        triple: _triple,\n        ipfsHash: _digest\n    });\n\n    entries[_triple] = data;\n  }\n\n  /**\n   * @dev retrieve multihash entry associated with an ipfs hash digest\n   * @param _triple address used as key\n   */\n\n    function buyData(bytes32 _triple, address payable receiver) payable public{\n        require(msg.value > 0);\n        receiver.transfer(msg.value);\n    }\n\n    function fetchIPFS(bytes32 _triple) external view returns (string memory ipfsHash) {\n        Triple storage ipfs = entries[_triple];\n        return ipfs.ipfsHash;\n    }\n\n\n}\n",
+  "sourcePath": "D:\\dev\\resTh\\Semantic2019-master\\blockchain\\Smart Contract\\contracts\\StoreTripleData.sol",
+  "ast": {
+    "absolutePath": "/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/StoreTripleData.sol",
+    "exportedSymbols": {
+      "StoreTripleData": [
+        241
+      ]
+    },
+    "id": 242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 171,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 241,
+        "linearizedBaseContracts": [
+          241
+        ],
+        "name": "StoreTripleData",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StoreTripleData.Triple",
+            "id": 176,
+            "members": [
+              {
+                "constant": false,
+                "id": 173,
+                "name": "triple",
+                "nodeType": "VariableDeclaration",
+                "scope": 176,
+                "src": "90:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 172,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "90:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 175,
+                "name": "ipfsHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 176,
+                "src": "114:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 174,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Triple",
+            "nodeType": "StructDefinition",
+            "scope": 241,
+            "src": "66:70:3",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 180,
+            "name": "entries",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "142:43:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+              "typeString": "mapping(bytes32 => struct StoreTripleData.Triple)"
+            },
+            "typeName": {
+              "id": 179,
+              "keyType": {
+                "id": 177,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "151:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "142:27:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+                "typeString": "mapping(bytes32 => struct StoreTripleData.Triple)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 178,
+                "name": "Triple",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 176,
+                "src": "162:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                  "typeString": "struct StoreTripleData.Triple"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 200,
+              "nodeType": "Block",
+              "src": "414:129:3",
+              "statements": [
+                {
+                  "assignments": [
+                    188
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 188,
+                      "name": "data",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 200,
+                      "src": "421:18:3",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_memory_ptr",
+                        "typeString": "struct StoreTripleData.Triple"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 187,
+                        "name": "Triple",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 176,
+                        "src": "421:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                          "typeString": "struct StoreTripleData.Triple"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 193,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 190,
+                        "name": "_triple",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 182,
+                        "src": "467:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 191,
+                        "name": "_digest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 184,
+                        "src": "494:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 189,
+                      "name": "Triple",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 176,
+                      "src": "442:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Triple_$176_storage_ptr_$",
+                        "typeString": "type(struct StoreTripleData.Triple storage pointer)"
+                      }
+                    },
+                    "id": 192,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "triple",
+                      "ipfsHash"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "442:66:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$176_memory",
+                      "typeString": "struct StoreTripleData.Triple memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "421:87:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 198,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 194,
+                        "name": "entries",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 180,
+                        "src": "515:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+                          "typeString": "mapping(bytes32 => struct StoreTripleData.Triple storage ref)"
+                        }
+                      },
+                      "id": 196,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 195,
+                        "name": "_triple",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 182,
+                        "src": "523:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "515:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_storage",
+                        "typeString": "struct StoreTripleData.Triple storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 197,
+                      "name": "data",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 188,
+                      "src": "534:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_memory_ptr",
+                        "typeString": "struct StoreTripleData.Triple memory"
+                      }
+                    },
+                    "src": "515:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$176_storage",
+                      "typeString": "struct StoreTripleData.Triple storage ref"
+                    }
+                  },
+                  "id": 199,
+                  "nodeType": "ExpressionStatement",
+                  "src": "515:23:3"
+                }
+              ]
+            },
+            "documentation": "@dev associate a multihash entry with the sender address\n@param _digest hash digest produced by hashing content using hash function",
+            "id": 201,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "insertIPFS",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 182,
+                  "name": "_triple",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "367:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 181,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 184,
+                  "name": "_digest",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "384:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 183,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:40:3"
+            },
+            "returnParameters": {
+              "id": 186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "414:0:3"
+            },
+            "scope": 241,
+            "src": "347:196:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 222,
+              "nodeType": "Block",
+              "src": "747:77:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 212,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 209,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 284,
+                            "src": "765:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 210,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "765:9:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 211,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "777:1:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "765:13:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 208,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        287,
+                        288
+                      ],
+                      "referencedDeclaration": 287,
+                      "src": "757:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 213,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "757:22:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 214,
+                  "nodeType": "ExpressionStatement",
+                  "src": "757:22:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 218,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 284,
+                          "src": "807:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 219,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "807:9:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 215,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 205,
+                        "src": "789:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 217,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "789:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 220,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "789:28:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 221,
+                  "nodeType": "ExpressionStatement",
+                  "src": "789:28:3"
+                }
+              ]
+            },
+            "documentation": "@dev retrieve multihash entry associated with an ipfs hash digest\n@param _triple address used as key",
+            "id": 223,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buyData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 206,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 203,
+                  "name": "_triple",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 223,
+                  "src": "690:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 202,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "690:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 205,
+                  "name": "receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 223,
+                  "src": "707:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 204,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "707:15:3",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "689:43:3"
+            },
+            "returnParameters": {
+              "id": 207,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "747:0:3"
+            },
+            "scope": 241,
+            "src": "673:151:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 239,
+              "nodeType": "Block",
+              "src": "913:85:3",
+              "statements": [
+                {
+                  "assignments": [
+                    231
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 231,
+                      "name": "ipfs",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 239,
+                      "src": "923:19:3",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                        "typeString": "struct StoreTripleData.Triple"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 230,
+                        "name": "Triple",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 176,
+                        "src": "923:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                          "typeString": "struct StoreTripleData.Triple"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 235,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 232,
+                      "name": "entries",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 180,
+                      "src": "945:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+                        "typeString": "mapping(bytes32 => struct StoreTripleData.Triple storage ref)"
+                      }
+                    },
+                    "id": 234,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 233,
+                      "name": "_triple",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 225,
+                      "src": "953:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "945:16:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$176_storage",
+                      "typeString": "struct StoreTripleData.Triple storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "923:38:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 236,
+                      "name": "ipfs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 231,
+                      "src": "978:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                        "typeString": "struct StoreTripleData.Triple storage pointer"
+                      }
+                    },
+                    "id": 237,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "ipfsHash",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 175,
+                    "src": "978:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 229,
+                  "id": 238,
+                  "nodeType": "Return",
+                  "src": "971:20:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 240,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fetchIPFS",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 226,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 225,
+                  "name": "_triple",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "849:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 224,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "849:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "848:17:3"
+            },
+            "returnParameters": {
+              "id": 229,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 228,
+                  "name": "ipfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "889:22:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 227,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "889:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "888:24:3"
+            },
+            "scope": 241,
+            "src": "830:168:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 242,
+        "src": "34:968:3"
+      }
+    ],
+    "src": "0:1003:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/dev/resTh/Semantic2019-master/blockchain/Smart Contract/contracts/StoreTripleData.sol",
+    "exportedSymbols": {
+      "StoreTripleData": [
+        241
+      ]
+    },
+    "id": 242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 171,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 241,
+        "linearizedBaseContracts": [
+          241
+        ],
+        "name": "StoreTripleData",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StoreTripleData.Triple",
+            "id": 176,
+            "members": [
+              {
+                "constant": false,
+                "id": 173,
+                "name": "triple",
+                "nodeType": "VariableDeclaration",
+                "scope": 176,
+                "src": "90:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 172,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "90:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 175,
+                "name": "ipfsHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 176,
+                "src": "114:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 174,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Triple",
+            "nodeType": "StructDefinition",
+            "scope": 241,
+            "src": "66:70:3",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 180,
+            "name": "entries",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "142:43:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+              "typeString": "mapping(bytes32 => struct StoreTripleData.Triple)"
+            },
+            "typeName": {
+              "id": 179,
+              "keyType": {
+                "id": 177,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "151:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "142:27:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+                "typeString": "mapping(bytes32 => struct StoreTripleData.Triple)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 178,
+                "name": "Triple",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 176,
+                "src": "162:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                  "typeString": "struct StoreTripleData.Triple"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 200,
+              "nodeType": "Block",
+              "src": "414:129:3",
+              "statements": [
+                {
+                  "assignments": [
+                    188
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 188,
+                      "name": "data",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 200,
+                      "src": "421:18:3",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_memory_ptr",
+                        "typeString": "struct StoreTripleData.Triple"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 187,
+                        "name": "Triple",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 176,
+                        "src": "421:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                          "typeString": "struct StoreTripleData.Triple"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 193,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 190,
+                        "name": "_triple",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 182,
+                        "src": "467:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 191,
+                        "name": "_digest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 184,
+                        "src": "494:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 189,
+                      "name": "Triple",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 176,
+                      "src": "442:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Triple_$176_storage_ptr_$",
+                        "typeString": "type(struct StoreTripleData.Triple storage pointer)"
+                      }
+                    },
+                    "id": 192,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "triple",
+                      "ipfsHash"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "442:66:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$176_memory",
+                      "typeString": "struct StoreTripleData.Triple memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "421:87:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 198,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 194,
+                        "name": "entries",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 180,
+                        "src": "515:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+                          "typeString": "mapping(bytes32 => struct StoreTripleData.Triple storage ref)"
+                        }
+                      },
+                      "id": 196,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 195,
+                        "name": "_triple",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 182,
+                        "src": "523:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "515:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_storage",
+                        "typeString": "struct StoreTripleData.Triple storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 197,
+                      "name": "data",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 188,
+                      "src": "534:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_memory_ptr",
+                        "typeString": "struct StoreTripleData.Triple memory"
+                      }
+                    },
+                    "src": "515:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$176_storage",
+                      "typeString": "struct StoreTripleData.Triple storage ref"
+                    }
+                  },
+                  "id": 199,
+                  "nodeType": "ExpressionStatement",
+                  "src": "515:23:3"
+                }
+              ]
+            },
+            "documentation": "@dev associate a multihash entry with the sender address\n@param _digest hash digest produced by hashing content using hash function",
+            "id": 201,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "insertIPFS",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 182,
+                  "name": "_triple",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "367:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 181,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 184,
+                  "name": "_digest",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "384:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 183,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:40:3"
+            },
+            "returnParameters": {
+              "id": 186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "414:0:3"
+            },
+            "scope": 241,
+            "src": "347:196:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 222,
+              "nodeType": "Block",
+              "src": "747:77:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 212,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 209,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 284,
+                            "src": "765:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 210,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "765:9:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 211,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "777:1:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "765:13:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 208,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        287,
+                        288
+                      ],
+                      "referencedDeclaration": 287,
+                      "src": "757:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 213,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "757:22:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 214,
+                  "nodeType": "ExpressionStatement",
+                  "src": "757:22:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 218,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 284,
+                          "src": "807:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 219,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "807:9:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 215,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 205,
+                        "src": "789:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 217,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "789:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 220,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "789:28:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 221,
+                  "nodeType": "ExpressionStatement",
+                  "src": "789:28:3"
+                }
+              ]
+            },
+            "documentation": "@dev retrieve multihash entry associated with an ipfs hash digest\n@param _triple address used as key",
+            "id": 223,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buyData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 206,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 203,
+                  "name": "_triple",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 223,
+                  "src": "690:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 202,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "690:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 205,
+                  "name": "receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 223,
+                  "src": "707:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 204,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "707:15:3",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "689:43:3"
+            },
+            "returnParameters": {
+              "id": 207,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "747:0:3"
+            },
+            "scope": 241,
+            "src": "673:151:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 239,
+              "nodeType": "Block",
+              "src": "913:85:3",
+              "statements": [
+                {
+                  "assignments": [
+                    231
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 231,
+                      "name": "ipfs",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 239,
+                      "src": "923:19:3",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                        "typeString": "struct StoreTripleData.Triple"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 230,
+                        "name": "Triple",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 176,
+                        "src": "923:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                          "typeString": "struct StoreTripleData.Triple"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 235,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 232,
+                      "name": "entries",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 180,
+                      "src": "945:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Triple_$176_storage_$",
+                        "typeString": "mapping(bytes32 => struct StoreTripleData.Triple storage ref)"
+                      }
+                    },
+                    "id": 234,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 233,
+                      "name": "_triple",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 225,
+                      "src": "953:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "945:16:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Triple_$176_storage",
+                      "typeString": "struct StoreTripleData.Triple storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "923:38:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 236,
+                      "name": "ipfs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 231,
+                      "src": "978:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Triple_$176_storage_ptr",
+                        "typeString": "struct StoreTripleData.Triple storage pointer"
+                      }
+                    },
+                    "id": 237,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "ipfsHash",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 175,
+                    "src": "978:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 229,
+                  "id": 238,
+                  "nodeType": "Return",
+                  "src": "971:20:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 240,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fetchIPFS",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 226,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 225,
+                  "name": "_triple",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "849:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 224,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "849:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "848:17:3"
+            },
+            "returnParameters": {
+              "id": 229,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 228,
+                  "name": "ipfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "889:22:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 227,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "889:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "888:24:3"
+            },
+            "scope": 241,
+            "src": "830:168:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 242,
+        "src": "34:968:3"
+      }
+    ],
+    "src": "0:1003:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "4224": {
+      "events": {},
+      "links": {},
+      "address": "0xA07a79f014A9eeB2326C73Cb1a3235464508Fa1f",
+      "transactionHash": "0x7e040923ec180dcc506533a0426749c667850d63d19145a0b7c3869e99ac38ab"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x372c18de82fd15B155D75666F4C0a33F66a6A5dA",
+      "transactionHash": "0xad7bbec09bf0d688d67c7bb29cf10ccbcc29bc4a03c5c83cc5e895d09b58a095"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-04-06T07:16:53.791Z",
+  "devdoc": {
+    "methods": {
+      "buyData(bytes32,address)": {
+        "details": "retrieve multihash entry associated with an ipfs hash digest",
+        "params": {
+          "_triple": "address used as key"
+        }
+      },
+      "insertIPFS(bytes32,string)": {
+        "details": "associate a multihash entry with the sender address",
+        "params": {
+          "_digest": "hash digest produced by hashing content using hash function"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

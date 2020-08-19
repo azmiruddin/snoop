@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+set -o pipefail
+
+source ./lib/functions.sh
+
+while getopts ":y" opt; do
+  case ${opt} in
+    y) assume_yes=true;;
+  esac
+done
+
+if [ -z $assume_yes ]; then
+  ask "Uninstall IPFS?" || exit 0
+fi
+
+echo ">>> Uninstalling IPFS"
+
+# Stop IPFS daemon service
+init_system=$(get_init_system)
+
+if [ $init_system == "systemd" ]; then
+  sudo systemctl status ipfs-daemon.service 2>/dev/null 1>&2
+
+  if [ $? -eq 0 ]; then
+    echo ">>> Stopping IPFS service..."
+    sudo systemctl stop ipfs-daemon.service 2>/dev/null 1>&2
+
+    if [ $? -ne 0 ]; then
+      echo ">>> Failed to stop IPFS"
+      exit $?
+    fi
+  fi
+
+  sudo systemctl disable ipfs-daemon 2>/dev/null 1>&2
+  sudo rm -f /lib/systemd/system/ipfs-daemon.service
+  sudo systemctl daemon-reload
+elif [ $init_system == "upstart" ]; then
+  sudo service ipfs-daemon status 2>/dev/null 1>&2
+
+  if [ $? -eq 0 ]; then
+    echo ">>> Stopping IPFS service..."
+    sudo service ipfs-daemon stop 2>/dev/null 1>&2
+
+    if [ $? -ne 0 ]; then
+      echo ">>> Failed to stop IPFS"
+      exit $?
+    fi
+  fi
+
+  sudo rm -f /etc/init/ipfs-daemon.conf
+  sudo initctl reload-configuration
+fi
+
+sudo rm -rf /usr/local/bin/ipfs
+ipfs_dir=~/.ipfs
+
+if [ -d $ipfs_dir ]; then
+  remove_ipfs_dir=true
+
+  if [ -z $assume_yes ]; then
+    ask "Uninstall IPFS directory ($ipfs_dir)? This will remove all your local IPFS files." || remove_ipfs_dir=false
+  fi
+
+  if [ $remove_ipfs_dir == true ]; then
+    echo ">>> Removing IPFS directory ($ipfs_dir)"
+    rm -rf $ipfs_dir
+  fi
+fi
+
+echo ">>> All done."
