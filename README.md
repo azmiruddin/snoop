@@ -6,3 +6,5 @@ Project workspace to develop integration between:
 3. Additional feature with:
 a. GO-Perun and 
 b. Blockchain API
+
+![Blop Integration View](relative/path/to/docs/blops-integration.png?raw=true "Integration View")
