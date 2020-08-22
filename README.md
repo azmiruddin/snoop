@@ -1,6 +1,5 @@
 # snoop
-javasnoop - replacement for gcode repo
-
+javasnoop - Blockchain Micropayment - Imporving Transaction Throughput
 Project workspace to develop integration between:
 1. Semantic2019
 2. HSG88/Payment-Channel
