@@ -1,5 +1,5 @@
-# snoop
-javasnoop - Blockchain Micropayment - Improving Transaction Throughput
+# Juli - Blop
+Blockchain Micropayment - Improving Transaction Throughput
 Project workspace to develop integration between:
 1. Semantic2019
 2. HSG88/Payment-Channel
