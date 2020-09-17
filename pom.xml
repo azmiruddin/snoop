@@ -86,19 +86,32 @@
             <groupId>dev.insight</groupId>
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/common-1.0-SNAPSHOT.jar</systemPath>
+            <type>jar</type>
+  			<optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>dev.insight</groupId>
             <artifactId>rdf</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/rdf-1.0-SNAPSHOT.jar</systemPath>
+            <type>jar</type>
+  			<optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>dev.insight</groupId>
             <artifactId>db</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/db-1.0-SNAPSHOT.jar</systemPath>
+            <type>jar</type>
+  			<optional>true</optional>
         </dependency>
+
 
         <dependency>
             <groupId>com.github.ipfs</groupId>
@@ -135,6 +148,9 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>5.2.0.BUILD-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/spring-web-5.2.0.BUILD-SNAPSHOT.jar</systemPath>
+            <type>jar</type>
         </dependency>
 
         <dependency>
