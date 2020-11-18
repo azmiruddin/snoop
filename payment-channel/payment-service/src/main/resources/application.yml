@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: payment-service
+server:
+  port: ${PORT:8091}
+web3j:
+  client-address: http://192.168.99.100:8545
+  
+contract-service:
+  url: http://localhost:8090/contract/owner
