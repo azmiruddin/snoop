@@ -5,6 +5,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
+  	<module>channel-service</module>
   	<module>contract-service</module>
   	<module>payment-service</module>
   </modules>
