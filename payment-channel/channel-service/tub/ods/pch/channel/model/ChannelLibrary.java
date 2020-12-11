@@ -1,4 +1,4 @@
-package model;
+package tub.ods.pch.channel.model;
 
 import java.math.BigInteger;
 import java.util.Arrays;
@@ -25,7 +25,7 @@ import org.web3j.tx.gas.ContractGasProvider;
  * <p>Generated with web3j version 4.5.16.
  */
 @SuppressWarnings("rawtypes")
-public class ChannelContract extends Contract {
+public class ChannelLibrary extends Contract {
     public static final String BINARY = "{\r\n"
             + "\t\"linkReferences\": {},\r\n"
             + "\t\"object\": \"610205610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f300730000000000000000000000000000000000000000301460806040526004361061006e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631d3b9edf1461007357806366098d4f146100be578063f4f3bdc114610109575b600080fd5b81801561007f57600080fd5b506100a86004803603810190808035906020019092919080359060200190929190505050610154565b6040518082815260200191505060405180910390f35b8180156100ca57600080fd5b506100f36004803603810190808035906020019092919080359060200190929190505050610187565b6040518082815260200191505060405180910390f35b81801561011557600080fd5b5061013e60048036038101908080359060200190929190803590602001909291905050506101b1565b6040518082815260200191505060405180910390f35b600080828402905061017d6000851480610178575083858381151561017557fe5b04145b6101ca565b8091505092915050565b60008082840190506101a78482101580156101a25750838210155b6101ca565b8091505092915050565b60006101bf838311156101ca565b818303905092915050565b8015156101d657600080fd5b505600a165627a7a72305820cdc5b1b412cdef4238a861a3678390da2c8094615c1204b03b29a86317a64b4f0029\",\r\n"
@@ -40,20 +40,20 @@ public class ChannelContract extends Contract {
     public static final String FUNC_MINUS = "minus";
 
     @Deprecated
-    protected ChannelContract(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
+    protected ChannelLibrary(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
         super(BINARY, contractAddress, web3j, credentials, gasPrice, gasLimit);
     }
 
-    protected ChannelContract(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
+    protected ChannelLibrary(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
         super(BINARY, contractAddress, web3j, credentials, contractGasProvider);
     }
 
     @Deprecated
-    protected ChannelContract(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
+    protected ChannelLibrary(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
         super(BINARY, contractAddress, web3j, transactionManager, gasPrice, gasLimit);
     }
 
-    protected ChannelContract(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
+    protected ChannelLibrary(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
         super(BINARY, contractAddress, web3j, transactionManager, contractGasProvider);
     }
 
@@ -85,38 +85,38 @@ public class ChannelContract extends Contract {
     }
 
     @Deprecated
-    public static ChannelContract load(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
-        return new ChannelContract(contractAddress, web3j, credentials, gasPrice, gasLimit);
+    public static ChannelLibrary load(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
+        return new ChannelLibrary(contractAddress, web3j, credentials, gasPrice, gasLimit);
     }
 
     @Deprecated
-    public static ChannelContract load(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
-        return new ChannelContract(contractAddress, web3j, transactionManager, gasPrice, gasLimit);
+    public static ChannelLibrary load(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
+        return new ChannelLibrary(contractAddress, web3j, transactionManager, gasPrice, gasLimit);
     }
 
-    public static ChannelContract load(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
-        return new ChannelContract(contractAddress, web3j, credentials, contractGasProvider);
+    public static ChannelLibrary load(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
+        return new ChannelLibrary(contractAddress, web3j, credentials, contractGasProvider);
     }
 
-    public static ChannelContract load(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
-        return new ChannelContract(contractAddress, web3j, transactionManager, contractGasProvider);
+    public static ChannelLibrary load(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
+        return new ChannelLibrary(contractAddress, web3j, transactionManager, contractGasProvider);
     }
 
-    public static RemoteCall<ChannelContract> deploy(Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
-        return deployRemoteCall(ChannelContract.class, web3j, credentials, contractGasProvider, BINARY, "");
-    }
-
-    @Deprecated
-    public static RemoteCall<ChannelContract> deploy(Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
-        return deployRemoteCall(ChannelContract.class, web3j, credentials, gasPrice, gasLimit, BINARY, "");
-    }
-
-    public static RemoteCall<ChannelContract> deploy(Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
-        return deployRemoteCall(ChannelContract.class, web3j, transactionManager, contractGasProvider, BINARY, "");
+    public static RemoteCall<ChannelLibrary> deploy(Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
+        return deployRemoteCall(ChannelLibrary.class, web3j, credentials, contractGasProvider, BINARY, "");
     }
 
     @Deprecated
-    public static RemoteCall<ChannelContract> deploy(Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
-        return deployRemoteCall(ChannelContract.class, web3j, transactionManager, gasPrice, gasLimit, BINARY, "");
+    public static RemoteCall<ChannelLibrary> deploy(Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
+        return deployRemoteCall(ChannelLibrary.class, web3j, credentials, gasPrice, gasLimit, BINARY, "");
+    }
+
+    public static RemoteCall<ChannelLibrary> deploy(Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
+        return deployRemoteCall(ChannelLibrary.class, web3j, transactionManager, contractGasProvider, BINARY, "");
+    }
+
+    @Deprecated
+    public static RemoteCall<ChannelLibrary> deploy(Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
+        return deployRemoteCall(ChannelLibrary.class, web3j, transactionManager, gasPrice, gasLimit, BINARY, "");
     }
 }
