@@ -1,6 +1,6 @@
-Running Process
+Running Steps
 
-POSTMAN
+# USING POSTMAN
 1. Run IPFS, Redis and Ganache Service
 2. Run rest-service using eclipse
 3. Open Postman
@@ -20,5 +20,5 @@ request
 }
 
 
-CLIENT APP
+# USING CLIENT APP
 **To Be Updated**
