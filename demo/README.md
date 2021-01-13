@@ -27,5 +27,5 @@ request
 ## USING CLIENT APP
 **To Be Updated**
 - [x] Homepage UI
-- [ ] ~~Functionally Transaction~~
+- [ ] ~~Functionally Simple one-way Transaction~~
 - [ ] ~~Store Redis/IPFS UI history~~
