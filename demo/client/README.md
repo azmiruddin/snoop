@@ -13,3 +13,6 @@ Basic tests can be run by entering `npm test`.
 ##### External components used:
 * react-modal
 * react-autosuggest
+
+## UI HomePage
+![Alt text](https://github.com/azmiruddin/snoop/blob/master/demo/client/screen/init-step.png?raw=true "UI Homepage")
