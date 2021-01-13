@@ -1,0 +1,44 @@
+API Spesification
+
+-- read data from IPFS
+POST
+url endpoint : http://localhost:8085/mediatorApi/readDataFromIPFS
+request
+{
+  "key" : "key response  fromsimple transaction"
+}
+
+
+-- read data from Redis
+POST
+url endpoint : http://localhost:8085/mediatorApi/readDataFromRedis
+request
+{
+  "key" : "key response  fromsimple transaction"
+}
+
+
+-- store data ipfs redis , simple transaction
+POST
+url endpoint : http://localhost:8085/mediatorApi/simpleTransaction
+request
+
+{
+  "addressTo" : "xxxxyy"
+  "valueTrx" : 3434
+}
+
+
+-- init data
+GET
+url endpoint : http://localhost:8085/mediatorApi/init
+request
+
+
+
+
+
+
+
+
+
