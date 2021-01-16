@@ -1,6 +1,6 @@
 # Juli - Blop
 Blockchain Micropayment is an open source project that aims to increase blockchain transaction throughput by using just a handful of main chain transactions to move an entire peer-to-peer network of activity off the main chain.
-We develop micropament by implementing the following core component:
+We develop micropayment by implementing the following core component:
 1. Semantic data store: RDF4LED
 2. Smart contract: Perun-ETH-Contracts and HSG88
 3. Blockchain library: Web3J and BitcoinJ
