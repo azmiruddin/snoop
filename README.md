@@ -7,7 +7,7 @@ We develop micropayment by implementing the following core component:
 
 ## Project Status
 
-At this state, Blockchain Micropayment is under development, and ready for testing early in February 2021.
+At this state, Blockchain Micropayment is under active development, and few feature ready for testing early in January 2021.
 Basic features available, that we can try it and start to get involved, are covered the following feature
 1. Off chain transaction
 2. Channel Management
