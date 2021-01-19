@@ -3,13 +3,13 @@ Blockchain Micropayment is an open source project that aims to increase blockcha
 We develop micropayment by implementing the following core component:
 1. Semantic data store: RDF4LED
 2. Smart contract: HSG88 and Perun-ETH
-3. Blockchain library: Web3J and BitcoinJ
+3. Blockchain library: Web3J
 
 ## Project Status
 
 At this state, Blockchain Micropayment is under active development, and few feature ready for testing early in January 2021.
 Basic features available, that we can try it and start to get involved, are covered the following feature
-1. Off chain transaction
+1. Off chain Transaction
 2. Channel Management
 3. System Configuration
 
