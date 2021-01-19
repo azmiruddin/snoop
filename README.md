@@ -18,8 +18,8 @@ Basic features available, that we can try it and start to get involved, are cove
 The Blockchain Micropayment is multi-user state channel node that can be used for opening, transacting on and closing state channels. It builds on top of HSG88 and Perun-ETH smart contracts.
 The current feature plan to implements the following functionalities:
 
-1. Off chain transaction and use bi-directional payment channels.
-2. Channle Management: for the user to define a list of known channel in the off-chain network.
+1. Off-chain transaction and use bi-directional payment channels.
+2. Channel Management: for the user to define a list of known channel in the off-chain network.
 3. System management: for managing the sytem e.g., initial setup and cryptographic keys of the user.
 4. User API interface: for client app (front end) to interact with the core payment channel.
 
