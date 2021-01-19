@@ -38,4 +38,4 @@ The current version provides the following features:
 This project currently contains two client test located in the rest client and front end directory.
 
 
-![Blop Integration View](docs/pch-component-v0.1.png?raw=true "Integration View")
+![Blop Integration View](docs/HighLevel-BC-Semantic-v0.3.png?raw=true "Integration View")
