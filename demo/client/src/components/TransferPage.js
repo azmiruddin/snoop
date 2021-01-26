@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { pastTransactions } from "../data/pastTransactions";
 import TransferForm from "./TransferForm";
@@ -27,6 +27,7 @@ class TransferPage extends React.Component {
       isConfirmed: false
     }
   };
+
 
   firstPage = React.createRef();
   secondPage = React.createRef();
@@ -171,10 +172,10 @@ class TransferPage extends React.Component {
           <div className="TransferPage__FirstScreen__ButtonsBlock">
             <div className="TransferPage__FirstScreen__ButtonsBlock__Buttons">
               <button className="button" onClick={this.switchToSendMode}>
-                Send money
+                Send coin
               </button>
               <button className="button" onClick={this.switchToRequestMode} disabled>
-                Request money
+                Request coin
               </button>
             </div>
           </div>

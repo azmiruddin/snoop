@@ -4,6 +4,7 @@ import { names } from "../data/names";
 import Autosuggest from "react-autosuggest";
 
 const nameObjects = names.map(name => ({ name }));
+console.log(nameObjects)
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();

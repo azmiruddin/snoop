@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import AutoComplete from "./AutoComplete";
+import axios from 'axios';
 
 export default class TransferForm extends React.Component {
   static propTypes = {
@@ -50,13 +51,26 @@ export default class TransferForm extends React.Component {
 
   handleSubmitForm = e => {
     e.preventDefault();
-    const { selectedName, amount, note } = this.state;
+    const { selectedName, note } = this.state;
+    const amount =  {valueTrx: this.state.valueTrx}
     this.props.handleSubmitForm(
       this.props.isModeSend,
-      selectedName,
-      amount,
+      {
+        credentialsAddress : selectedName,
+        valueTrx : amount,
       note
+      }
+      
     );
+    axios.post("http://localhost:8085/mediatorApi/simpleTransaction", {
+      body: JSON.stringify({
+        credentialsAddress: {selectedName},
+        valueTrx: {amount}
+      })
+    }).then(res => {
+      console.log(res);
+      console.log(res.data);
+    });
     this.clearInputs(e);
   };
 
