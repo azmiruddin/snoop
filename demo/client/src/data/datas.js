@@ -8,9 +8,33 @@ fetch(get_url)
   window.localStorage.setItem("coinbase", JSON.stringify(rawAddress.balanceEthCoinbaseAddress))
 })
 
-//first feature
 const dataNames = localStorage.getItem("address")
 const parseName = JSON.parse(dataNames)
+
+function truncate(str, num) {
+  if(str.length <= num){
+    return str;  
+  }
+  return str.slice(0, num) + '...'
+}
+
+const address = [
+  truncate(parseName[0], 16),
+  truncate(parseName[1], 16), 
+  truncate(parseName[2], 16),
+  truncate(parseName[3], 16),
+  truncate(parseName[4], 16),
+  truncate(parseName[5], 16),
+  truncate(parseName[6], 16),
+  truncate(parseName[7], 16),
+  truncate(parseName[8], 16)
+  // truncate(parseName[9], 16),
+]
+
+//console.log(address)
+
+
+//first feature
 // const getCoinbaseAddr = localStorage.getItem("coinbaseAddr")
 // const getCoinbaseBalance = localStorage.getItem("coinbase")
 
@@ -22,9 +46,9 @@ const alice = `Alice (${parseBalance[1]}) (${parseName[1]})`
 const bob = `Bob (${parseBalance[2]}) (${parseName[2]})`
 const clark = `Clark (${parseBalance[3]}) (${parseName[3]})`
 const withName = [alice, bob, clark]
-console.log(withName)
+//console.log(withName)
 
-export const names = parseName
+export const names = address
 console.log(names)
 // const balance = JSON.parse(getCoinbaseBalance)
 // const coinbase = JSON.parse(getCoinbaseAddr)

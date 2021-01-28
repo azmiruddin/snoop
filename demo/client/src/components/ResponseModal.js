@@ -6,6 +6,7 @@ const ResponseModal = props => {
   ResponseModal.propTypes = {
     transaction: PropTypes.object.isRequired
   };
+
   return (
     <Modal
       isOpen={

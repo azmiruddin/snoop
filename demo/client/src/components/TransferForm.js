@@ -35,7 +35,20 @@ export default class TransferForm extends React.Component {
     }
   };
 
+  truncate = (str, num) => {
+    if(str.length <= num){
+      return str;  
+    }
+    return str.slice(0, num) + '...'
+  }
+
   setSelectedName = selectedName => {
+    // function truncate(str, num) {
+    //   if(str.length <= num){
+    //     return str;  
+    //   }
+    //   return str.slice(0, num) + '...'
+    // }
     this.setState(() => ({ selectedName }));
   };
 
@@ -84,7 +97,7 @@ export default class TransferForm extends React.Component {
       <form onSubmit={this.handleSubmitForm}>
         <h2>{this.props.isModeSend ? "Send to" : "Request from"}</h2>
         <AutoComplete
-          setSelectedName={this.setSelectedName}
+          setSelectedName= {this.setSelectedName}
           ref={instance => {
             this.autocomplete = instance;
           }}

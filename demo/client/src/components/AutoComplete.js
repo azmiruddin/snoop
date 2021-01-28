@@ -4,10 +4,10 @@ import { names } from "../data/datas";
 import Autosuggest from "react-autosuggest";
 
 const nameObjects = names.map(name => ({ name }));
-console.log(names)
+console.log(nameObjects)
 
 const getSuggestions = value => {
-  const inputValue = value.trim().toLowerCase();
+  const inputValue = value.trim().toLowerCase()
   const inputLength = inputValue.length;
 
   return nameObjects === 0
