@@ -5,8 +5,14 @@
 /.pnp
 .pnp.js
 
+#unused data
+/src/data/pastTransactions.js
+/src/data/updatedNames.js
+
 # testing
 /coverage
+/tests
+/src/tests
 
 # production
 /build

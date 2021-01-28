@@ -1,6 +1,7 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { Fragment } from "react";
 import { FaAngleDoubleUp } from "react-icons/fa";
-import { pastTransactions } from "../data/pastTransactions";
+// import { pastTransactions } from "../data/pastTransactions";
+import {pastTransactions} from "../data/datas"
 import TransferForm from "./TransferForm";
 import ConfirmationModal from "./ConfirmationModal";
 import ResponseModal from "./ResponseModal";
@@ -33,7 +34,7 @@ class TransferPage extends React.Component {
   secondPage = React.createRef();
 
   componentDidMount() {
-    // this.setState(() => pastTransactions);
+    // this.setState(() => pastTransactions, coinInit);
     axios
       .get("http://localhost:8085/mediatorApi/init")
       .then(response => {
@@ -42,8 +43,9 @@ class TransferPage extends React.Component {
         const addr0 = response.data.ethCoinbaseAddress
         console.log(ether0, addr0)
         this.setState({
+          pastTransactions,
           coinbase : addr0,
-          balance : ether0
+          balance : ether0,
         })
         console.log(this.state)
       })

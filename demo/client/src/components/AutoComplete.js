@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { names } from "../data/names";
+import { names } from "../data/datas";
 import Autosuggest from "react-autosuggest";
 
 const nameObjects = names.map(name => ({ name }));
-console.log(nameObjects)
+console.log(names)
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();

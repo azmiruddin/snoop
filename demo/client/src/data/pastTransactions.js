@@ -1,5 +1,6 @@
 export const pastTransactions = {
-  // balance: this.state.coinbaseBalance,
+  coinbase : "Rudiii",
+  balance : 99,
   transactions: [
     {
       isModeSend: true,
@@ -39,5 +40,40 @@ export const pastTransactions = {
     }
   ]
 };
+
+// console.log(pastTransactions)
+
+// const get_url = "http://localhost:8085/mediatorApi/init"
+
+// async function getdata(url){
+  //storing response
+  //const res = await fetch(url)
+
+  //storing data in form of JSON
+  //const rawData = await res.json()
+  //let coinbaseData = rawData.ethCoinbaseAddress
+  //let balanceData = rawData.balanceEthCoinbaseAddress / 1000000000000000000
+  // let address1 = rawData.listEthAccount[0]
+  // console.log(data.listEthAccount)
+  // addDataCoinbase(coinbaseData)
+  // addBalanceCoinbase(balanceData)
+  //addData(rawData)
+  // const names = new Array(address)
+  //console.log(`${coinbaseData}, +  ${typeof balanceData}`)
+  //pastTransactions.coinbase = coinbaseData
+  //pastTransactions.balance = balanceData
+//}
+
+//getdata(get_url)
+
+// function addDataCoinbase(coinbaseData){
+  
+//   console.log(pastTransactions.coinbase)
+// }
+
+// function addBalanceCoinbase(balanceData){
+  
+//   console.log(pastTransactions.balance)
+// }
 
 

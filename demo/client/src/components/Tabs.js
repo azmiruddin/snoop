@@ -21,8 +21,8 @@ export default function DisabledTabs() {
          aria-label="icon label tabs example"
          centered
       >
-        <Tab label="TRX" />
-        <Tab label="PCH" disabled />
+        <Tab label="Transaction" />
+        <Tab label="Channel" disabled />
       </Tabs>
     </Paper>
   );

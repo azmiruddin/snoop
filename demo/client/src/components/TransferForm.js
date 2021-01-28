@@ -51,26 +51,23 @@ export default class TransferForm extends React.Component {
 
   handleSubmitForm = e => {
     e.preventDefault();
-    const { selectedName, note } = this.state;
-    const amount =  {valueTrx: this.state.valueTrx}
+    const { selectedName, amount, note } = this.state;
+    // const amount =  {valueTrx: this.state.valueTrx}
     this.props.handleSubmitForm(
       this.props.isModeSend,
-      {
-        credentialsAddress : selectedName,
-        valueTrx : amount,
-      note
-      }
-      
-    );
-    axios.post("http://localhost:8085/mediatorApi/simpleTransaction", {
-      body: JSON.stringify({
-        credentialsAddress: {selectedName},
-        valueTrx: {amount}
-      })
-    }).then(res => {
-      console.log(res);
-      console.log(res.data);
-    });
+        selectedName,
+        amount,
+        note
+    )
+    // axios.post("http://localhost:8085/mediatorApi/simpleTransaction", {
+    //   body: JSON.stringify({
+    //     credentialsAddress: {selectedName},
+    //     valueTrx: {amount}
+    //   })
+    // }).then(res => {
+    //   console.log(res);
+    //   console.log(res.data);
+    // });
     this.clearInputs(e);
   };
 
