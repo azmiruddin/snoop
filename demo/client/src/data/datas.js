@@ -48,7 +48,7 @@ const clark = `Clark (${parseBalance[3]}) (${parseName[3]})`
 const withName = [alice, bob, clark]
 //console.log(withName)
 
-export const names = address
+export const names = parseName
 console.log(names)
 // const balance = JSON.parse(getCoinbaseBalance)
 // const coinbase = JSON.parse(getCoinbaseAddr)
