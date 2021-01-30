@@ -19,7 +19,7 @@ const getSuggestions = value => {
 
 const getSuggestionValue = suggestion => suggestion.name;
 
-const renderSuggestion = suggestion => <div>{suggestion.name}</div>;
+const renderSuggestion = suggestion => <div>{suggestion.name.substring(0,30)}...</div>;
 
 export default class AutoComplete extends React.Component {
   static propTypes = {

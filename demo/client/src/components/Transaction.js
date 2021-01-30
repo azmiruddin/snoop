@@ -20,7 +20,7 @@ const Transaction = props => {
       <div className="transaction__left__left">
         <div className="transaction__left__message">
           {isModeSend ? "Sent" : executed ? "Received" : "Requested"} {amount} Eth{" "}
-          {isModeSend ? "to" : "from"} {selectedName}
+          {isModeSend ? "to" : "from"} {selectedName.substring(0,20)}...
         </div>
         {note && <div className="transaction__left__note">{note}</div>}
       </div>

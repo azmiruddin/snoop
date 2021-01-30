@@ -72,17 +72,17 @@ export default class TransferForm extends React.Component {
         amount,
         note
     )
-    axios.post("http://localhost:8085/mediatorApi/simpleTransaction", {
-      addressTo: selectedName,
-      valueTrx: amount * 1000000000000000000
-      // body: JSON.stringify({
-      //   credentialsAddress: selectedName,
-      //   valueTrx: amount *1000000000000000000
-      // })
-    }).then(res => {
-      console.log(res);
-      console.log(res.data);
-    });
+    // axios.post("http://localhost:8085/mediatorApi/simpleTransaction", {
+    //   addressTo: selectedName,
+    //   valueTrx: amount * 1000000000000000000
+    //   // body: JSON.stringify({
+    //   //   credentialsAddress: selectedName,
+    //   //   valueTrx: amount *1000000000000000000
+    //   // })
+    // }).then(res => {
+    //   console.log(res);
+    //   console.log(res.data);
+    // });
     this.clearInputs(e);
   };
 
