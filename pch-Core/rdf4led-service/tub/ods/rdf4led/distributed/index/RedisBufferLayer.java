@@ -189,12 +189,12 @@ public class RedisBufferLayer extends DistributedBufferLayerSecure<long[]> {
 
 	@Override
 	public ObjectFileTransaction readDataRedis(String key) {
-		ObjectFileTransaction sampleTrx = new ObjectFileTransaction();
+		ObjectFileTransaction newTrx = new ObjectFileTransaction();
     	byte[] bytes=jedis.get(key.getBytes());	// get data from redis
     	
-    	sampleTrx = (ObjectFileTransaction)SerializeUtils.deSerialize(bytes);
+    	newTrx = (ObjectFileTransaction)SerializeUtils.deSerialize(bytes);
     	
-		return sampleTrx;
+		return newTrx;
 		
 	}
 

@@ -11,7 +11,9 @@ import com.google.gson.stream.JsonWriter;
 
 public class JSONDataCustome {
 	
-	public JSONDataCustome(String file, String coinBaseAddress, BigInteger trxCount, String credentialsAddrs, BigInteger gasPrice, BigInteger gasLimit, BigInteger valueTrx, long balanceFrom, long balanceTo) throws IOException{
+	public JSONDataCustome(String file, String coinBaseAddress, BigInteger trxCount, String credentialsAddrs,
+			BigInteger gasPrice, BigInteger gasLimit, BigInteger valueTrx, long balanceFrom, long balanceTo)
+			throws IOException {
 	 	super();
 		BufferedReader reader = null;
      

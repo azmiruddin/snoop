@@ -2,9 +2,9 @@ package tub.ods.pch.channel.util;
 
 import java.io.Serializable;
 
-/*import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;*/
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
 public abstract class DataObject implements Serializable {
@@ -13,7 +13,7 @@ public abstract class DataObject implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/*@Override
+	@Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this);
     }
@@ -26,5 +26,5 @@ public abstract class DataObject implements Serializable {
     @Override
     public boolean equals(Object obj) {
         return EqualsBuilder.reflectionEquals(this, obj);
-    }*/
+    }
 }

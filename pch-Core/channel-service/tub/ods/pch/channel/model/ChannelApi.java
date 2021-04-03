@@ -22,15 +22,15 @@ import org.web3j.tx.gas.ContractGasProvider;
  * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the 
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  *
- * <p>Generated with web3j version 4.5.16.
+ * <p>Generated with web3j version 4.5.5.
  */
 @SuppressWarnings("rawtypes")
 public class ChannelApi extends Contract {
-    public static final String BINARY = "";
-
-    public static final String FUNC_APPLYAUDITORSCHECKUPDATE = "applyAuditorsCheckUpdate";
+    private static final String BINARY = "";
 
     public static final String FUNC_APPLYRUNTIMEUPDATE = "applyRuntimeUpdate";
+
+    public static final String FUNC_APPLYAUDITORSCHECKUPDATE = "applyAuditorsCheckUpdate";
 
     @Deprecated
     protected ChannelApi(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
@@ -50,16 +50,6 @@ public class ChannelApi extends Contract {
         super(BINARY, contractAddress, web3j, transactionManager, contractGasProvider);
     }
 
-    public RemoteFunctionCall<TransactionReceipt> applyAuditorsCheckUpdate(String from, String to, BigInteger fraudCountDelta) {
-        final Function function = new Function(
-                FUNC_APPLYAUDITORSCHECKUPDATE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, from), 
-                new org.web3j.abi.datatypes.Address(160, to), 
-                new org.web3j.abi.datatypes.generated.Uint256(fraudCountDelta)), 
-                Collections.<TypeReference<?>>emptyList());
-        return executeRemoteCallTransaction(function);
-    }
-
     public RemoteFunctionCall<TransactionReceipt> applyRuntimeUpdate(String from, String to, BigInteger impressionsCount, BigInteger fraudCount) {
         final Function function = new Function(
                 FUNC_APPLYRUNTIMEUPDATE, 
@@ -67,6 +57,16 @@ public class ChannelApi extends Contract {
                 new org.web3j.abi.datatypes.Address(160, to), 
                 new org.web3j.abi.datatypes.generated.Uint256(impressionsCount), 
                 new org.web3j.abi.datatypes.generated.Uint256(fraudCount)), 
+                Collections.<TypeReference<?>>emptyList());
+        return executeRemoteCallTransaction(function);
+    }
+
+    public RemoteFunctionCall<TransactionReceipt> applyAuditorsCheckUpdate(String from, String to, BigInteger fraudCountDelta) {
+        final Function function = new Function(
+                FUNC_APPLYAUDITORSCHECKUPDATE, 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, from), 
+                new org.web3j.abi.datatypes.Address(160, to), 
+                new org.web3j.abi.datatypes.generated.Uint256(fraudCountDelta)), 
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }

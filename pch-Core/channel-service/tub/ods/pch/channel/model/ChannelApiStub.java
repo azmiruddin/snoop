@@ -1,7 +1,6 @@
 package tub.ods.pch.channel.model;
 
 import io.reactivex.Flowable;
-import io.reactivex.functions.Function;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,6 +10,7 @@ import org.web3j.abi.EventEncoder;
 import org.web3j.abi.TypeReference;
 import org.web3j.abi.datatypes.Address;
 import org.web3j.abi.datatypes.Event;
+import org.web3j.abi.datatypes.Function;
 import org.web3j.abi.datatypes.Type;
 import org.web3j.abi.datatypes.generated.Uint256;
 import org.web3j.crypto.Credentials;
@@ -33,15 +33,15 @@ import org.web3j.tx.gas.ContractGasProvider;
  * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the 
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  *
- * <p>Generated with web3j version 4.5.16.
+ * <p>Generated with web3j version 4.5.5.
  */
 @SuppressWarnings("rawtypes")
 public class ChannelApiStub extends Contract {
-    public static final String BINARY = "608060405234801561001057600080fd5b50610140806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063879abc111461003b5780639d3fae0414610079575b600080fd5b6100776004803603608081101561005157600080fd5b506001600160a01b038135811691602081013590911690604081013590606001356100af565b005b6100776004803603606081101561008f57600080fd5b506001600160a01b03813581169160208101359091169060400135610106565b604080516001600160a01b038087168252851660208201528082018490526060810183905290517fe9304a57050597713c56a840bee91ee69885e97d86cf5d841232def20c4e3f569181900360800190a150505050565b50505056fea265627a7a72315820356a447e0b6021a263595ca9c5b8147643c56d1d8ce442624192d3dc5c1144c264736f6c63430005100032";
-
-    public static final String FUNC_APPLYAUDITORSCHECKUPDATE = "applyAuditorsCheckUpdate";
+    private static final String BINARY = "608060405234801561001057600080fd5b50610158806100206000396000f30060806040526004361061004b5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663879abc1181146100505780639d3fae041461008c575b600080fd5b34801561005c57600080fd5b5061008a73ffffffffffffffffffffffffffffffffffffffff600435811690602435166044356064356100c3565b005b34801561009857600080fd5b5061008a73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610127565b6040805173ffffffffffffffffffffffffffffffffffffffff8087168252851660208201528082018490526060810183905290517fe9304a57050597713c56a840bee91ee69885e97d86cf5d841232def20c4e3f569181900360800190a150505050565b5050505600a165627a7a72305820c24bc258fa6f2036e536d989c9d3c9f9a95578804f4543561e6073722bebeba70029";
 
     public static final String FUNC_APPLYRUNTIMEUPDATE = "applyRuntimeUpdate";
+
+    public static final String FUNC_APPLYAUDITORSCHECKUPDATE = "applyAuditorsCheckUpdate";
 
     public static final Event CHANNELAUDIT_EVENT = new Event("ChannelAudit", 
             Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}, new TypeReference<Address>() {}, new TypeReference<Uint256>() {}, new TypeReference<Uint256>() {}));
@@ -65,6 +65,27 @@ public class ChannelApiStub extends Contract {
         super(BINARY, contractAddress, web3j, transactionManager, contractGasProvider);
     }
 
+    public RemoteFunctionCall<TransactionReceipt> applyRuntimeUpdate(String from, String to, BigInteger impressionsCount, BigInteger fraudCount) {
+        final Function function = new Function(
+                FUNC_APPLYRUNTIMEUPDATE, 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, from), 
+                new org.web3j.abi.datatypes.Address(160, to), 
+                new org.web3j.abi.datatypes.generated.Uint256(impressionsCount), 
+                new org.web3j.abi.datatypes.generated.Uint256(fraudCount)), 
+                Collections.<TypeReference<?>>emptyList());
+        return executeRemoteCallTransaction(function);
+    }
+
+    public RemoteFunctionCall<TransactionReceipt> applyAuditorsCheckUpdate(String from, String to, BigInteger fraudCountDelta) {
+        final Function function = new Function(
+                FUNC_APPLYAUDITORSCHECKUPDATE, 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, from), 
+                new org.web3j.abi.datatypes.Address(160, to), 
+                new org.web3j.abi.datatypes.generated.Uint256(fraudCountDelta)), 
+                Collections.<TypeReference<?>>emptyList());
+        return executeRemoteCallTransaction(function);
+    }
+
     public List<ChannelAuditEventResponse> getChannelAuditEvents(TransactionReceipt transactionReceipt) {
         List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(CHANNELAUDIT_EVENT, transactionReceipt);
         ArrayList<ChannelAuditEventResponse> responses = new ArrayList<ChannelAuditEventResponse>(valueList.size());
@@ -81,7 +102,7 @@ public class ChannelApiStub extends Contract {
     }
 
     public Flowable<ChannelAuditEventResponse> channelAuditEventFlowable(EthFilter filter) {
-        return web3j.ethLogFlowable(filter).map(new Function<Log, ChannelAuditEventResponse>() {
+        return web3j.ethLogFlowable(filter).map(new io.reactivex.functions.Function<Log, ChannelAuditEventResponse>() {
             @Override
             public ChannelAuditEventResponse apply(Log log) {
                 Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(CHANNELAUDIT_EVENT, log);
@@ -100,27 +121,6 @@ public class ChannelApiStub extends Contract {
         EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress());
         filter.addSingleTopic(EventEncoder.encode(CHANNELAUDIT_EVENT));
         return channelAuditEventFlowable(filter);
-    }
-
-    public RemoteFunctionCall<TransactionReceipt> applyAuditorsCheckUpdate(String from, String to, BigInteger fraudCountDelta) {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(
-                FUNC_APPLYAUDITORSCHECKUPDATE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, from), 
-                new org.web3j.abi.datatypes.Address(160, to), 
-                new org.web3j.abi.datatypes.generated.Uint256(fraudCountDelta)), 
-                Collections.<TypeReference<?>>emptyList());
-        return executeRemoteCallTransaction(function);
-    }
-
-    public RemoteFunctionCall<TransactionReceipt> applyRuntimeUpdate(String from, String to, BigInteger impressionsCount, BigInteger fraudCount) {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(
-                FUNC_APPLYRUNTIMEUPDATE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, from), 
-                new org.web3j.abi.datatypes.Address(160, to), 
-                new org.web3j.abi.datatypes.generated.Uint256(impressionsCount), 
-                new org.web3j.abi.datatypes.generated.Uint256(fraudCount)), 
-                Collections.<TypeReference<?>>emptyList());
-        return executeRemoteCallTransaction(function);
     }
 
     @Deprecated
