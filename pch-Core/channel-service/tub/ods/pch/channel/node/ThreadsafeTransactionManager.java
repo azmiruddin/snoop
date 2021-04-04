@@ -5,15 +5,13 @@ import java.io.IOException;
 import java.math.BigInteger;
 
 import org.web3j.crypto.Credentials;
+import org.web3j.crypto.RawTransaction;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.methods.request.RawTransaction;
 import org.web3j.protocol.core.methods.request.Transaction;
 import org.web3j.protocol.core.methods.response.EthGetTransactionCount;
 import org.web3j.protocol.core.methods.response.EthSendTransaction;
 import org.web3j.tx.RawTransactionManager;
-
-import tub.ods.pch.channel.node.EthRpcProperties;
 
 public class ThreadsafeTransactionManager extends RawTransactionManager {
     private final Credentials credentials;
@@ -26,7 +24,7 @@ public class ThreadsafeTransactionManager extends RawTransactionManager {
         this.credentials = credentials;
     }
 
-    BigInteger getNonce() throws IOException {
+    protected BigInteger getNonce() throws IOException {
         if (nonce.signum() == -1) {
             EthGetTransactionCount ethGetTransactionCount = web3j.ethGetTransactionCount(
                 credentials.getAddress(), DefaultBlockParameterName.PENDING).send();
