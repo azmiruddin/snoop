@@ -1,7 +1,7 @@
 pragma solidity ^0.4.26;
 
-import './StandardToken.sol';
-import ./'Ownable.sol';
+import "./StandardToken.sol";
+import "./Ownable.sol";
 
 /// @title SCH token contract (SCH)
 contract SCHToken is StandardToken, Ownable {
@@ -13,7 +13,7 @@ contract SCHToken is StandardToken, Ownable {
 
     // PUBLIC FUNCTIONS
 
-    function SCHToken(address[] _wallets, uint256[] _amounts) constant returns(uint256 _totalSupply) {
+    function SCHToken(address[] _wallets, uint256[] _amounts, uint256 totalSupply)  {
         require(_wallets.length == _amounts.length && _wallets.length > 0);
         uint i;
         uint256 sum = 0;
@@ -21,7 +21,7 @@ contract SCHToken is StandardToken, Ownable {
             sum = sum.add(_amounts[i]);
         }
         require(sum == __SCH_LIMIT);
-        _totalSupply = __SCH_LIMIT;
+        totalSupply = __SCH_LIMIT;
         for (i = 0; i < _wallets.length; ++i) {
             // balanceOf(_wallets[i] = _amounts[i]);
             balanceOf(_wallets[i]);
@@ -73,46 +73,4 @@ contract SCHToken is StandardToken, Ownable {
 
     // Amount of supplied tokens is constant and equals to 1 000 000 000 SCH
     uint256 private constant __SCH_LIMIT = 1000000000;
-}
-
-library SafeMath {
-
-  /**
-  * @dev Multiplies two numbers, throws on overflow.
-  */
-  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {
-    if (a == 0) {
-      return 0;
-    }
-    c = a * b;
-    assert(c / a == b);
-    return c;
-  }
-
-  /**
-  * @dev Integer division of two numbers, truncating the quotient.
-  */
-  function div(uint256 a, uint256 b) internal pure returns (uint256) {
-    // assert(b > 0); // Solidity automatically throws when dividing by 0
-    // uint256 c = a / b;
-    // assert(a == b * c + a % b); // There is no case in which this doesn't hold
-    return a / b;
-  }
-
-  /**
-  * @dev Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend).
-  */
-  function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-    assert(b <= a);
-    return a - b;
-  }
-
-  /**
-  * @dev Adds two numbers, throws on overflow.
-  */
-  function add(uint256 a, uint256 b) internal pure returns (uint256 c) {
-    c = a + b;
-    assert(c >= a);
-    return c;
-  }
 }

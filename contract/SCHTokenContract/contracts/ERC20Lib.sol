@@ -3,7 +3,7 @@ pragma solidity ^0.4.4;
 import "./SafeMathLib.sol";
 
 library ERC20Lib {
-  using SafeMathLib for uint;
+  using SafeMath for uint;
 
   struct TokenStorage {
     mapping (address => uint) balances;
@@ -14,14 +14,14 @@ library ERC20Lib {
   event Transfer(address indexed from, address indexed to, uint value);
   event Approval(address indexed owner, address indexed spender, uint value);
 
-  function init(TokenStorage storage self, ui   nt256 _initial_supply) {
+  function init(TokenStorage storage self, uint256 _initial_supply) {
     self.totalSupply = _initial_supply;
     self.balances[msg.sender] = _initial_supply;
   }
 
   function transfer(TokenStorage storage self, address _to, uint _value) returns (bool success) {
-    self.balances[msg.sender] = self.balances[msg.sender].minus(_value);
-    self.balances[_to] = self.balances[_to].plus(_value);
+    self.balances[msg.sender] = self.balances[msg.sender].sub(_value);
+    self.balances[_to] = self.balances[_to].add(_value);
     Transfer(msg.sender, _to, _value);
     return true;
   }
@@ -29,9 +29,9 @@ library ERC20Lib {
   function transferFrom(TokenStorage storage self, address _from, address _to, uint _value) returns (bool success) {
     var _allowance = self.allowed[_from][msg.sender];
 
-    self.balances[_to] = self.balances[_to].plus(_value);
-    self.balances[_from] = self.balances[_from].minus(_value);
-    self.allowed[_from][msg.sender] = _allowance.minus(_value);
+    self.balances[_to] = self.balances[_to].add(_value);
+    self.balances[_from] = self.balances[_from].sub(_value);
+    self.allowed[_from][msg.sender] = _allowance.sub(_value);
     Transfer(_from, _to, _value);
     return true;
   }
