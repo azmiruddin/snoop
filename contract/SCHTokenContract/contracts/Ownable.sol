@@ -1,4 +1,4 @@
-pragma solidity ^0.4.4;
+pragma solidity ^0.4.26;
 
 /** @title Ownership Contract */
 contract Ownable {

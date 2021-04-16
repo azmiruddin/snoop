@@ -1,6 +1,6 @@
 pragma solidity ^0.4.4;
 
-import "./SafeMathLib.sol";
+import "./SafeMath.sol";
 
 library ERC20Lib {
   using SafeMath for uint;
