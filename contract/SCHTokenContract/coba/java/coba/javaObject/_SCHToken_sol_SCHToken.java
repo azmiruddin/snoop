@@ -40,8 +40,8 @@ import org.web3j.tx.gas.ContractGasProvider;
  * <p>Generated with web3j version 4.5.16.
  */
 @SuppressWarnings("rawtypes")
-public class Contracts__SCHToken_sol_SCHToken extends Contract {
-    public static final String BINARY = "60c0604052600b60808190527f53696d706c65546f6b656e00000000000000000000000000000000000000000060a090815262000040916003919062000405565b506040805180820190915260038082527f53494d00000000000000000000000000000000000000000000000000000000006020909201918252620000879160049162000405565b5060126005556127106006556040805180820190915260098082527f53434820546f6b656e00000000000000000000000000000000000000000000006020909201918252620000d99160089162000405565b506040805180820190915260038082527f53434800000000000000000000000000000000000000000000000000000000006020909201918252620001209160099162000405565b506040805180820190915260048082527f48302e310000000000000000000000000000000000000000000000000000000060209092019182526200016791600a9162000405565b50600b805461ff001960ff19909116601217166101001790553480156200018d57600080fd5b5060405162000dbf38038062000dbf83398101604081815282516020840151828501516006547f43505a7500000000000000000000000000000000000000000000000000000000865260006004870181905260248701919091529351928601959190910193909291829173__contracts/_SCHToken.sol:ERC20Lib______916343505a75916044808201928692909190829003018186803b1580156200023357600080fd5b505af415801562000248573d6000803e3d6000fd5b505060078054600160a060020a0319163317905550508351855114801562000271575060008551115b15156200027d57600080fd5b5060009050805b8451821015620002cf57620002c18483815181101515620002a157fe5b602090810290910101518290640100000000620008c66200034082021704565b905081600101915062000284565b633b9aca008114620002e057600080fd5b633b9aca009250600091505b845182101562000335576200032885838151811015156200030957fe5b9060200190602002015162000354640100000000026401000000009004565b50816001019150620002ec565b5050505050620004aa565b818101828110156200034e57fe5b92915050565b604080517fd1717fd4000000000000000000000000000000000000000000000000000000008152600060048201819052600160a060020a0384166024830152915173__contracts/_SCHToken.sol:ERC20Lib______9163d1717fd4916044808301926020929190829003018186803b158015620003d157600080fd5b505af4158015620003e6573d6000803e3d6000fd5b505050506040513d6020811015620003fd57600080fd5b505192915050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106200044857805160ff191683800117855562000478565b8280016001018555821562000478579182015b82811115620004785782518255916020019190600101906200045b565b50620004869291506200048a565b5090565b620004a791905b8082111562000486576000815560010162000491565b90565b61090580620004ba6000396000f3006080604052600436106100c45763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306fdde0381146100d6578063095ea7b31461016057806318160ddd1461019857806323b872dd146101bf5780632ff2e9dc146101e9578063313ce567146101fe57806354fd4d501461022957806370a082311461023e57806392ff0d311461025f57806395d89b41146102745780639cd2370714610289578063a9059cbb146102a5578063dd62ed3e146102c9575b3480156100d057600080fd5b50600080fd5b3480156100e257600080fd5b506100eb6102f0565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561012557818101518382015260200161010d565b50505050905090810190601f1680156101525780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561016c57600080fd5b50610184600160a060020a036004351660243561037e565b604080519115158252519081900360200190f35b3480156101a457600080fd5b506101ad6103bd565b60408051918252519081900360200190f35b3480156101cb57600080fd5b50610184600160a060020a03600435811690602435166044356103c3565b3480156101f557600080fd5b506101ad610404565b34801561020a57600080fd5b5061021361040a565b6040805160ff9092168252519081900360200190f35b34801561023557600080fd5b506100eb610413565b34801561024a57600080fd5b506101ad600160a060020a036004351661046e565b34801561026b57600080fd5b5061018461051c565b34801561028057600080fd5b506100eb61052a565b34801561029557600080fd5b506102a36004351515610585565b005b3480156102b157600080fd5b50610184600160a060020a0360043516602435610612565b3480156102d557600080fd5b506101ad600160a060020a036004358116906024351661064a565b6008805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103765780601f1061034b57610100808354040283529160200191610376565b820191906000526020600020905b81548152906001019060200180831161035957829003601f168201915b505050505081565b600b54600090610100900460ff16806103a15750600754600160a060020a031633145b15156103ac57600080fd5b6103b68383610701565b9392505050565b60025490565b600b54600090610100900460ff16806103e65750600754600160a060020a031633145b15156103f157600080fd5b6103fc848484610784565b949350505050565b60065481565b600b5460ff1681565b600a805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103765780601f1061034b57610100808354040283529160200191610376565b604080517fd1717fd4000000000000000000000000000000000000000000000000000000008152600060048201819052600160a060020a0384166024830152915173__contracts/_SCHToken.sol:ERC20Lib______9163d1717fd4916044808301926020929190829003018186803b1580156104ea57600080fd5b505af41580156104fe573d6000803e3d6000fd5b505050506040513d602081101561051457600080fd5b505192915050565b600b54610100900460ff1681565b6009805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103765780601f1061034b57610100808354040283529160200191610376565b600754600160a060020a0316331461059c57600080fd5b600b5460ff61010090910416151581151514156105b857600080fd5b600b805482151561010090810261ff00199092169190911791829055604080519190920460ff161515815290517f6488c20eb299903c41aa1b53c3ad5a3140aca395935e57cc52c1cc8dae8d9e179181900360200190a150565b600b54600090610100900460ff16806106355750600754600160a060020a031633145b151561064057600080fd5b6103b68383610843565b604080517f88fd6510000000000000000000000000000000000000000000000000000000008152600060048201819052600160a060020a03808616602484015284166044830152915173__contracts/_SCHToken.sol:ERC20Lib______916388fd6510916064808301926020929190829003018186803b1580156106ce57600080fd5b505af41580156106e2573d6000803e3d6000fd5b505050506040513d60208110156106f857600080fd5b50519392505050565b604080517f5bada338000000000000000000000000000000000000000000000000000000008152600060048201819052600160a060020a038516602483015260448201849052915173__contracts/_SCHToken.sol:ERC20Lib______91635bada338916064808301926020929190829003018186803b1580156106ce57600080fd5b604080517f45008797000000000000000000000000000000000000000000000000000000008152600060048201819052600160a060020a0380871660248401528516604483015260648201849052915173__contracts/_SCHToken.sol:ERC20Lib______916345008797916084808301926020929190829003018186803b15801561080f57600080fd5b505af4158015610823573d6000803e3d6000fd5b505050506040513d602081101561083957600080fd5b5051949350505050565b604080517f2d0277b9000000000000000000000000000000000000000000000000000000008152600060048201819052600160a060020a038516602483015260448201849052915173__contracts/_SCHToken.sol:ERC20Lib______91632d0277b9916064808301926020929190829003018186803b1580156106ce57600080fd5b818101828110156108d357fe5b929150505600a165627a7a72305820f1a73cb76349fcca30c4baad3127958ecedb833f2d8e0ed75713f87bd761b3a00029";
+public class _SCHToken_sol_SCHToken extends Contract {
+    public static final String BINARY = "60c0604052600960808190527f53434820546f6b656e000000000000000000000000000000000000000000000060a09081526200004091600891906200024b565b506040805180820190915260038082527f5343480000000000000000000000000000000000000000000000000000000000602090920191825262000087916009916200024b565b506040805180820190915260048082527f48302e31000000000000000000000000000000000000000000000000000000006020909201918252620000ce91600a916200024b565b50600b805461ff001960ff1990911660121716610100179055348015620000f457600080fd5b5060405162000afd38038062000afd833981016040908152815160208301519183015160078054600160a060020a0319163317905591830180519190930180519093929160009182911480156200014c575060008551115b15156200015857600080fd5b5060009050805b8451821015620001aa576200019c84838151811015156200017c57fe5b602090810290910101518290640100000000620007ac6200023782021704565b90508160010191506200015f565b633b9aca008114620001bb57600080fd5b633b9aca009250600091505b84518210156200022c578382815181101515620001e057fe5b90602001906020020151600560008785815181101515620001fd57fe5b6020908102909101810151600160a060020a0316825281019190915260400160002055600190910190620001c7565b5050505050620002f0565b818101828110156200024557fe5b92915050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106200028e57805160ff1916838001178555620002be565b82800160010185558215620002be579182015b82811115620002be578251825591602001919060010190620002a1565b50620002cc929150620002d0565b5090565b620002ed91905b80821115620002cc5760008155600101620002d7565b90565b6107fd80620003006000396000f3006080604052600436106100b95763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306fdde0381146100cb578063095ea7b31461015557806318160ddd1461017b57806323b872dd146101a2578063313ce567146101cc57806354fd4d50146101f757806370a082311461020c57806392ff0d311461022d57806395d89b41146102565780639cd237071461026b578063a9059cbb14610285578063dd62ed3e146102a9575b3480156100c557600080fd5b50600080fd5b3480156100d757600080fd5b506100e06102d0565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561011a578181015183820152602001610102565b50505050905090810190601f1680156101475780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561016157600080fd5b50610179600160a060020a036004351660243561035e565b005b34801561018757600080fd5b506101906103c0565b60408051918252519081900360200190f35b3480156101ae57600080fd5b50610179600160a060020a03600435811690602435166044356103c6565b3480156101d857600080fd5b506101e1610529565b6040805160ff9092168252519081900360200190f35b34801561020357600080fd5b506100e0610532565b34801561021857600080fd5b50610190600160a060020a036004351661058d565b34801561023957600080fd5b506102426105a8565b604080519115158252519081900360200190f35b34801561026257600080fd5b506100e06105b6565b34801561027757600080fd5b506101796004351515610611565b34801561029157600080fd5b50610179600160a060020a036004351660243561069e565b3480156102b557600080fd5b50610190600160a060020a0360043581169060243516610780565b6008805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103565780601f1061032b57610100808354040283529160200191610356565b820191906000526020600020905b81548152906001019060200180831161033957829003601f168201915b505050505081565b336000818152600660209081526040808320600160a060020a03871680855290835292819020859055805185815290519293927f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925929181900390910190a35050565b60005481565b600160a060020a03831660009081526005602052604090205481118015906104115750600160a060020a03831660009081526006602090815260408083203384529091529020548111155b801561041d5750600081115b151561042857600080fd5b600160a060020a038216600090815260056020526040902054610451908263ffffffff6107ac16565b600160a060020a038084166000908152600560205260408082209390935590851681522054610486908263ffffffff6107bf16565b600160a060020a03841660009081526005602090815260408083209390935560068152828220338352905220546104c3908263ffffffff6107bf16565b600160a060020a03808516600081815260066020908152604080832033845282529182902094909455805185815290519286169391927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef929181900390910190a3505050565b600b5460ff1681565b600a805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103565780601f1061032b57610100808354040283529160200191610356565b600160a060020a031660009081526005602052604090205490565b600b54610100900460ff1681565b6009805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103565780601f1061032b57610100808354040283529160200191610356565b600754600160a060020a0316331461062857600080fd5b600b5460ff610100909104161515811515141561064457600080fd5b600b805482151561010090810261ff00199092169190911791829055604080519190920460ff161515815290517f6488c20eb299903c41aa1b53c3ad5a3140aca395935e57cc52c1cc8dae8d9e179181900360200190a150565b6040366044146106aa57fe5b3360009081526005602052604090205482118015906106c95750600082115b15156106d457600080fd5b336000908152600560205260409020546106f4908363ffffffff6107bf16565b3360009081526005602052604080822092909255600160a060020a03851681522054610726908363ffffffff6107ac16565b600160a060020a0384166000818152600560209081526040918290209390935580518581529051919233927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef9281900390910190a3505050565b600160a060020a0380821660009081526006602090815260408083209386168352929052205492915050565b818101828110156107b957fe5b92915050565b6000828211156107cb57fe5b509003905600a165627a7a72305820ce8769643638bb8b3b25af2d81708fcf402a6d9337ac874d1ff9927c98ef4ff70029";
 
     public static final String FUNC_NAME = "name";
 
@@ -50,8 +50,6 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
     public static final String FUNC_TOTALSUPPLY = "totalSupply";
 
     public static final String FUNC_TRANSFERFROM = "transferFrom";
-
-    public static final String FUNC_INITIAL_SUPPLY = "INITIAL_SUPPLY";
 
     public static final String FUNC_DECIMALS = "decimals";
 
@@ -82,20 +80,20 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
     ;
 
     @Deprecated
-    protected Contracts__SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
+    protected _SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
         super(BINARY, contractAddress, web3j, credentials, gasPrice, gasLimit);
     }
 
-    protected Contracts__SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
+    protected _SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
         super(BINARY, contractAddress, web3j, credentials, contractGasProvider);
     }
 
     @Deprecated
-    protected Contracts__SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
+    protected _SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
         super(BINARY, contractAddress, web3j, transactionManager, gasPrice, gasLimit);
     }
 
-    protected Contracts__SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
+    protected _SCHToken_sol_SCHToken(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
         super(BINARY, contractAddress, web3j, transactionManager, contractGasProvider);
     }
 
@@ -132,13 +130,6 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
         return executeRemoteCallTransaction(function);
     }
 
-    public RemoteFunctionCall<BigInteger> INITIAL_SUPPLY() {
-        final Function function = new Function(FUNC_INITIAL_SUPPLY, 
-                Arrays.<Type>asList(), 
-                Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
-        return executeRemoteCallSingleValueReturn(function, BigInteger.class);
-    }
-
     public RemoteFunctionCall<BigInteger> decimals() {
         final Function function = new Function(FUNC_DECIMALS, 
                 Arrays.<Type>asList(), 
@@ -153,9 +144,9 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
-    public RemoteFunctionCall<BigInteger> balanceOf(String who) {
+    public RemoteFunctionCall<BigInteger> balanceOf(String _owner) {
         final Function function = new Function(FUNC_BALANCEOF, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, who)), 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _owner)), 
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
@@ -182,19 +173,19 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
         return executeRemoteCallTransaction(function);
     }
 
-    public RemoteFunctionCall<TransactionReceipt> transfer(String _to, BigInteger _value) {
+    public RemoteFunctionCall<TransactionReceipt> transfer(String _recipient, BigInteger _value) {
         final Function function = new Function(
                 FUNC_TRANSFER, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _to), 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _recipient), 
                 new org.web3j.abi.datatypes.generated.Uint256(_value)), 
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
-    public RemoteFunctionCall<BigInteger> allowance(String owner, String spender) {
+    public RemoteFunctionCall<BigInteger> allowance(String _spender, String _owner) {
         final Function function = new Function(FUNC_ALLOWANCE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, owner), 
-                new org.web3j.abi.datatypes.Address(160, spender)), 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _spender), 
+                new org.web3j.abi.datatypes.Address(160, _owner)), 
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
@@ -236,9 +227,9 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
         for (Contract.EventValuesWithLog eventValues : valueList) {
             TransferEventResponse typedResponse = new TransferEventResponse();
             typedResponse.log = eventValues.getLog();
-            typedResponse.from = (String) eventValues.getIndexedValues().get(0).getValue();
-            typedResponse.to = (String) eventValues.getIndexedValues().get(1).getValue();
-            typedResponse.value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
+            typedResponse._from = (String) eventValues.getIndexedValues().get(0).getValue();
+            typedResponse._to = (String) eventValues.getIndexedValues().get(1).getValue();
+            typedResponse._value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
             responses.add(typedResponse);
         }
         return responses;
@@ -251,9 +242,9 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
                 Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(TRANSFER_EVENT, log);
                 TransferEventResponse typedResponse = new TransferEventResponse();
                 typedResponse.log = log;
-                typedResponse.from = (String) eventValues.getIndexedValues().get(0).getValue();
-                typedResponse.to = (String) eventValues.getIndexedValues().get(1).getValue();
-                typedResponse.value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
+                typedResponse._from = (String) eventValues.getIndexedValues().get(0).getValue();
+                typedResponse._to = (String) eventValues.getIndexedValues().get(1).getValue();
+                typedResponse._value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
                 return typedResponse;
             }
         });
@@ -271,9 +262,9 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
         for (Contract.EventValuesWithLog eventValues : valueList) {
             ApprovalEventResponse typedResponse = new ApprovalEventResponse();
             typedResponse.log = eventValues.getLog();
-            typedResponse.owner = (String) eventValues.getIndexedValues().get(0).getValue();
-            typedResponse.spender = (String) eventValues.getIndexedValues().get(1).getValue();
-            typedResponse.value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
+            typedResponse._owner = (String) eventValues.getIndexedValues().get(0).getValue();
+            typedResponse._spender = (String) eventValues.getIndexedValues().get(1).getValue();
+            typedResponse._value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
             responses.add(typedResponse);
         }
         return responses;
@@ -286,9 +277,9 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
                 Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(APPROVAL_EVENT, log);
                 ApprovalEventResponse typedResponse = new ApprovalEventResponse();
                 typedResponse.log = log;
-                typedResponse.owner = (String) eventValues.getIndexedValues().get(0).getValue();
-                typedResponse.spender = (String) eventValues.getIndexedValues().get(1).getValue();
-                typedResponse.value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
+                typedResponse._owner = (String) eventValues.getIndexedValues().get(0).getValue();
+                typedResponse._spender = (String) eventValues.getIndexedValues().get(1).getValue();
+                typedResponse._value = (BigInteger) eventValues.getNonIndexedValues().get(0).getValue();
                 return typedResponse;
             }
         });
@@ -301,24 +292,24 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
     }
 
     @Deprecated
-    public static Contracts__SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
-        return new Contracts__SCHToken_sol_SCHToken(contractAddress, web3j, credentials, gasPrice, gasLimit);
+    public static _SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit) {
+        return new _SCHToken_sol_SCHToken(contractAddress, web3j, credentials, gasPrice, gasLimit);
     }
 
     @Deprecated
-    public static Contracts__SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
-        return new Contracts__SCHToken_sol_SCHToken(contractAddress, web3j, transactionManager, gasPrice, gasLimit);
+    public static _SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit) {
+        return new _SCHToken_sol_SCHToken(contractAddress, web3j, transactionManager, gasPrice, gasLimit);
     }
 
-    public static Contracts__SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
-        return new Contracts__SCHToken_sol_SCHToken(contractAddress, web3j, credentials, contractGasProvider);
+    public static _SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider) {
+        return new _SCHToken_sol_SCHToken(contractAddress, web3j, credentials, contractGasProvider);
     }
 
-    public static Contracts__SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
-        return new Contracts__SCHToken_sol_SCHToken(contractAddress, web3j, transactionManager, contractGasProvider);
+    public static _SCHToken_sol_SCHToken load(String contractAddress, Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider) {
+        return new _SCHToken_sol_SCHToken(contractAddress, web3j, transactionManager, contractGasProvider);
     }
 
-    public static RemoteCall<Contracts__SCHToken_sol_SCHToken> deploy(Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
+    public static RemoteCall<_SCHToken_sol_SCHToken> deploy(Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
         String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.Address>(
                         org.web3j.abi.datatypes.Address.class,
                         org.web3j.abi.Utils.typeMap(_wallets, org.web3j.abi.datatypes.Address.class)), 
@@ -326,10 +317,10 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
                         org.web3j.abi.datatypes.generated.Uint256.class,
                         org.web3j.abi.Utils.typeMap(_amounts, org.web3j.abi.datatypes.generated.Uint256.class)), 
                 new org.web3j.abi.datatypes.generated.Uint256(totalSupply)));
-        return deployRemoteCall(Contracts__SCHToken_sol_SCHToken.class, web3j, credentials, contractGasProvider, BINARY, encodedConstructor);
+        return deployRemoteCall(_SCHToken_sol_SCHToken.class, web3j, credentials, contractGasProvider, BINARY, encodedConstructor);
     }
 
-    public static RemoteCall<Contracts__SCHToken_sol_SCHToken> deploy(Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
+    public static RemoteCall<_SCHToken_sol_SCHToken> deploy(Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
         String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.Address>(
                         org.web3j.abi.datatypes.Address.class,
                         org.web3j.abi.Utils.typeMap(_wallets, org.web3j.abi.datatypes.Address.class)), 
@@ -337,11 +328,11 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
                         org.web3j.abi.datatypes.generated.Uint256.class,
                         org.web3j.abi.Utils.typeMap(_amounts, org.web3j.abi.datatypes.generated.Uint256.class)), 
                 new org.web3j.abi.datatypes.generated.Uint256(totalSupply)));
-        return deployRemoteCall(Contracts__SCHToken_sol_SCHToken.class, web3j, transactionManager, contractGasProvider, BINARY, encodedConstructor);
+        return deployRemoteCall(_SCHToken_sol_SCHToken.class, web3j, transactionManager, contractGasProvider, BINARY, encodedConstructor);
     }
 
     @Deprecated
-    public static RemoteCall<Contracts__SCHToken_sol_SCHToken> deploy(Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
+    public static RemoteCall<_SCHToken_sol_SCHToken> deploy(Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
         String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.Address>(
                         org.web3j.abi.datatypes.Address.class,
                         org.web3j.abi.Utils.typeMap(_wallets, org.web3j.abi.datatypes.Address.class)), 
@@ -349,11 +340,11 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
                         org.web3j.abi.datatypes.generated.Uint256.class,
                         org.web3j.abi.Utils.typeMap(_amounts, org.web3j.abi.datatypes.generated.Uint256.class)), 
                 new org.web3j.abi.datatypes.generated.Uint256(totalSupply)));
-        return deployRemoteCall(Contracts__SCHToken_sol_SCHToken.class, web3j, credentials, gasPrice, gasLimit, BINARY, encodedConstructor);
+        return deployRemoteCall(_SCHToken_sol_SCHToken.class, web3j, credentials, gasPrice, gasLimit, BINARY, encodedConstructor);
     }
 
     @Deprecated
-    public static RemoteCall<Contracts__SCHToken_sol_SCHToken> deploy(Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
+    public static RemoteCall<_SCHToken_sol_SCHToken> deploy(Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit, List<String> _wallets, List<BigInteger> _amounts, BigInteger totalSupply) {
         String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.Address>(
                         org.web3j.abi.datatypes.Address.class,
                         org.web3j.abi.Utils.typeMap(_wallets, org.web3j.abi.datatypes.Address.class)), 
@@ -361,7 +352,7 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
                         org.web3j.abi.datatypes.generated.Uint256.class,
                         org.web3j.abi.Utils.typeMap(_amounts, org.web3j.abi.datatypes.generated.Uint256.class)), 
                 new org.web3j.abi.datatypes.generated.Uint256(totalSupply)));
-        return deployRemoteCall(Contracts__SCHToken_sol_SCHToken.class, web3j, transactionManager, gasPrice, gasLimit, BINARY, encodedConstructor);
+        return deployRemoteCall(_SCHToken_sol_SCHToken.class, web3j, transactionManager, gasPrice, gasLimit, BINARY, encodedConstructor);
     }
 
     public static class TransferableChangedEventResponse extends BaseEventResponse {
@@ -369,18 +360,18 @@ public class Contracts__SCHToken_sol_SCHToken extends Contract {
     }
 
     public static class TransferEventResponse extends BaseEventResponse {
-        public String from;
+        public String _from;
 
-        public String to;
+        public String _to;
 
-        public BigInteger value;
+        public BigInteger _value;
     }
 
     public static class ApprovalEventResponse extends BaseEventResponse {
-        public String owner;
+        public String _owner;
 
-        public String spender;
+        public String _spender;
 
-        public BigInteger value;
+        public BigInteger _value;
     }
 }
