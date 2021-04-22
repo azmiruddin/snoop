@@ -90,7 +90,8 @@ public class EthereumService {
             if (balance.compareTo(minBalance) < 0) {
                 TransactionManager manager = managerSupplier.get();
                 log.info("Refill {} ETH from {} to {}", minBalance, manager.getFromAddress(), address);
-                new Transfer(web3j, manager).sendFundsAsync(address, minBalance, Convert.Unit.ETHER).get();
+                //new Transfer(web3j, manager).sendFundsAsync(address, minBalance, Convert.Unit.ETHER).get();
+                ((Supplier<TransactionManager>) new Transfer(web3j, manager).sendFunds(address, minBalance, Convert.Unit.ETHER)).get();
             }
             log.info("Balance after refill of {} is {}", address, getBalance(address, Convert.Unit.ETHER));
         }

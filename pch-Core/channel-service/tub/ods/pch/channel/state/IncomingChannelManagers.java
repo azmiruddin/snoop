@@ -7,9 +7,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Service;
 import org.web3j.abi.datatypes.Address;
 
+import tub.ods.common.data.model.SignedTransfer;
+import tub.ods.common.data.model.SignedTransferUnlock;
 import tub.ods.pch.channel.SignedChannelState;
-import tub.ods.pch.channel.SignedTransfer;
-import tub.ods.pch.channel.SignedTransferUnlock;
 import tub.ods.pch.channel.node.ContractsManagerFactory;
 
 @Service
@@ -34,7 +34,7 @@ public class IncomingChannelManagers {
         return managers.computeIfAbsent(receiverAddress, address -> new IncomingChannelManager(contractsManagerFactory.getContractManager(receiverAddress)));
     }
 
-    public void registerTransfer(SignedTransfer signedTransfer) {
+    public void registerTransfer(SignedTransfer signedTransfer) throws SignatureException {
         IncomingChannelState state = registry.get(signedTransfer.getChannelAddress()).orElseThrow(() -> new IllegalArgumentException("Channel not found: " + signedTransfer.getChannelAddress()));
         if (!state.registerTransfer(signedTransfer)) {
             throw new IllegalArgumentException();

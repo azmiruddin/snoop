@@ -11,10 +11,10 @@ import org.web3j.abi.datatypes.Address;
 import org.web3j.abi.datatypes.generated.Uint256;
 
 import tub.ods.pch.channel.util.ChannelProperties;
+import tub.ods.common.data.model.SignedTransfer;
+import tub.ods.common.data.model.SignedTransferUnlock;
 import tub.ods.pch.channel.BlockchainChannel;
 import tub.ods.pch.channel.SignedChannelState;
-import tub.ods.pch.channel.SignedTransfer;
-import tub.ods.pch.channel.SignedTransferUnlock;
 
 public class IncomingChannelState {
     private static final Logger log = LoggerFactory.getLogger(IncomingChannelState.class);
@@ -41,7 +41,7 @@ public class IncomingChannelState {
     }
 
     private synchronized void computeRoots() {
-        //TODO
+        //TODO Merkle 
     }
     
     public SignedChannelState getSenderState() {
@@ -55,24 +55,20 @@ public class IncomingChannelState {
         this.senderState = receiverState;
     }
     
-    public synchronized boolean registerTransfer(SignedTransfer transfer) {
-        try {
-            Uint256 transferId = transfer.getTransferId();
-            if (transfers.containsKey(transferId) || lockedTransfers.containsKey(transferId)) {
-                return false;
-            }
-            transfer.verifySignature(channel.getClientAddress());
-            if (transfer.isLocked()) {
-                lockedTransfers.put(transferId, transfer);
-            } else {
-                transfers.put(transferId, transfer);
-                ownState.setCompletedTransfers(ownState.getCompletedTransfers().add(transfer.getValueWei()));
-                ownState.setTransfersRoot(null);
-            }
-            return true;
-        } catch (SignatureException e) {
-            throw new RuntimeException(e);
-        }
+    public synchronized boolean registerTransfer(SignedTransfer transfer) throws SignatureException {
+        Uint256 transferId = transfer.getTransferId();
+		if (transfers.containsKey(transferId) || lockedTransfers.containsKey(transferId)) {
+		    return false;
+		}
+		transfer.verifySignature(channel.getClientAddress());
+		if (transfer.isLocked()) {
+		    lockedTransfers.put(transferId, transfer);
+		} else {
+		    transfers.put(transferId, transfer);
+		    ownState.setCompletedTransfers(ownState.getCompletedTransfers().add(transfer.getValueWei()));
+		    ownState.setTransfersRoot(null);
+		}
+		return true;
     }
 
     public synchronized boolean registerTransferUnlock(SignedTransferUnlock transferUnlock) {

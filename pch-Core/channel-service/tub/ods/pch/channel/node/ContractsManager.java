@@ -25,8 +25,10 @@ import com.google.common.base.Throwables;
 
 import tub.ods.pch.channel.node.ContractsProperties;
 import tub.ods.pch.channel.node.EthRpcProperties;
+import tub.ods.pch.channel.util.CryptoUtil;
 import tub.ods.pch.channel.model.ChannelManagerContract;
 import tub.ods.pch.channel.model.EndpointRegistryContract;
+import tub.ods.pch.channel.model.SCHToken;
 
 public class ContractsManager {
     private static final Logger log = LoggerFactory.getLogger(ContractsManager.class);
@@ -37,7 +39,7 @@ public class ContractsManager {
     private final ChannelManagerContract channelManager;
     private final EthRpcProperties rpcProperties;
     private final Web3j web3j;
-    private final PapyrusToken papyrusToken;
+    private final SCHToken schToken;
     private final TokenService tokenService;
     private final Address address;
 
@@ -52,12 +54,12 @@ public class ContractsManager {
         
         registry = loadPredeployedContract(EndpointRegistryContract.class);
         channelManager = loadPredeployedContract(ChannelManagerContract.class);
-        papyrusToken = loadPredeployedContract(PapyrusToken.class);
+        schToken = loadPredeployedContract(SCHToken.class);
         address = new Address(credentials.getAddress());
-        tokenService = new TokenService(papyrusToken, address);
+        tokenService = new TokenService(schToken, address);
         try {
             Address channelManagerToken = channelManager.token().get();
-            Preconditions.checkState(new Address(papyrusToken.getContractAddress()).equals(channelManagerToken), "Wrong token contract %s != %s", papyrusToken.getContractAddress(), channelManagerToken);
+            Preconditions.checkState(new Address(schToken.getContractAddress()).equals(channelManagerToken), "Wrong token contract %s != %s", schToken.getContractAddress(), channelManagerToken);
         } catch (Exception e) {
             throw Throwables.propagate(e);
         }
@@ -75,8 +77,8 @@ public class ContractsManager {
         return registry;
     }
 
-    public PapyrusToken token() {
-        return papyrusToken;
+    public SCHToken token() {
+        return schToken;
     }
 
     public TokenService getTokenService() {

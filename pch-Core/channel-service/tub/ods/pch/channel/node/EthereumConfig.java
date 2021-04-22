@@ -19,7 +19,7 @@ import org.web3j.protocol.Web3j;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Throwables;
 
-import papyrus.channel.node.server.ethereum.ThreadsafeTransactionManager;
+import tub.ods.pch.channel.node.ThreadsafeTransactionManager;
 
 @EnableConfigurationProperties({EthProperties.class, ContractsProperties.class})
 @Configuration

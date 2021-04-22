@@ -1,5 +1,9 @@
 package tub.ods.pch.channel.util;
 
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties("channel.server")
 public class ChannelServerProperties {
     private int port;
     private int healthCheckPort;
@@ -38,3 +42,4 @@ public class ChannelServerProperties {
         this.endpointUrl = endpointUrl;
     }
 }
+

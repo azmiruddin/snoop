@@ -5,6 +5,7 @@ import org.web3j.abi.datatypes.Address;
 import org.web3j.abi.datatypes.generated.Uint256;
 
 import papyrus.channel.node.server.persistence.ClusteredCassandraRepository;
+import tub.ods.common.data.model.SignedTransfer;
 
 @Repository
 public class TransferRepository extends ClusteredCassandraRepository<Address, Uint256, SignedTransfer> {

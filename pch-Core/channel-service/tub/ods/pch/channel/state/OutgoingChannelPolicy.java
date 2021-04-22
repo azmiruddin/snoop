@@ -2,7 +2,7 @@ package tub.ods.pch.channel.state;
 
 import java.math.BigInteger;
 
-import papyrus.channel.node.entity.DataObject;
+import tub.ods.pch.channel.util.DataObject;
 
 public class OutgoingChannelPolicy extends DataObject {
     public static final OutgoingChannelPolicy NONE = new OutgoingChannelPolicy(BigInteger.ZERO, 0);

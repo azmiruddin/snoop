@@ -8,6 +8,7 @@ import com.datastax.driver.mapping.annotations.Accessor;
 import com.datastax.driver.mapping.annotations.Query;
 
 import papyrus.channel.node.server.persistence.ClusteredCassandraRepository;
+import tub.ods.common.data.model.OutgoingChannelPoolBean;
 
 @Repository
 public class OutgoingChannelPoolRepository extends ClusteredCassandraRepository<Address, Address, OutgoingChannelPoolBean> {

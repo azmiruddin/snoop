@@ -28,11 +28,13 @@ import com.datastax.driver.core.exceptions.NoHostAvailableException;
 
 import tub.ods.pch.channel.node.EthProperties;
 import tub.ods.pch.channel.node.EthereumConfig;
-import tub.ods.pch.channel.SignedTransfer;
-import tub.ods.pch.channel.SignedTransferUnlock;
+import tub.ods.common.data.model.OutgoingChannelBean;
+import tub.ods.common.data.model.OutgoingChannelPoolBean;
+import tub.ods.common.data.model.SignedTransfer;
+import tub.ods.common.data.model.SignedTransferUnlock;
 import tub.ods.pch.channel.TransferRepository;
 import tub.ods.pch.channel.TransferUnlockRepository;
-//import papyrus.channel.node.util.Retriable;
+import tub.ods.pch.channel.util.Retriable;
 
 @EnableConfigurationProperties(EthProperties.class)
 @Component
@@ -114,7 +116,7 @@ public class OutgoingChannelPoolManager {
             }
         }
     }
-/*
+
     @EventListener(ContextStartedEvent.class)
     public void start() throws Exception {
         Retriable.wrapTask(() -> {
@@ -127,7 +129,7 @@ public class OutgoingChannelPoolManager {
 
         watchThread.start();
     }
-*/
+
     @PreDestroy
     public void destroy() throws InterruptedException {
         //TODO close all channels

@@ -18,8 +18,8 @@ import papyrus.channel.node.TransferMessage;
 import papyrus.channel.node.UnlockTransferMessage;
 import papyrus.channel.node.UnlockTransferRequest;
 import papyrus.channel.node.UnlockTransferResponse;
-import papyrus.channel.node.server.channel.SignedTransfer;
-import papyrus.channel.node.server.channel.SignedTransferUnlock;
+import tub.ods.common.data.model.SignedTransfer;
+import tub.ods.common.data.model.SignedTransferUnlock;
 
 @Component
 public class OutgoingChannelClientImpl extends OutgoingChannelClientGrpc.OutgoingChannelClientImplBase {
@@ -68,7 +68,7 @@ public class OutgoingChannelClientImpl extends OutgoingChannelClientGrpc.Outgoin
     public void unlockTransfer(UnlockTransferRequest request, StreamObserver<UnlockTransferResponse> responseObserver) {
         for (UnlockTransferMessage unlockTransferMessage : request.getUnlockList()) {
             try {
-                SignedTransferUnlock signedTransferUnlock = new SignedTransferUnlock(unlockTransferMessage);
+                SignedTransferUnlock signedTransferUnlock = new SignedTransferUnlock();
                 manager.registerTransferUnlock(signedTransferUnlock);
             } catch (Exception e) {
                 log.warn("Invalid transfer", e);

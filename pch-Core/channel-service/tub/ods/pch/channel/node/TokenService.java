@@ -10,16 +10,16 @@ import org.web3j.protocol.core.methods.response.TransactionReceipt;
 
 import com.google.common.base.Throwables;
 
-import papyrus.channel.node.contract.PapyrusToken;
+import tub.ods.pch.channel.model.SCHToken;
 
 public class TokenService {
-    private final PapyrusToken papyrusToken;
+    private final SCHToken schToken;
     private final Address address;
     private BigInteger balance;
     private CompletableFuture<BigInteger> balanceLoader;
 
-    public TokenService(PapyrusToken papyrusToken, Address address) {
-        this.papyrusToken = papyrusToken;
+    public TokenService(SCHToken schToken, Address address) {
+        this.schToken = schToken;
         this.address = address;
     }
 
@@ -54,16 +54,16 @@ public class TokenService {
             }
         }
         balance = balance.subtract(value);
-        return (CompletableFuture<TransactionReceipt>) papyrusToken.approve(spender, new Uint256(value));
+        return (CompletableFuture<TransactionReceipt>) schToken.approve(spender, new Uint256(value));
     }
     
     public BigInteger allowance(Address spender) throws ExecutionException, InterruptedException {
-        return papyrusToken.allowance(address, spender).get().getValue();
+        return schToken.allowance(address, spender).get().getValue();
     }
 
     private BigInteger loadBalance() {
         try {
-            return papyrusToken.balanceOf(address).get().getValue();
+            return schToken.balanceOf(address).get().getValue();
         } catch (Exception e) {
             throw Throwables.propagate(e);
         }
