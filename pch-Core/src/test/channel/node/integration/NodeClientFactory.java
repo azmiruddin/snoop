@@ -13,8 +13,8 @@ import io.grpc.ManagedChannel;
 import papyrus.channel.node.ChannelAdminGrpc;
 import papyrus.channel.node.IncomingChannelClientGrpc;
 import papyrus.channel.node.OutgoingChannelClientGrpc;
-import papyrus.channel.node.config.ChannelServerProperties;
-import papyrus.channel.node.server.peer.PeerConnection;
+import tub.ods.pch.channel.util.ChannelServerProperties;
+import tub.ods.pch.channel.PeerConnection;
 import papyrus.channel.protocol.ChannelPeerGrpc;
 
 @Lazy

@@ -15,15 +15,19 @@ import org.web3j.abi.datatypes.generated.Uint256;
 import org.web3j.crypto.Credentials;
 import org.web3j.crypto.WalletUtils;
 import org.web3j.protocol.Web3j;
+import org.web3j.protocol.core.methods.request.EthFilter;
 import org.web3j.utils.Convert;
 import org.web3j.utils.Numeric;
 
+import io.reactivex.Flowable;
 import tub.ods.pch.channel.node.ContractsProperties;
 import tub.ods.pch.channel.node.EthProperties;
 import tub.ods.pch.channel.node.EthereumConfig;
 import tub.ods.pch.channel.node.PropertyConvertersConfig;
 import tub.ods.pch.channel.node.Web3jConfigurer;
+import tub.ods.pch.channel.util.ChannelServerProperties;
 import tub.ods.pch.channel.model.ChannelContract;
+import tub.ods.pch.channel.model.ChannelContract.ChannelClosedEventResponse;
 import tub.ods.pch.channel.SignedChannelState;
 import tub.ods.pch.channel.node.ContractsManager;
 import tub.ods.pch.channel.node.ContractsManagerFactory;
@@ -32,10 +36,10 @@ import tub.ods.pch.channel.node.TokenConvert;
 
 @EnableConfigurationProperties({EthProperties.class, ContractsProperties.class})
 @SpringBootApplication()
-@Import({PropertyConvertersConfig.class, EthereumConfig.class, Web3jConfigurer.class, ContractsManagerFactory.class, EthereumService.class})
-public class PapyrusDemo {
-//    private static final String PROFILE = "demo";
-    private static final String PROFILE = "demomain";
+@Import({ChannelServerProperties.class, PropertyConvertersConfig.class, EthereumConfig.class, Web3jConfigurer.class, ContractsManagerFactory.class, EthereumService.class})
+public class StateChannelDemo {
+    private static final String PROFILE = "demo";
+//    private static final String PROFILE = "demomain";
     @Autowired
     EthProperties ethProperties;
     @Autowired
@@ -51,15 +55,15 @@ public class PapyrusDemo {
     
     public static void main(String[] args) throws Exception {
         SpringApplicationBuilder builder = new SpringApplicationBuilder()
-            .sources(PapyrusDemo.class)
-            .main(PapyrusDemo.class)
+            .sources(StateChannelDemo.class)
+            .main(StateChannelDemo.class)
             .profiles(PROFILE);
         ConfigurableApplicationContext context = builder.build().run();
-        context.getBean(PapyrusDemo.class).run();
+        context.getBean(StateChannelDemo.class).run();
     }
 
     private void run() throws Exception {
-//        System.out.println("Hello");
+        System.out.println("Run  :: Spring Boot :: ");
 
 //        System.out.println(Numeric.toHexString(Numeric.toBytesPadded(devnetCredentials.getEcKeyPair().getPrivateKey(), 32)));
         String password = "83917419471923841";
@@ -143,16 +147,19 @@ public class PapyrusDemo {
         state.sign(dspCredentials.getEcKeyPair());
         
         System.out.println("Closing");
-        long closed = channelDsp.close(new Uint256(state.getNonce()), new Uint256(state.getCompletedTransfers()), new DynamicBytes(state.getSignature())).get().getBlockNumber().longValueExact();
-        waitBlock(closed + settleTimeout);
-
+//        long closed = channelDsp.close(new Uint256(state.getNonce()), new Uint256(state.getCompletedTransfers()), new DynamicBytes(state.getSignature())).get().getBlockNumber().longValueExact();
+		EthFilter filter = null;
+		Flowable<ChannelClosedEventResponse> closed = channelDsp.channelClosedEventFlowable(filter);
+		waitBlock(closeTimeout);
+//        waitBlock(closed + settleTimeout);
+/*
         System.out.println("Settling");
         long settled = channelDsp.settle().get().getBlockNumber().longValueExact();
         waitBlock(settled + 2);
         
         System.out.println("Auditor response");
         long audited = auditorManager.channelManager().auditReport(address, new Uint256(auditTotal), new Uint256(auditFraud)).get().getBlockNumber().longValueExact();
-        System.out.println("Completed at block " + audited);
+        System.out.println("Completed at block " + audited);*/
     }
 
     private void waitBlock(long blockNumber) throws InterruptedException {

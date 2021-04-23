@@ -13,7 +13,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import papyrus.channel.Error;
-import papyrus.channel.node.ChannelNodeApplication;
+import tub.ods.pch.channel.node.ChannelNodeApplication;
 
 class Util {
     private static final long MAX_WAIT = 600000L;

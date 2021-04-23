@@ -16,89 +16,78 @@ import papyrus.channel.node.HealthCheckRequest;
 import papyrus.channel.node.OutgoingChannelClientGrpc;
 import papyrus.channel.node.RegisterTransfersRequest;
 import papyrus.channel.node.RemoveChannelPoolRequest;
-import papyrus.channel.node.server.channel.SignedTransfer;
+import tub.ods.common.data.model.SignedTransfer;
 
 public class ChannelClientTest {
-    public static final String SSP_ADDRESS = "51ec6501f31d2ae6cd799864b3598e188495cd76";
-    public static final String DSP_ADDRESS = "b508d41ecb22e9b9bb85c15b5fb3a90cdaddc4ea";
-    public static final String DSP_CLIENT_ADDRESS = "0x327d868ec4c7bd18b7e7d776c41e251d42d2590c";
+	public static final String SSP_ADDRESS = "51ec6501f31d2ae6cd799864b3598e188495cd76";
+	public static final String DSP_ADDRESS = "b508d41ecb22e9b9bb85c15b5fb3a90cdaddc4ea";
+	public static final String DSP_CLIENT_ADDRESS = "0x327d868ec4c7bd18b7e7d776c41e251d42d2590c";
 
-    public static void main(String[] args) throws Exception {
-        Credentials dspClientCredentials = Credentials.create("5c714cb0bb20b7b2960e3dd99a5e11a984441aa3a9f55497dc2eb5a8fa88a25d");
-        Assert.assertEquals(DSP_CLIENT_ADDRESS, dspClientCredentials.getAddress());
-        
-        NodeClientFactory dsp = new NodeClientFactory("grpc://35.195.5.183:8080");
-        System.out.println("DSP uid: " + dsp.getClientAdmin().healthCheck(HealthCheckRequest.newBuilder().build()).getServerUid());
+	public static void main(String[] args) throws Exception {
+		Credentials dspClientCredentials = Credentials
+				.create("5c714cb0bb20b7b2960e3dd99a5e11a984441aa3a9f55497dc2eb5a8fa88a25d");
+		Assert.assertEquals(DSP_CLIENT_ADDRESS, dspClientCredentials.getAddress());
 
-        NodeClientFactory ssp = new NodeClientFactory("grpc://35.195.91.148:8080");
-        System.out.println("SSP uid: " + ssp.getClientAdmin().healthCheck(HealthCheckRequest.newBuilder().build()).getServerUid());
+		NodeClientFactory dsp = new NodeClientFactory("grpc://35.195.5.183:8080");
+		System.out.println(
+				"DSP uid: " + dsp.getClientAdmin().healthCheck(HealthCheckRequest.newBuilder().build()).getServerUid());
 
-        System.out.printf("Opening channel %s->%s%n", DSP_ADDRESS, SSP_ADDRESS);
+		NodeClientFactory ssp = new NodeClientFactory("grpc://35.195.91.148:8080");
+		System.out.println(
+				"SSP uid: " + ssp.getClientAdmin().healthCheck(HealthCheckRequest.newBuilder().build()).getServerUid());
 
-        AddChannelPoolRequest.Builder requestBuilder = AddChannelPoolRequest.newBuilder();
-        ChannelPoolMessage.Builder builder = ChannelPoolMessage.newBuilder();
-        builder.setSenderAddress(DSP_ADDRESS);
-        builder.setReceiverAddress(SSP_ADDRESS);
-        builder.setMinActiveChannels(1);
-        builder.setMaxActiveChannels(1);
-        builder.setDeposit("0.01");
-        ChannelPropertiesMessage.Builder propertiesBuilder = builder.getPropertiesBuilder();
-        propertiesBuilder.setCloseTimeout(1);
-        propertiesBuilder.setSettleTimeout(6);
+		System.out.printf("Opening channel %s->%s%n", DSP_ADDRESS, SSP_ADDRESS);
 
-        requestBuilder.setPool(builder.build());
-        dsp.getClientAdmin().addChannelPool(requestBuilder.build());
+		AddChannelPoolRequest.Builder requestBuilder = AddChannelPoolRequest.newBuilder();
+		ChannelPoolMessage.Builder builder = ChannelPoolMessage.newBuilder();
+		builder.setSenderAddress(DSP_ADDRESS);
+		builder.setReceiverAddress(SSP_ADDRESS);
+		builder.setMinActiveChannels(1);
+		builder.setMaxActiveChannels(1);
+		builder.setDeposit("0.01");
+		ChannelPropertiesMessage.Builder propertiesBuilder = builder.getPropertiesBuilder();
+		propertiesBuilder.setCloseTimeout(1);
+		propertiesBuilder.setSettleTimeout(6);
 
-        ChannelStatusResponse response = Util.waitFor(() ->
-                dsp.getOutgoingChannelClient().getChannels(
-                    ChannelStatusRequest.newBuilder()
-                        .setSenderAddress(DSP_ADDRESS)
-                        .setReceiverAddress(SSP_ADDRESS)
-                        .build()
-                ),
-            r -> !r.getChannelList().isEmpty()
-        );
+		requestBuilder.setPool(builder.build());
+		dsp.getClientAdmin().addChannelPool(requestBuilder.build());
 
-        String channelAddress = response.getChannel(0).getChannelAddress();
-        System.out.printf("Channel address: %s%n", channelAddress);
+		ChannelStatusResponse response = Util.waitFor(
+				() -> dsp.getOutgoingChannelClient().getChannels(ChannelStatusRequest.newBuilder()
+						.setSenderAddress(DSP_ADDRESS).setReceiverAddress(SSP_ADDRESS).build()),
+				r -> !r.getChannelList().isEmpty());
 
-        for (int i = 0; i < 10; i++) {
-            sendTransfer("" + i, channelAddress, new BigDecimal("0.00001"), dspClientCredentials, dsp.getOutgoingChannelClient());
-        }
+		String channelAddress = response.getChannel(0).getChannelAddress();
+		System.out.printf("Channel address: %s%n", channelAddress);
 
-        //Remove channel pool
-        Util.assertNoError(
-            dsp.getClientAdmin().removeChannelPool(
-                RemoveChannelPoolRequest.newBuilder()
-                    .setSenderAddress(DSP_ADDRESS)
-                    .setReceiverAddress(SSP_ADDRESS)
-                    .build()
-            ).getError()
-        );
+		for (int i = 0; i < 10; i++) {
+			sendTransfer("" + i, channelAddress, new BigDecimal("0.00001"), dspClientCredentials,
+					dsp.getOutgoingChannelClient());
+		}
 
-        //Wait for close
-        Util.waitFor(() ->
-                dsp.getOutgoingChannelClient().getChannels(
-                    ChannelStatusRequest.newBuilder()
-                        .setSenderAddress(DSP_ADDRESS)
-                        .setReceiverAddress(SSP_ADDRESS)
-                        .build()
-                ),
-            r -> r.getChannelList().isEmpty()
-        );
-    }
+		// Remove channel pool
+		Util.assertNoError(dsp.getClientAdmin().removeChannelPool(RemoveChannelPoolRequest.newBuilder()
+				.setSenderAddress(DSP_ADDRESS).setReceiverAddress(SSP_ADDRESS).build()).getError());
 
-    private static SignedTransfer sendTransfer(String transferId, String channelAddress, BigDecimal sum, Credentials clientCredentials, OutgoingChannelClientGrpc.OutgoingChannelClientBlockingStub channelClient) throws InterruptedException, SignatureException {
-        SignedTransfer transfer = new SignedTransfer(transferId, channelAddress, sum.toString(), false);
-        transfer.sign(clientCredentials.getEcKeyPair());
-        Assert.assertEquals(new Address(clientCredentials.getAddress()), transfer.getSignerAddress());
-        Assert.assertEquals(transfer, new SignedTransfer(transfer.toMessage()));
+		// Wait for close
+		Util.waitFor(
+				() -> dsp.getOutgoingChannelClient().getChannels(ChannelStatusRequest.newBuilder()
+						.setSenderAddress(DSP_ADDRESS).setReceiverAddress(SSP_ADDRESS).build()),
+				r -> r.getChannelList().isEmpty());
+	}
 
-        Util.assertNoError(channelClient.registerTransfers(RegisterTransfersRequest.newBuilder()
-            .addTransfer(transfer.toMessage())
-            .build()
-        ).getError());
-        
-        return transfer;
-    }
+	private static SignedTransfer sendTransfer(String transferId, String channelAddress, BigDecimal sum,
+			Credentials clientCredentials, OutgoingChannelClientGrpc.OutgoingChannelClientBlockingStub channelClient)
+			throws InterruptedException, SignatureException {
+		SignedTransfer transfer = new SignedTransfer(transferId, channelAddress, sum.toString(), false);
+		transfer.sign(clientCredentials.getEcKeyPair());
+		Assert.assertEquals(new Address(clientCredentials.getAddress()), transfer.getSignerAddress());
+		Assert.assertEquals(transfer, new SignedTransfer(transfer.toMessage()));
+
+		Util.assertNoError(channelClient
+				.registerTransfers(RegisterTransfersRequest.newBuilder().addTransfer(transfer.toMessage()).build())
+				.getError());
+
+		return transfer;
+	}
 }

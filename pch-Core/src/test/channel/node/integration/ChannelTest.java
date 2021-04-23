@@ -20,6 +20,8 @@ import org.web3j.crypto.Credentials;
 import org.web3j.utils.Convert;
 
 import com.google.common.base.Throwables;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import papyrus.channel.ChannelPropertiesMessage;
 import papyrus.channel.node.AddChannelPoolRequest;
@@ -51,7 +53,7 @@ import tub.ods.pch.channel.PeerConnection;
  *     truffle migrate --reset
  * </code> the copy contract addresses to application-devnet.yaml
  */
-public class BaseChannelTest {
+public class ChannelTest {
 	ConfigurableApplicationContext sender;
 	ConfigurableApplicationContext receiver;
 	PeerConnection senderClient;
@@ -65,6 +67,12 @@ public class BaseChannelTest {
 	BigInteger senderStartBalance;
 	BigInteger receiverStartBalance;
 
+	private static final Logger log = LoggerFactory.getLogger(ChannelTest.class);
+
+	public static void main(String[] args) throws Exception {
+		new ChannelTest().init();
+	}
+
 	@Before
 	public void init() throws IOException, CipherException, ExecutionException, InterruptedException {
 		initSender(true);
@@ -77,8 +85,7 @@ public class BaseChannelTest {
 
 	private void initSender(boolean clean) throws InterruptedException, ExecutionException {
 		sender = createContext("sender");
-		/*if (clean)
-			sender.getBean(DatabaseCleaner.class).clean();*/
+
 		sender.start();
 		senderClient = sender.getBean(PeerConnection.class);
 		Assert.assertNotNull(senderClient);
@@ -214,7 +221,7 @@ public class BaseChannelTest {
 				sum.toString(), false);
 		transfer.sign(clientCredentials.getEcKeyPair());
 		Assert.assertEquals(new Address(clientCredentials.getAddress()), transfer.getSignerAddress());
-		Assert.assertEquals(transfer, new SignedTransfer(transfer.toMessage()));
+		Assert.assertEquals(transfer, new SignedTransfer());
 
 		Util.assertNoError(senderClient.getOutgoingChannelClient()
 				.registerTransfers(RegisterTransfersRequest.newBuilder().addTransfer(transfer.toMessage()).build())
@@ -260,8 +267,8 @@ public class BaseChannelTest {
 		transferUnlock.sign(auditorCredentials.getEcKeyPair());
 		Assert.assertEquals(new Address(auditorCredentials.getAddress()), transferUnlock.getSignerAddress());
 		Assert.assertEquals(transferUnlock, new SignedTransferUnlock(transferUnlock.toMessage()));
-/*
-		Util.assertNoError(senderClient.getOutgoingChannelClient()
+
+/*		Util.assertNoError(senderClient.getOutgoingChannelClient()
 				.unlockTransfer(UnlockTransferRequest.newBuilder().addUnlock(transferUnlock.toMessage()).build())
 				.getError());
 */
