@@ -1,0 +1,2 @@
+sender,receiver,auditor,min_active,max_active,deposit,close_timeout,settle_timeout,audit_timeout,close_blocks_count,shutdown
+0x0afe0b64c384976905e6398d4ee1161b0af80693,0x3165811587992715a55996abbdc4f128c6c04bec,,1,1,2000000.000000000000000000,6,6,0,10,False

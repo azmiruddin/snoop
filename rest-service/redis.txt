@@ -1,0 +1,8 @@
+
+
+127.0.0.1:6379> KEYS *QmXYRJKotL4teHG5paJpvUtMSF9X6oRdeSV5VBm318RFmP
+
+
+C:\go-ipfs>ipfs daemon
+ipfs cat QmXYRJKotL4teHG5paJpvUtMSF9X6oRdeSV5VBm318RFmP
+ipfs shutdown
