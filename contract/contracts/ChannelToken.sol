@@ -6,7 +6,7 @@ import './ERC20Standard.sol';
 import './Ownable.sol';
 
 /// @title SCH token contract (SCH)
-contract SCHToken is ERC20Standard, Ownable {
+contract ChannelToken is ERC20Standard, Ownable {
     using SafeMath for uint256;
 
     // EVENTS
@@ -15,7 +15,7 @@ contract SCHToken is ERC20Standard, Ownable {
 
     // PUBLIC FUNCTIONS
 
-    function SCHToken(address[] _wallets, uint256[] _amounts, uint256 totalSupply) public {
+    function ChannelToken(address[] _wallets, uint256[] _amounts, uint256 totalSupply) public {
         require(_wallets.length == _amounts.length && _wallets.length > 0);
         uint i;
         uint256 sum = 0;

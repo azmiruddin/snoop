@@ -1,52 +1,43 @@
-var bip39 = require("bip39");
-var ethwallet = require('ethereumjs-wallet');
-var ProviderEngine = require("web3-provider-engine");
-var WalletSubprovider = require('web3-provider-engine/subproviders/wallet.js');
-//var Web3Subprovider = require("web3-provider-engine/subproviders/web3.js");
-const FilterSubprovider = require('web3-provider-engine/subproviders/filters.js');
-var Web3 = require("web3");
 
-// Insert raw hex private key here, e.g. using MyEtherWallet
-//var wallet = ethwallet.fromPrivateKey(Buffer.from('16c2f2505b7c5b2640951039d1fb346f7026794f57509cfc23db1628bb697454', 'hex'));//ropsten dsp
-// from metamask
-//var wallet = ethwallet.fromPrivateKey(Buffer.from('67ad9b848bc05a99e99f07e6ea774fb77d98a139bd7a72bdc829893503d2afea', 'hex'));//metamask
+require('dotenv').config();
+//var HDWalletProvider = require("@truffle/hdwallet-provider");
+//var HDWalletProvider = require("truffle-hdwallet-provider");
+//var mnemonic = process.env["mnemonic"];
+var mnemonic = "either priority fitness salon dolphin coral liquid nominee toy panther piece moon";
+var infuraKey = "7081e5074e514ce8b5ea8ab9e8196ac4";
 
-//var address = "0x" + wallet.getAddress().toString("hex");
-
-//var providerUrl = "https://ropsten.infura.io";
-//var engine = new ProviderEngine();
-//engine.addProvider(new FilterSubprovider());
-//engine.addProvider(new WalletSubprovider(wallet, {}));
-//engine.addProvider(new Web3Subprovider(new Web3.providers.HttpProvider(providerUrl)));
-//engine.start(); // Required by the provider engine.
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
-	//contracts_directory: "./contracts/*SCHToken.sol",
-  networks: {
-      development: {
-        host: "127.0.0.1",
-        port: 8545,
-        network_id: "*", // Match any network id
-        gas: 2000000,
-        gasPrice: 0x01
-      }
-    },
-/*
-  test: {
-      host: "dev.ropsten.infura.io",
-      port: 80,
-      network_id: "*" // Match any network id
-    },
 
-  infura_ropsten: {
-      provider: engine,
-      network_id: "*", // Match any network id
-      from: address
-  },
-*/
-  compilers: {
+	networks: {
+		development: {
+			host: "127.0.0.1",
+			port: 8545,
+			network_id: "*",
+			from: "0x95Cb5B3436E5A4Fc45A7eafb2135C40d00f52320",
+			gas: 2000000,
+			gasPrice: 0x01
+		},
+
+		rinkeby: {
+			host: "127.0.0.1",
+			port: 8545,
+			//from: "0x53fE24bb8f96e68636d9A1154dc49aDa5C333097",
+			provider: () => new HDWalletProvider({
+				mnemonic: {
+					phrase: mnemonic
+				},
+				providerOrUrl: "https://rinkeby.infura.io/v3/7081e5074e514ce8b5ea8ab9e8196ac4",
+				//numberOfAddresses: 1,
+				}),
+			network_id: "*",
+			gas: 2000000
+		},
+	},
+
+ compilers: {
       solc: {
-  		//version: "^0.7.0",
   		version: "0.4.26",
   		//version: ">=0.4.26 < 0.7.2",
         settings: {
@@ -59,3 +50,19 @@ module.exports = {
   }
 
 };
+
+//truffle migrate network development
+//truffle deploy --network rinkeby --reset
+//https://stackoverflow.com/questions/48694192/contract-has-not-been-deployed-to-detected-network-network-artifact-mismatch-o
+
+
+
+/**
+//gcloud compute ssh statechannel --zone=europe-west3-c
+//sudo su root
+
+
+sudo apt-get remove nodejs
+sudo apt-get remove npm
+
+**/
