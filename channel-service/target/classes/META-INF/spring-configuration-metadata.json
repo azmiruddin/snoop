@@ -1,0 +1,87 @@
+{
+  "groups": [
+    {
+      "name": "channel.server",
+      "type": "tub.ods.pch.channel.node.ChannelServerProperties",
+      "sourceType": "tub.ods.pch.channel.node.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server",
+      "type": "tub.ods.pch.channel.util.ChannelServerProperties",
+      "sourceType": "tub.ods.pch.channel.util.ChannelServerProperties"
+    },
+    {
+      "name": "contract",
+      "type": "tub.ods.pch.channel.node.ContractsProperties",
+      "sourceType": "tub.ods.pch.channel.node.ContractsProperties"
+    },
+    {
+      "name": "eth",
+      "type": "tub.ods.pch.channel.node.EthProperties",
+      "sourceType": "tub.ods.pch.channel.node.EthProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "channel.server.endpoint-url",
+      "type": "java.lang.String",
+      "sourceType": "tub.ods.pch.channel.node.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server.endpoint-url",
+      "type": "java.lang.String",
+      "sourceType": "tub.ods.pch.channel.util.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server.health-check-port",
+      "type": "java.lang.Integer",
+      "sourceType": "tub.ods.pch.channel.node.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server.health-check-port",
+      "type": "java.lang.Integer",
+      "sourceType": "tub.ods.pch.channel.util.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server.port",
+      "type": "java.lang.Integer",
+      "sourceType": "tub.ods.pch.channel.node.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server.port",
+      "type": "java.lang.Integer",
+      "sourceType": "tub.ods.pch.channel.util.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server.secure",
+      "type": "java.lang.Boolean",
+      "sourceType": "tub.ods.pch.channel.node.ChannelServerProperties"
+    },
+    {
+      "name": "channel.server.secure",
+      "type": "java.lang.Boolean",
+      "sourceType": "tub.ods.pch.channel.util.ChannelServerProperties"
+    },
+    {
+      "name": "contract.address",
+      "type": "java.util.Map<java.lang.String,org.web3j.abi.datatypes.Address>",
+      "sourceType": "tub.ods.pch.channel.node.ContractsProperties"
+    },
+    {
+      "name": "eth.accounts",
+      "type": "java.util.Map<java.lang.String,tub.ods.pch.channel.node.EthKeyProperties>",
+      "sourceType": "tub.ods.pch.channel.node.EthProperties"
+    },
+    {
+      "name": "eth.rpc",
+      "type": "tub.ods.pch.channel.node.EthRpcProperties",
+      "sourceType": "tub.ods.pch.channel.node.EthProperties"
+    },
+    {
+      "name": "eth.sync",
+      "type": "java.lang.Boolean",
+      "sourceType": "tub.ods.pch.channel.node.EthProperties"
+    }
+  ],
+  "hints": []
+}
