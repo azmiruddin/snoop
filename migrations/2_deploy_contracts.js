@@ -13,7 +13,7 @@ module.exports = function(deployer) {
     deployer.link(ECRecovery, ChannelLibrary);
     deployer.link(ChannelLibrary, ChannelManagerContract);
 
-    //deployer.deploy(ERC20Standard)
+    deployer.deploy(ERC20Standard)
     //deployer.deploy(ChannelManagerContract, SCHToken.address, ChannelApiStub.address);
     deployer.deploy(ChannelApiStub).then(function() {
         deployer.deploy(SCHToken, ["0x02c675be7624FC682A95eB29346722E231B34863"],
@@ -22,7 +22,7 @@ module.exports = function(deployer) {
         })
     });
 
-    deployer.deploy(ERC20Standard)
+    //deployer.deploy(ERC20Standard)
     deployer.deploy(ChannelManagerContract, SCHToken.address, ChannelApiStub.address);
     // console.log('SCHToken Address' + SCHToken.address, 'ChannelManager' + ChannelManagerContract.)
 };
