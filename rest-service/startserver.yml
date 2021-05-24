@@ -1,0 +1,86 @@
+
+>>> Redis
+C:\>cd Redis-x64-5.0.10
+
+C:\Redis-x64-5.0.10> redis-server
+
+127.0.0.1:6379> KEYS *QmXYRJKotL4teHG5paJpvUtMSF9X6oRdeSV5VBm318RFmP
+
+>>> ipfs
+C:\go-ipfs>ipfs daemon
+ipfs cat QmXYRJKotL4teHG5paJpvUtMSF9X6oRdeSV5VBm318RFmP
+ipfs shutdown
+
+==================
+
+>>> Ganache SCH Papyrus
+
+C:\>ganache-cli -p 8545 -m "now liquid name cherry equal record announce second faith lab wrong odor"
+Ganache CLI v6.12.1 (ganache-core: 2.13.1)
+
+==================
+
+>>> Ganache SCH Perun
+
+C:\>ganache-cli -p 8545 -m "pony moral boost humor rice make diagram quality unable dad fragile mandate"
+Ganache CLI v6.12.1 (ganache-core: 2.13.1)
+
+==================
+>>> Ganache
+C:\>ganache-cli -p 8545 -m "now leg stove actress version urge illness will dune squeeze enrich student"
+Ganache CLI v6.12.1 (ganache-core: 2.13.1)
+
+C:\>ganache-cli -p 8545
+Ganache CLI v6.12.1 (ganache-core: 2.13.1)
+
+Available Accounts
+==================
+(0) 0x2AE41F2FAda2D513eA5E6693F02193c9F420EA78 (100 ETH)
+(1) 0xB53E19F6e09F90a176115E21cdf1aF019A7654D3 (100 ETH)
+(2) 0xcABd02a86FB510AFb337C701396D7520137f59ca (100 ETH)
+(3) 0xf6C7d14a9Dfe4732dcc38d615F781C05AF9CBB9d (100 ETH)
+(4) 0x985E3B840d3BF68Ef0F1FaAe516c47c4Bfc7E4db (100 ETH)
+(5) 0xC14AF1101a92bbFb0806d6634F98ec6c98A8C651 (100 ETH)
+(6) 0xAF6d27c22739B7EBc878EEC61976695552b3ebEd (100 ETH)
+(7) 0x8c4aEbd23c24eb235133273d04b51a7F9dF74Bf3 (100 ETH)
+(8) 0x8A3b6f7BAf00c92f68e6788c3666e2fB4118706B (100 ETH)
+(9) 0x07D1aB04935A8C864D369b178752e65c95624529 (100 ETH)
+
+Private Keys
+==================
+(0) 0x65383d088a14157fc603a4d13bb55a97076bdb5da1afc9b95aef8c5775d085ae
+(1) 0x8b91cf644ba34694741588bcf39c1bf5cb5de36d8b8366b274e0d209a370059b
+(2) 0x6589b210662311c6f8b743c37914a664a3b0d14b399d03cf8ae7069ab4388917
+(3) 0x5227ce6bb277c8acedf1d56090be8a8ea24c1294a992bfa611afceb9baad7710
+(4) 0x45e382e34532b6714d9dfa3b153b8ad1a28f871d3da9faf496b6968993fdf0ba
+(5) 0xd6f70c529be9f1a39d7f01a8cd8f7c2d716989e9282abde12b9f7f07ab53fea7
+(6) 0xaf74fcf19eb6cc83acdad63f6a488dfe0d9021cc061b080e161d1428e1dc2cd6
+(7) 0x300a887c6365d535bb11d314225d078180c08945059b2424311fa70224738377
+(8) 0xbb90761ac44d9a989366f5ce0c4ffc7c9905a65dd59d7cfaa978eb1e67b75289
+(9) 0x87d3ee94e82561f7efab1b6e62b98e2984c3e7d8a4dfc9b9f0ed59e32fc93e51
+
+HD Wallet
+==================
+Mnemonic:      now leg stove actress version urge illness will dune squeeze enrich student
+Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+Gas Price
+==================
+20000000000
+
+Gas Limit
+==================
+6721975
+
+Call Gas Limit
+==================
+9007199254740991
+
+========================================================================
+Ganache tooth paste
+
+ganache-cli -p 8545 -m "drink mad pause bright field reunion spend argue garment era drastic happy"
+
+========================================================================
+
+
