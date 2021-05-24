@@ -25,7 +25,7 @@ module.exports = function(deployer) {
 
 
     deployer.deploy(ChannelApiStub).then(function() {
-        deployer.deploy(SCHToken, ["0x1f11D1753eB0C0EFf5eD1807C4A568e244302aa5"],
+        deployer.deploy(SCHToken, ["0x7203561d49be898e16fED9A6FEc851647d6CFF20"],
         ["1000000000000"], 1000000000000).then(function() {
             deployer.deploy(ChannelManagerContract, SCHToken.address, ChannelApiStub.address);
             //console.log('SCHToken Address ' + SCHToken.address);
