@@ -1,8 +1,8 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 // import './StandardToken.sol';
-import './SCHToken.sol';
-//import './ERC20Standard.sol';
+//import './SCHToken.sol';
+import './ERC20Standard.sol';
 import './ChannelContract.sol';
 import './ChannelApi.sol';
 
@@ -32,7 +32,7 @@ contract ChannelManagerContract {
         require(token_address != 0);
         require(channel_api_address != 0);
         // token = StandardToken(token_address);
-        token = SCHToken(token_address);
+        token = ERC20Standard(token_address);
         channel_api = ChannelApi(channel_api_address);
     }
 

@@ -24,4 +24,5 @@ module.exports = function(deployer) {
 
     deployer.deploy(ERC20Standard)
     deployer.deploy(ChannelManagerContract, SCHToken.address, ChannelApiStub.address);
+    // console.log('SCHToken Address' + SCHToken.address, 'ChannelManager' + ChannelManagerContract.)
 };
