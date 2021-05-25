@@ -12,8 +12,8 @@ module.exports = {
         port: 8545,
         network_id: "*", // Match any network id
         from:"0x02c675be7624FC682A95eB29346722E231B34863" ,
-        gas: 2000000,
-        gasPrice: 0x01
+        gas: 6721975,
+        gasPrice: 20000000000
       },
 
       // ganachecli: {
