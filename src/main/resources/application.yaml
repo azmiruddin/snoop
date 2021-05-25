@@ -1,0 +1,46 @@
+eth:
+  rpc:
+    node-url: http://127.0.0.1:8545
+    #node-url: http://35.246.148.192:8545
+    gas-price: 1
+    gas-limit: 2000000
+    sleep: 1s
+  accounts:
+    0x02c675be7624FC682A95eB29346722E231B34863:    
+      private-key: b112d64d8033df5c8ac3340f527088d12d54f47d98796cd0abaec768948a0757
+      auto-refill: 0.1
+channel:
+  server:
+    port: 8081
+    endpoint-url: grpc://localhost:8081
+
+#     run 'truffle migrate' and copy contract's addresses here
+#     addresses for net 'testrpc -b 1 --seed 5ee1d'
+contract:
+  address:  
+    ECRecovery: 0xf7270B87E85a89966AB81F2A5C55D05e302AC80a
+    ChannelLibrary: 0xB0a5A8D2e3F1b53F053edF6828F0cA84ADD3b897
+    EndpointRegistryContract: 0x0da184c22Ef318B95A918EE989D3C4E0CBC1cb56
+    ChannelApiStub: 0x2ce87e500c96Ea436ac62d4cbe1D55CCf1A0bD70
+    SCHToken: 0xbdcf1bddb27cd90cb65673e6a7c7a57151ed6e98 
+    #SCHToken: 0x8306bD119BB528B3873B8251268f3420876504E2 #owner:address
+    ChannelManagerContract: 0x203443D905571C05db4c0A164f313e9d1DFf5352
+
+#     run 'truffle migrate' and copy contract's addresses here
+#     addresses for net 'tools/devnet.sh'
+#contract:
+#  address:
+#    ECRecovery: 0x97C638eDe61C7aCf237Be77e5239b7DB56Cb2820
+#    ChannelLibrary: 0xeCe9841bD651610e118c022a3188B139b2D5D72D
+#    EndpointRegistryContract: 0x143CC6E8832A801049D9bFD2A65Fa8268050ab3b
+#    ChannelApiStub: 0xE53b9ba7f83f4363753aD6832f7C558C74D6F3c6
+#    PapyrusToken: 0xd404d227bc4d1391e1c41473a2a18daed5e4943e
+#    ChannelManagerContract: 0xb668eeaaee32eed2f12df7b603768a553a3956bf
+
+logging:
+  level:
+   default: INFO
+#   org.apache.http: DEBUG
+   papyrus: DEBUG
+   
+DEFAULT_URL: http://127.0.0.1:8545
