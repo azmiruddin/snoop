@@ -32,7 +32,7 @@ contract SCHToken is ERC20Standard, Ownable {
 
     // If ether is sent to this address, send it back
     // function() public { revert(); }
-    function receive() public { revert(); }
+    function() public { revert(); }
 
     // Check transferable state before transfer
     // function transfer(address _to, uint _value) canTransfer public returns (bool) {

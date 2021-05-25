@@ -2,7 +2,7 @@ pragma solidity >=0.4.22 <0.9.0;
 
 // import './StandardToken.sol';
 import './SCHToken.sol';
-// import './ERC20Standard.sol';
+//import './ERC20Standard.sol';
 import './ChannelContract.sol';
 import './ChannelApi.sol';
 
@@ -24,17 +24,17 @@ contract ChannelManagerContract {
         address indexed receiver
     );
 
-    // ERC20Standard public token;
     SCHToken public token;
+    //ERC20Standard public token;
     // StandardToken public token;
     ChannelApi public channel_api;
 
     function ChannelManagerContract(address token_address, address channel_api_address) public {
         require(token_address != 0);
         require(channel_api_address != 0);
-        // token = StandardToken(token_address);
-        //token = ERC20Standard(token_address);
+        
         token = SCHToken(token_address);
+        //token = ERC20Standard(token_address);
         channel_api = ChannelApi(channel_api_address);
     }
 
@@ -83,11 +83,11 @@ contract ChannelManagerContract {
         ch.audit(auditor);
         channel_api.applyRuntimeUpdate(ch.sender(), ch.receiver(), total, fraud);
     }
-    
+
     function destroyChannel(address channel_address) public{
         ChannelContract ch = ChannelContract(channel_address);
         require(ch.manager() == address(this));
         emit ChannelDeleted(channel_address,ch.sender(),ch.receiver());
         ch.destroy();
     }
-}
+} 
