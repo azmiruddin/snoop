@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-11.0.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/asm-5.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/asm-analysis-5.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/asm-commons-5.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/asm-tree-5.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/asm-util-5.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/bcprov-jdk15on-1.60.jar"/>
+	<classpathentry kind="lib" path="libs/common-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang3-3.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-pool2-2.4.3.jar"/>
+	<classpathentry kind="lib" path="libs/crypto-4.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/db-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-core-2.9.8.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-databind-2.9.8.jar"/>
+	<classpathentry kind="lib" path="libs/java-cid-v1.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/java-ipfs-http-client-v1.2.2.jar"/>
+	<classpathentry kind="lib" path="libs/java-merge-sort-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/java-multiaddr-v1.3.1.jar"/>
+	<classpathentry kind="lib" path="libs/java-multibase-v1.0.0.jar"/>
+	<classpathentry kind="lib" path="libs/java-multihash-v1.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/Java-WebSocket-1.3.8.jar"/>
+	<classpathentry kind="lib" path="libs/jedis-3.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/jffi-1.2.17.jar"/>
+	<classpathentry kind="lib" path="libs/jnr-a64asm-1.0.0.jar"/>
+	<classpathentry kind="lib" path="libs/jnr-constants-0.9.11.jar"/>
+	<classpathentry kind="lib" path="libs/jnr-enxio-0.19.jar"/>
+	<classpathentry kind="lib" path="libs/jnr-ffi-2.1.9.jar"/>
+	<classpathentry kind="lib" path="libs/jnr-posix-3.0.47.jar"/>
+	<classpathentry kind="lib" path="libs/jnr-unixsocket-0.21.jar"/>
+	<classpathentry kind="lib" path="libs/jnr-x86asm-1.0.2.jar"/>
+	<classpathentry kind="lib" path="libs/logging-interceptor-3.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/okhttp-3.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/okio-1.13.0.jar"/>
+	<classpathentry kind="lib" path="libs/org.json.jar"/>
+	<classpathentry kind="lib" path="libs/rdf-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="libs/reactive-streams-1.0.2.jar"/>
+	<classpathentry kind="lib" path="libs/rlp-4.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/rxjava-2.2.2.jar"/>
+	<classpathentry kind="lib" path="libs/tuples-4.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/bitcoinj/bitcoinj-core-0.15.jar"/>
+	<classpathentry kind="lib" path="libs/bitcoinj/bitcoinj-tools.jar"/>
+	<classpathentry kind="lib" path="libs/bitcoinj/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="libs/bitcoinj/guava-concurrent-19.0.0.jar"/>
+	<classpathentry kind="lib" path="libs/bitcoinj/jopt-simple-5.0.jar"/>
+	<classpathentry kind="lib" path="libs/bitcoinj/protobuf-java-3.11.0.jar"/>
+	<classpathentry kind="lib" path="libs/merkletree/MerkleTree.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-aop-5.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-beans-5.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-2.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-actuator-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-configuration-processor-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-starter-actuator-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-starter-json-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-starter-logging-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-starter-test-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-starter-tomcat-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-boot-starter-web-2.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-context-5.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-core-5.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-expression-5.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-jcl-5.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring/spring-test-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/web3j/abi-4.5.11.jar"/>
+	<classpathentry kind="lib" path="libs/web3j/core-4.5.11.jar"/>
+	<classpathentry kind="lib" path="libs/web3j/crypto-4.5.11.jar"/>
+	<classpathentry kind="lib" path="libs/web3j/rlp-4.5.11.jar"/>
+	<classpathentry kind="lib" path="libs/web3j/tuples-4.5.11.jar"/>
+	<classpathentry kind="lib" path="libs/web3j/utils-4.5.11.jar"/>
+	<classpathentry kind="lib" path="libs/web3j/web3j-spring-boot-starter-1.6.0.jar"/>
+	<classpathentry kind="lib" path="libs/grpc-context-1.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/grpc-core-1.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/grpc-netty-1.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/grpc-protobuf-lite-1.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/netty-all-4.1.63.Final.jar"/>
+	<classpathentry kind="lib" path="libs/netty-handler-4.1.63.Final.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/backend_core/backend-channel-11.0.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
