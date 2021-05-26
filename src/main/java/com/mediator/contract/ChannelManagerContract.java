@@ -1,9 +1,6 @@
 package com.mediator.contract;
 
 
-import io.netty.util.concurrent.Future;
-import io.reactivex.Flowable;
-
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -33,6 +30,9 @@ import org.web3j.tx.Contract;
 import org.web3j.tx.TransactionManager;
 import org.web3j.tx.gas.ContractGasProvider;
 import org.web3j.utils.Async;
+
+import io.netty.util.concurrent.Future;
+import io.reactivex.Flowable;
 
 /**
  * <p>Auto generated code.

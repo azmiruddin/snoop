@@ -4,11 +4,7 @@ import java.lang.reflect.Field;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.commons.lang3.StringUtils;
-import org.web3j.abi.datatypes.Address;
-import org.web3j.crypto.Keys;
 import org.web3j.tx.Contract;
-import org.web3j.utils.Numeric;
 
 
 public class ContractLinker {

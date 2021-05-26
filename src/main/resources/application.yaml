@@ -1,12 +1,11 @@
 eth:
   rpc:
     node-url: http://127.0.0.1:8545
-    #node-url: http://35.246.148.192:8545
     gas-price: 1
     gas-limit: 2000000
     sleep: 1s
   accounts:
-    0x02c675be7624FC682A95eB29346722E231B34863:    
+    0x02c675be7624FC682A95eB29346722E231B34863 :    
       private-key: b112d64d8033df5c8ac3340f527088d12d54f47d98796cd0abaec768948a0757
       auto-refill: 0.1
 channel:
@@ -17,7 +16,7 @@ channel:
 #     run 'truffle migrate' and copy contract's addresses here
 #     addresses for net 'testrpc -b 1 --seed 5ee1d'
 contract:
-  address:  
+  address:
     ECRecovery: 0xf7270B87E85a89966AB81F2A5C55D05e302AC80a
     ChannelLibrary: 0xB0a5A8D2e3F1b53F053edF6828F0cA84ADD3b897
     EndpointRegistryContract: 0x0da184c22Ef318B95A918EE989D3C4E0CBC1cb56

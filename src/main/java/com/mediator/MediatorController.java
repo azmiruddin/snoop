@@ -1,4 +1,4 @@
-package com.mediator.restservice;
+package com.mediator;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -15,8 +15,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import javax.annotation.PostConstruct;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -51,6 +50,7 @@ import org.web3j.protocol.http.HttpService;
 import org.web3j.utils.Convert;
 import org.web3j.utils.Numeric;
 
+import com.mediator.common.ObjectFileTransaction;
 import com.mediator.contract.ChannelContract;
 import com.mediator.contract.ChannelManagerContract.ChannelNewEventResponse;
 import com.mediator.contract.SCHToken;
@@ -73,17 +73,14 @@ import com.mediator.model.ConfigValueRequest;
 import com.mediator.model.ConfigValueResponse;
 import com.mediator.model.DataStoreRequest;
 import com.mediator.model.DataStoreResponse;
+import com.mediator.model.JSONDataUtils;
+
 import com.mediator.model.ResponseInit;
 import com.mediator.model.TransactionInputApi;
 import com.mediator.model.TransactionOutputApi;
 import com.mediator.model.TransactionOutputOffchain;
 
-import common.data.json.custome.JSONDataCustome;
-import common.data.json.custome.JSONDataUtils;
-
-import common.data.json.model.ObjectFileTransaction;
 import common.data.json.model.ObjectFileTransactionOffChain;
-
 import src.java.storage.DataStorage;
 
 
@@ -765,7 +762,9 @@ public class MediatorController {
 				if(status){
 					String key = pushData.storeDataToIPFSandRedis(file);
 			    	
-			    	result = pushData.readDataFromRedis(key);
+			    	Object resultData = (Object) pushData.readDataFromRedis(key);
+			    	
+			    	result = (ObjectFileTransaction) resultData;
 			    	
 			    	resutFix.setAddress(result.getAddress());
 			    	resutFix.setCrypto(result.getCrypto());

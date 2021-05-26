@@ -1,6 +1,6 @@
 package com.mediator.model;
 
-import common.data.json.model.ObjectFileTransaction;
+import com.mediator.common.ObjectFileTransaction;
 
 public class TransactionOutputApi extends ObjectFileTransaction{
 	

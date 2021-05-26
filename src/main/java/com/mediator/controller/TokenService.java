@@ -5,14 +5,11 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 import org.web3j.abi.datatypes.Address;
-import org.web3j.abi.datatypes.generated.Uint256;
 import org.web3j.protocol.core.RemoteFunctionCall;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 
 import com.google.common.base.Throwables;
 import com.mediator.contract.SCHToken;
-
-import io.reactivex.Flowable;
 
 
 public class TokenService {

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.11.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.mediator</groupId>
+	<artifactId>rest-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>rest-service</name>
+	<description>Backend Channel</description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<packaging>jar</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>core</artifactId>
+			<version>4.5.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.16.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>25.0-jre</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+
+		<!-- custome -->
+		<dependency>
+			<groupId>com.backend</groupId>
+			<artifactId>backend-channel</artifactId>
+			<version>11.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.common.snap</groupId>
+			<artifactId>common-1.0</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.db</groupId>
+			<artifactId>db</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.java.cid</groupId>
+			<artifactId>java-cid</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.java.ipfs.http</groupId>
+			<artifactId>java-ipfs-http-client</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.java.multiaddr</groupId>
+			<artifactId>java-multiaddr</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.java.multibase</groupId>
+			<artifactId>java-multibase</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.java.multihash</groupId>
+			<artifactId>java-multihash</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.rdf</groupId>
+			<artifactId>rdf</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+		<!-- until here -->
+
+
+
+
+
+		<!-- <dependency> <groupId>java-ipfs</groupId> <artifactId>java-ipfs-http-client</artifactId> 
+			<version>1.2.2</version> </dependency> -->
+
+
+
+		<!-- <dependency> <groupId>db</groupId> <artifactId>1.0-SNAPSHOT</artifactId> 
+			<version>1.0-SNAPSHOT</version> </dependency> -->
+
+		<!-- <dependency> <groupId>backend</groupId> <artifactId>backend-channel</artifactId> 
+			<version>11.0</version> </dependency> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</dependencies>
+
+	<!-- <repositories> <repository> <id>in-project</id> <name>In Project Repo</name> 
+		<url>file://${project.basedir}/libs</url> </repository> </repositories> -->
+
+	<!-- <repositories> <repository> <id>in-project</id> <name>In Project Repo</name> 
+		<url>file://${project.basedir}/libs</url> </repository> </repositories> -->
+
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- <configuration> <fork>true</fork> <mainClass>${com.mediator.RestServiceApplication}</mainClass> 
+					</configuration> <executions> <execution> <goals> <goal>repackage</goal> 
+					</goals> </execution> </executions> -->
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
