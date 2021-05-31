@@ -15,3 +15,4 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 4. CHECK THE ACCOUNT BALANCE
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x02c675be7624FC682A95eB29346722E231B34863", "latest"],"id":1}' localhost:8545
+
