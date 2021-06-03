@@ -21,5 +21,5 @@ module.exports = function(deployer) {
     });
 
     deployer.deploy(ERC20Standard);
-    //deployer.deploy(ChannelManagerContract, SCHToken.address, ChannelApiStub.address);
+    deployer.deploy(ChannelManagerContract, SCHToken.address, ChannelApiStub.address);
 }; 
