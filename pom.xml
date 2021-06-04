@@ -81,7 +81,7 @@
 		<dependency>
 			<groupId>com.backend</groupId>
 			<artifactId>backend-channel</artifactId>
-			<version>11.0</version>
+			<version>14.0</version>
 		</dependency>
 
 		<dependency>

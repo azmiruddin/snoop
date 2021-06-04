@@ -1,6 +1,7 @@
 eth:
   rpc:
-    node-url: http://127.0.0.1:8545
+    node-url: http://localhost:8545
+    #node-url: http://35.246.148.192:8545
     gas-price: 1
     gas-limit: 2000000
     sleep: 1s
@@ -15,31 +16,43 @@ channel:
 
 #     run 'truffle migrate' and copy contract's addresses here
 #     addresses for net 'testrpc -b 1 --seed 5ee1d'
+#LOCALHOST DOCKER
+# contract:
+#   address:
+#     ECRecovery: 0xe1d1953487e11cac56b3c59AF1B704d74388C4Cf
+#     ChannelLibrary: 0xb9C315457C92Ab8799C7B044a93EFF4500Afef43
+#     EndpointRegistryContract: 0x2e8746c2ACBC3C20430e8ef1bAA6DbecB8Dc9BD5
+#     ChannelApiStub: 0xb83b7697576030597A3Ab39B5183B4d4B4aC644D
+#     SCHToken: 0xd6a5412c875b0093145753192e5e5636528d49bc 
+#     ChannelManagerContract: 0x57aBcd13C1Fce0eE99636B0b00A7508F88254CEa
+
+#LOCALHOST GANACHE GUI
 contract:
   address:
-    ECRecovery: 0xf7270B87E85a89966AB81F2A5C55D05e302AC80a
-    ChannelLibrary: 0xB0a5A8D2e3F1b53F053edF6828F0cA84ADD3b897
-    EndpointRegistryContract: 0x0da184c22Ef318B95A918EE989D3C4E0CBC1cb56
-    ChannelApiStub: 0x2ce87e500c96Ea436ac62d4cbe1D55CCf1A0bD70
-    SCHToken: 0xbdcf1bddb27cd90cb65673e6a7c7a57151ed6e98 
-    #SCHToken: 0x8306bD119BB528B3873B8251268f3420876504E2 #owner:address
-    ChannelManagerContract: 0x203443D905571C05db4c0A164f313e9d1DFf5352
+    ECRecovery: 0x4200C0dc15873201d3AC42C7E738e74bF8fc63B1
+    ChannelLibrary: 0xB346441A8C87a31E1201b63817e56db06BB685e8
+    EndpointRegistryContract: 0xA510C7bC3aFd0FA00A5878b4D53A299cA08238B4
+    ChannelApiStub: 0x892A98C09D893Cc7318Cecd1a21bbEf7611a7111
+    SCHToken: 0xeE268ef9B909B5070BD8eE843B296653AB430618 
+    ChannelManagerContract: 0x4D010e2724Df5976ec47a411354aEF1ad940f614
 
 #     run 'truffle migrate' and copy contract's addresses here
 #     addresses for net 'tools/devnet.sh'
+#SERVERs
 #contract:
-#  address:
-#    ECRecovery: 0x97C638eDe61C7aCf237Be77e5239b7DB56Cb2820
-#    ChannelLibrary: 0xeCe9841bD651610e118c022a3188B139b2D5D72D
-#    EndpointRegistryContract: 0x143CC6E8832A801049D9bFD2A65Fa8268050ab3b
-#    ChannelApiStub: 0xE53b9ba7f83f4363753aD6832f7C558C74D6F3c6
-#    PapyrusToken: 0xd404d227bc4d1391e1c41473a2a18daed5e4943e
-#    ChannelManagerContract: 0xb668eeaaee32eed2f12df7b603768a553a3956bf
+# address:
+#   ECRecovery: 0x38420ef50C44578028176195A24Ffc2aBCAb920a
+#   ChannelLibrary: 0xbE360B4c1D3C001176a361a5f5c1294Faa039d39
+#   EndpointRegistryContract: 0xe1d1953487e11cac56b3c59AF1B704d74388C4Cf
+#   ChannelApiStub: 0xb9C315457C92Ab8799C7B044a93EFF4500Afef43
+#   SCHToken: 0x0cca1cd45460850f8b369728ff7bbef0f9c40d76
+#   ChannelManagerContract: 0x9E470D1B435Bef4FB0bF1BfaEe5Aff65e59c9405
 
 logging:
   level:
    default: INFO
 #   org.apache.http: DEBUG
-   papyrus: DEBUG
+   rest-service: DEBUG
    
-DEFAULT_URL: http://127.0.0.1:8545
+DEFAULT_URL: http://localhost:8545
+#DEFAULT_URL: http://35.246.148.192:8545

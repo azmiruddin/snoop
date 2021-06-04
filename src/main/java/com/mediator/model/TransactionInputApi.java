@@ -11,12 +11,27 @@ public class TransactionInputApi {
 	String addressFromPk;
 	String tokenAddress;
 	
+	long depositMinimum;
+	String channelKey;
 	
 	
 	
 	
 	
 	
+	
+	public long getDepositMinimum() {
+		return depositMinimum;
+	}
+	public void setDepositMinimum(long depositMinimum) {
+		this.depositMinimum = depositMinimum;
+	}
+	public String getChannelKey() {
+		return channelKey;
+	}
+	public void setChannelKey(String channelKey) {
+		this.channelKey = channelKey;
+	}
 	public String getAddressAudit() {
 		return addressAudit;
 	}
