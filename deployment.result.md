@@ -1,5 +1,6 @@
 root@statechannel:/applications/contract# truffle migrate --reset
 
+
 Compiling your contracts...
 ===========================
 > Everything is up to date, there is nothing to compile.
@@ -9,7 +10,7 @@ Compiling your contracts...
 Starting migrations...
 ======================
 > Network name:    'development'
-> Network id:      1622632298566
+> Network id:      1622725872509
 > Block gas limit: 6721975 (0x6691b7)
 
 
@@ -22,7 +23,7 @@ Starting migrations...
    > Blocks: 0            Seconds: 0
    > contract address:    0x850d512e0850BcDBde88aFf552Cc197753EaBadF
    > block number:        10
-   > block timestamp:     1622632461
+   > block timestamp:     1622726072
    > account:             0x02c675be7624FC682A95eB29346722E231B34863
    > balance:             99.94558146
    > gas used:            175813 (0x2aec5)
@@ -46,7 +47,7 @@ Starting migrations...
    > Blocks: 0            Seconds: 0
    > contract address:    0x38420ef50C44578028176195A24Ffc2aBCAb920a
    > block number:        12
-   > block timestamp:     1622632462
+   > block timestamp:     1622726072
    > account:             0x02c675be7624FC682A95eB29346722E231B34863
    > balance:             99.94333892
    > gas used:            69912 (0x11118)
@@ -61,7 +62,7 @@ Starting migrations...
    > Blocks: 0            Seconds: 0
    > contract address:    0xbE360B4c1D3C001176a361a5f5c1294Faa039d39
    > block number:        13
-   > block timestamp:     1622632462
+   > block timestamp:     1622726073
    > account:             0x02c675be7624FC682A95eB29346722E231B34863
    > balance:             99.92954596
    > gas used:            689648 (0xa85f0)
@@ -76,7 +77,7 @@ Starting migrations...
    > Blocks: 0            Seconds: 0
    > contract address:    0xe1d1953487e11cac56b3c59AF1B704d74388C4Cf
    > block number:        14
-   > block timestamp:     1622632462
+   > block timestamp:     1622726073
    > account:             0x02c675be7624FC682A95eB29346722E231B34863
    > balance:             99.92271296
    > gas used:            341650 (0x53692)
@@ -95,7 +96,7 @@ Starting migrations...
    > Blocks: 0            Seconds: 0
    > contract address:    0xb9C315457C92Ab8799C7B044a93EFF4500Afef43
    > block number:        15
-   > block timestamp:     1622632462
+   > block timestamp:     1622726073
    > account:             0x02c675be7624FC682A95eB29346722E231B34863
    > balance:             99.92016606
    > gas used:            127345 (0x1f171)
@@ -112,20 +113,9 @@ Starting migrations...
    > transaction hash:    0x59848f63ca5dfa76231d745d4f7ac8d7a402ea79f5bf6ac5aa955243060c64be
    ⠋ Blocks: 0            Seconds: 0   > transaction hash:    0xfd97196f95ac02c161e73f849b0e2c54c156943d2622be4757a5c10de44338f6
    > Blocks: 0            Seconds: 0
-   > contract address:    0xb83b7697576030597A3Ab39B5183B4d4B4aC644D
-   > block number:        17
-   > block timestamp:     1622632463
-   > account:             0x02c675be7624FC682A95eB29346722E231B34863
-   > balance:             99.89873974
-   > gas used:            441211 (0x6bb7b)
-   > gas price:           20 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00882422 ETH
-
-   > Blocks: 0            Seconds: 0
    > contract address:    0x2e8746c2ACBC3C20430e8ef1bAA6DbecB8Dc9BD5
    > block number:        16
-   > block timestamp:     1622632463
+   > block timestamp:     1622726073
    > account:             0x02c675be7624FC682A95eB29346722E231B34863
    > balance:             99.89873974
    > gas used:            630105 (0x99d59)
@@ -133,55 +123,51 @@ Starting migrations...
    > value sent:          0 ETH
    > total cost:          0.0126021 ETH
 
-   ⠼ Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xb83b7697576030597A3Ab39B5183B4d4B4aC644D
+   > block number:        17
+   > block timestamp:     1622726073
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             99.89873974
+   > gas used:            441211 (0x6bb7b)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00882422 ETH
+
+   ⠹ Blocks: 0            Seconds: 0
    Deploying 'ChannelManagerContract'
    ----------------------------------
-   ⠴ Blocks: 0            Seconds: 0
-   Deploying 'ChannelManagerContract'
-   ----------------------------------
-   ⠦ Blocks: 0            Seconds: 0   > transaction hash:    0x360c854a75c03a98437dc062b56e6af354dd8635c73b14ef8a72faa7d1c11e56
-   ⠧ Blocks: 0            Seconds: 0   > transaction hash:    0xf50e2482729d9e366293beaa7323c6146678ece20106011bfb792c7c12846bdd
+   ⠸ Blocks: 0            Seconds: 0   > transaction hash:    0xe020bf446e64c43991716d350dd96f977ddd2d1850cbc61d2d34073d8a781d25
    > Blocks: 0            Seconds: 0
    > contract address:    0x9E470D1B435Bef4FB0bF1BfaEe5Aff65e59c9405
    > block number:        18
-   > block timestamp:     1622632463
+   > block timestamp:     1622726073
    > account:             0x02c675be7624FC682A95eB29346722E231B34863
-   > balance:             99.85373582
+   > balance:             99.87623766
    > gas used:            1125104 (0x112af0)
    > gas price:           20 gwei
    > value sent:          0 ETH
    > total cost:          0.02250208 ETH
 
 
-   > Blocks: 0            Seconds: 0
-   > contract address:    0xe196000f28f94218E023e6496b5FDdcF5319Ca45
-   > block number:        19
-   > block timestamp:     1622632463
-   > account:             0x02c675be7624FC682A95eB29346722E231B34863
-   > balance:             99.85373582
-   > gas used:            1125092 (0x112ae4)
-   > gas price:           20 gwei
-   > value sent:          0 ETH
-   > total cost:          0.02250184 ETH
-
-   ⠏ Blocks: 0            Seconds: 0   > Saving migration to chain.
+   > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.09100134 ETH
+   > Total cost:           0.0684995 ETH
 
 
 Summary
 =======
-> Total deployments:   9
-> Final cost:          0.0945176 ETH
+> Total deployments:   8
+> Final cost:          0.07201576 ETH
+
 
 
 Token
 =======
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x9E470D1B435Bef4FB0bF1BfaEe5Aff65e59c9405", "0x0", "latest"], "id": 1}' localhost:8545
 
-
-{"id":1,"jsonrpc":"2.0","result":"0xc430b3b2b76b7b55834af32f85624a687a2ed771"}
+{"id":1,"jsonrpc":"2.0","result":"0x0cca1cd45460850f8b369728ff7bbef0f9c40d76"}
 
 
 
