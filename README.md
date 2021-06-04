@@ -1,41 +1,68 @@
-# Juli - Blop
-Blockchain Micropayment is an open source project that aims to increase blockchain transaction throughput by using just a handful of main chain transactions to move an entire peer-to-peer network of activity off the main chain.
-We develop micropayment by implementing the following core component:
-1. Semantic data store: RDF4LED
-2. Smart contract: HSG88, Perun-ETH and, reused State Channel
-3. Blockchain library: Web3J
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Project Status
+## Available Scripts
 
-At this state, Blockchain Micropayment is under active development, and few feature ready for testing early in January 2021.
-Basic features available, that we can try it and start to get involved, are covered the following feature
-1. Off-chain Transaction
-2. Channel Management
-3. System Configuration
+In the project directory, you can run:
 
-## Description
+### `yarn start`
 
-The Blockchain Micropayment is multi-user state channel node that can be used for opening, transacting on and closing state channels. It builds on top of HSG88 and Perun-ETH smart contracts.
-The current feature plan to implements the following functionalities:
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1. Off-chain transaction and use bi-directional payment channels.
-2. Channel Management: for the user to define a list of known channel in the off-chain network.
-3. System management: for managing the sytem e.g., initial setup and cryptographic keys of the user.
-4. User API interface: for client app (front end) to interact with the core payment channel.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-The current version provides the following features:
+### `yarn test`
 
-|Feature | Implementation |
-|:--|:--|
-|Blockchain Network|Ethereum|
-|Key management|Eth keystore |
-|ID Provider|Local |
-|User API|Two Party Transaction API |
-|API Adapter|REST |
-|Persistence|Redis and IPFS|
-|Language|JDK 1.8|
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-This project currently contains two client test located in the rest client and front end directory.
+### `yarn build`
 
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-![Blop Integration View](docs/HighLevel-BC-Semantic-v0.3.png?raw=true "High Level View")
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
