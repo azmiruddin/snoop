@@ -8,6 +8,7 @@ const globalTheme = {
     switchAnimationDuration: '0.2s',
     gradient: 'linear-gradient(122deg, rgba(128,74,216,1) 0%, rgba(98,75,217,1) 100%)',
     colorGreen: '#5DC399',
+    blueCool: "#1e88e5",
     colorGray: '#adadad',
 }
 
@@ -15,12 +16,22 @@ const globalTheme = {
 export const lightTheme = {
     primary: '#FFF',
     secondary: '#F8F8F8',
-    textColor: '#585280',
-    header: '#585280',
+    textColor: '#1e88e5',
+    header: '#1e88e5',
     headerNumber: '#FFF',
-    activeMenu: '#585280',
+    activeMenu: '#1e88e5',
     ...globalTheme
 }
+
+// export const lightTheme = {
+//     primary: '#FFF',
+//     secondary: '#F8F8F8',
+//     textColor: '#585280',
+//     header: '#585280',
+//     headerNumber: '#FFF',
+//     activeMenu: '#585280',
+//     ...globalTheme
+// }
 
 export const darkTheme = {
     primary: '#302C40',

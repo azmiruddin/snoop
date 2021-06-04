@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Image from '../../assets/images/profilelg.png'
 import axios from 'axios';
 
-const Container = styled.div`
+const ContainerProf = styled.div`
     margin-top: 5rem;
 `
 
@@ -26,7 +26,8 @@ class Profile extends React.Component {
     componentDidMount() {
         // this.setState(() => pastTransactions, coinInit);
         axios
-          .get("http://localhost:8085/mediatorApi/init")
+          .get("http://35.246.148.192:8085/mediatorApi/init")
+          // .get("http://localhost:8085/mediatorApi/init")
           .then(response => {
             const wei = response.data.balanceEthCoinbaseAddress
             const ether0 = wei / 1000000000000000000
@@ -51,11 +52,11 @@ class Profile extends React.Component {
         const bal = Math.floor(balance * 100) / 100;
         const user = coinbase.slice(0, 8)
         return (
-            <Container>
+            <ContainerProf>
                 <ProfileImg src={Image} />
                 <ProfileName>{user}...</ProfileName>
                 Balance : {bal} ETH 
-            </Container>
+            </ContainerProf>
         )
       }
 }

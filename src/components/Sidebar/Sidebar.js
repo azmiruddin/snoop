@@ -4,7 +4,7 @@ import Menu from './Menu/Menu'
 import Profile from './Profile'
 import ToggleSwitch from './ToggleSwitch'
 
-const Container = styled.div`
+const ContainerSid = styled.div`
     background-color: ${({ theme }) => theme.secondary};
     position: fixed;
     left: 0;
@@ -21,11 +21,11 @@ const Container = styled.div`
 const Sidebar = () => {
 
     return (
-        <Container>
+        <ContainerSid>
             <Profile />
             <Menu />
-            <ToggleSwitch />
-        </Container>
+            {/* <ToggleSwitch /> */}
+        </ContainerSid>
     )
 }
 

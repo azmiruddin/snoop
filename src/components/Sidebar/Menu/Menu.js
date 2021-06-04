@@ -1,21 +1,28 @@
 import React from 'react'
 import MenuLink from './MenuLink'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
-const Container = styled.div`
+const ContainerMenu = styled.div`
     margin-top: 2rem;
     width: 100%;
 `
 
 const Menu = () => {
     return (
-        <Container>
-            <MenuLink title="Home" icon={'home'}/>
-            <MenuLink title="Simple Transactions" icon={'file-multiple'}/>
-            <MenuLink title="Payment Channels" icon={'gift'}/>
-            <MenuLink title="State Channels" icon={'gift'}/>
-            <MenuLink title="Channels configuration" icon={'cog'}/>
-        </Container>
+        <ContainerMenu>
+            <Link to="/">
+                <MenuLink title="State Channels" icon={'gift'}/>
+            </Link>
+            <Link to="/onchain">
+                <MenuLink title="On-Chain Transactions" icon={'file-multiple'}/>
+            </Link>
+            <Link to="/systemconfig">
+                <MenuLink title="System Configurations" icon={'file-multiple'}/>
+            </Link>
+            
+            {/* <MenuLink title="Channels configuration" icon={'cog'}/> */}
+        </ContainerMenu>
     )
 }
 

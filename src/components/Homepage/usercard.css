@@ -1,0 +1,75 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.col-md-4 {
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 30px;
+  border: solid 1px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 20% 80%; /*columns widths*/
+}
+
+/* .col-1 {
+  background-color: blue;
+} */
+
+.col-2 {
+  /* background-color: #1b58b3; */
+  border-radius: 10px;
+}
+.card:hover {
+  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.08);
+}
+.card-title {
+  margin-top: 20px;
+  margin-left: 1.5vw;
+}
+.card-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 1.5vw;
+}
+.card-text .fa {
+  font-size: 26px;
+}
+.avatar {
+  width: 60px;
+  margin: auto;
+}
+.avatar img {
+  border: solid 6px transparent;
+  width: 170%;
+  border-radius: 10px;
+}
+.card:hover .avatar img {
+  border-color:#1b58b3;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+footer p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+footer p a,
+footer p a:hover {
+  color: rgb(99, 204, 131);
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1040px;
+  }
+}

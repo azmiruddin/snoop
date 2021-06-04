@@ -3,36 +3,36 @@
         {
             "property": {
                 "address": {
-                    "street": "771 Lost Round",
+                    "street": "0x553e604991Be0E871a7...",
                     "city": "Sacramento",
                     "state": "CA"
                 },
                 "imageUrl": "lostround.png"
             },
             "moveInDate": "25 February 2020",
-            "rent": 3000.00,
+            "rent": 1.3232,
             "deposit": {
-                "amount": 9000.00,
+                "amount": 2.222,
                 "type": "First, Last & Security"
             },
             "status": {
-                "message": "Awaiting Bank Processing",
+                "message": "Awaiting Approval",
                 "level": 2 
             }
         },
         {
             "property": {
                 "address": {
-                    "street": "1491 Jagged Arbor",
+                    "street": "0x153bbbae4399d5eee43...",
                     "city": "San Antonio",
                     "state": "TX"
                 },
                 "imageUrl": "jaggedarbor.png"
             },
             "moveInDate": "12 March 2020",
-            "rent": 2300.00,
+            "rent": 2.115,
             "deposit": {
-                "amount": 4600.00,
+                "amount": 2.555,
                 "type": "First & Last"
             },
             "status": {
@@ -45,40 +45,40 @@
         {
             "property": {
                 "address": {
-                    "street": "1694 Noble Cape",
+                    "street": "0x53cbc04642946680155...",
                     "city": "Las Vegas",
                     "state": "NV"
                 },
                 "imageUrl": "noblecape.png"
             },
             "moveInDate": "3 February 2020",
-            "rent": 3300.00,
+            "rent": 0.77,
             "deposit": {
-                "amount": 6900.00,
+                "amount": 6.977,
                 "type": "Complete"
             },
             "status": {
-                "message": "Awaiting Bank Processing",
+                "message": "Payment Processed",
                 "level": 3 
             }
         },
         {
             "property": {
                 "address": {
-                    "street": "1141 Tawny Maze",
+                    "street": "0x44ed3cef4e29f8eec2a...",
                     "city": "Raleigh",
                     "state": "NC"
                 },
                 "imageUrl": "tawnymaze.png"
             },
             "moveInDate": "12 January 2020",
-            "rent": 2500.00,
+            "rent": 2,
             "deposit": {
-                "amount": 7500.00,
+                "amount": 0.7577,
                 "type": "First, Last & Security"
             },
             "status": {
-                "message": "Expired: No Payment Received",
+                "message": "Rejected: No Payment Received",
                 "level": 1 
             }
         }
