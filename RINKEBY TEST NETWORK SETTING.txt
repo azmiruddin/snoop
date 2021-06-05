@@ -1,0 +1,185 @@
+PROJECT_ID_INFURA : 39b7892e38474758ab9e5f2b53c75125
+
+https://rinkeby.infura.io/v3/39b7892e38474758ab9e5f2b53c75125
+channel manager contract
+0xA333A1aC0f3199ad844cC34C8adb5CcA180Ad242
+
+#ETH_GETSTORAGEAT ==> Token
+curl https://rinkeby.infura.io/v3/39b7892e38474758ab9e5f2b53c75125 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0xA333A1aC0f3199ad844cC34C8adb5CcA180Ad242", "0x0", "latest"], "id": 1}' localhost:8545
+0x0000000000000000000000003fe1f94efc3bf870a9a78d18dbfde676132fb766
+
+#ETH_GETSTORAGEAT ==> ChannelAPI
+curl https://rinkeby.infura.io/v3/39b7892e38474758ab9e5f2b53c75125 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0xA333A1aC0f3199ad844cC34C8adb5CcA180Ad242", "0x48697f6e2784c8eef107b65230efbc4328df64dd46517fdbe29a3d45d98d8b5f", "0x84ea95"], "id": 1}'
+
+#Block Number
+0x84ea95 (block Number)
+
+ETH_BLOCK CODE
+curl https://rinkeby.infura.io/v3/39b7892e38474758ab9e5f2b53c75125 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params": [],"id":1}'
+
+============================================
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xc24235a976106ad01d957627e9b67ac060ecbdd1f719a28fb6138046658806ff
+   > Blocks: 1            Seconds: 17
+   > contract address:    0x3d2eB88FA3435Eb7C0459CD6BB797490B710c9Fc
+   > block number:        8710699
+   > block timestamp:     1622896488
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.610542436
+   > gas used:            177113 (0x2b3d9)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00354226 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00354226 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'ECRecovery'
+   ----------------------
+   > transaction hash:    0xcbe14dd53c54b2e135038ec49df962f09010039c3da982469e23f4e41cc0342d
+   > Blocks: 1            Seconds: 9
+   > contract address:    0xDdbf78a3a839fA6268936BF556122c267da9bbd3
+   > block number:        8710701
+   > block timestamp:     1622896518
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.608231896
+   > gas used:            69912 (0x11118)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00139824 ETH
+
+
+   Replacing 'ChannelLibrary'
+   --------------------------
+   > transaction hash:    0xc181a5a9fbb5554500b3123df337d608919e7e12df682470347ded626a81481d
+   > Blocks: 1            Seconds: 5
+   > contract address:    0x1b9Bd3879330063AA7b212cb295Ddc5cD7b09B49
+   > block number:        8710702
+   > block timestamp:     1622896533
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.594438696
+   > gas used:            689660 (0xa85fc)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0137932 ETH
+
+
+   Replacing 'EndpointRegistryContract'
+   ------------------------------------
+   > transaction hash:    0x5dc451673dfb43b82973f6f9879fe3d7d77dd6638025539cba6ad142dc39b017
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x868FB581Be2D7424Ba931d6e2E5DCd645CA12bE8
+   > block number:        8710703
+   > block timestamp:     1622896548
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.587605696
+   > gas used:            341650 (0x53692)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.006833 ETH
+
+
+   Linking
+   -------
+   * Contract: ChannelManagerContract <--> Library: ChannelLibrary (at address: 0x1b9Bd3879330063AA7b212cb295Ddc5cD7b09B49)
+
+   Replacing 'ChannelApiStub'
+   --------------------------
+   > transaction hash:    0xfb5c9dcb474656537b8f38caee31fee2ad933b031a277f1a20e6dbdb0f50bd15
+   > Blocks: 0            Seconds: 5
+   > contract address:    0x97f49Aa4D1c21D7b073345E798a0e5bA61e7496b
+   > block number:        8710704
+   > block timestamp:     1622896563
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.585058796
+   > gas used:            127345 (0x1f171)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0025469 ETH
+
+
+   Replacing 'ERC20Standard'
+   -------------------------
+
+   Replacing 'SCHToken'
+   --------------------
+   > transaction hash:    0x6bf28994f84bb90414e78c249a520229974c501e3b79415d382c5169dc84292f
+   ⠏ Blocks: 0            Seconds: 0   > transaction hash:    0x63cbf567ca2e624665592af42e6355510e3ce82f1632fc296e446f0f4a0f1366
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x48225e907583e97CdC7917d14de3338642D505Fd
+   > block number:        8710705
+   > block timestamp:     1622896578
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.563460476
+   > gas used:            441211 (0x6bb7b)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00882422 ETH
+
+   ⠏ Blocks: 0            Seconds: 0   > Blocks: 1            Seconds: 9
+   > contract address:    0x3fe1f94eFC3BF870a9a78d18dbFdE676132FB766
+   > block number:        8710705
+   > block timestamp:     1622896578
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.563460476
+   > gas used:            638705 (0x9bef1)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0127741 ETH
+
+   ⠦ Blocks: 0            Seconds: 0
+   Deploying 'ChannelManagerContract'
+   ----------------------------------
+   ⠦ Blocks: 0            Seconds: 0
+   Deploying 'ChannelManagerContract'
+   ----------------------------------
+   ⠴ Blocks: 0            Seconds: 0   > transaction hash:    0x48697f6e2784c8eef107b65230efbc4328df64dd46517fdbe29a3d45d98d8b5f
+   ⠴ Blocks: 0            Seconds: 0   > transaction hash:    0x6984177adbe9318231e0afd221ea351da9a61bd5d4d48f2bb74a3dfab7613c36
+   > Blocks: 1            Seconds: 13
+   > contract address:    0xA333A1aC0f3199ad844cC34C8adb5CcA180Ad242
+   > block number:        8710706
+   > block timestamp:     1622896593
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.518349436
+   > gas used:            1127776 (0x113560)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02255552 ETH
+
+   ⠙ Blocks: 0            Seconds: 0   > Blocks: 1            Seconds: 13
+   > contract address:    0x0d74BDa7E2329c4bb9411Eb4968324b05d41a2F4
+   > block number:        8710706
+   > block timestamp:     1622896593
+   > account:             0x02c675be7624FC682A95eB29346722E231B34863
+   > balance:             1.518349436
+   > gas used:            1127776 (0x113560)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02255552 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0912807 ETH
+
+
+Summary
+=======
+> Total deployments:   9
+> Final cost:          0.09482296 ETH
+
+#eth_GetStorageAt
+curl https://rinkeby.infura.io/v3/39b7892e38474758ab9e5f2b53c75125 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0xA333A1aC0f3199ad844cC34C8adb5CcA180Ad242", "0x0", "latest"], "id": 1}' localhost:8545
+0x0000000000000000000000003fe1f94efc3bf870a9a78d18dbfde676132fb766

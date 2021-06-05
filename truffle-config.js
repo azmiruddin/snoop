@@ -1,6 +1,7 @@
 //var mnemonic = "either priority fitness salon dolphin coral liquid nominee toy panther piece moon";
 const mnemonic = "priority nominee cloud they adapt fortune mean change boat march extra success"
 var infuraKey = "7081e5074e514ce8b5ea8ab9e8196ac4";
+const infuraKeyStateChannel = "39b7892e38474758ab9e5f2b53c75125";
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
@@ -28,16 +29,18 @@ module.exports = {
       rinkeby: {
         host: "127.0.0.1",
         port: 8545,
-        //from: "0x53fE24bb8f96e68636d9A1154dc49aDa5C333097",
+        network_id: "*",
+        gas: 6721975,
+        gasPrice: 20000000000,
+        from:"0x02c675be7624FC682A95eB29346722E231B34863",
         provider: () => new HDWalletProvider({
           mnemonic: {
             phrase: mnemonic
           },
-          providerOrUrl: `https://rinkeby.infura.io/v3/${infuraKey}`,
-          //numberOfAddresses: 1,
-          }),
-        network_id: "*",
-        gas: 2000000
+          //providerOrUrl: `https://rinkeby.infura.io/v3/${infuraKey}`,
+          providerOrUrl: `https://rinkeby.infura.io/v3/${infuraKeyStateChannel}`,
+          numberOfAddresses: 10,
+        })
       },
     },
     
