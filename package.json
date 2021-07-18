@@ -1,0 +1,32 @@
+{
+  "name": "snoop-smart-contract",
+  "version": "1.0.0",
+  "description": "smart contract repository for the snoop state channel project",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azmiruddin/snoop.git"
+  },
+  "keywords": [
+    "ethereum",
+    "state-channel",
+    "redis",
+    "smart-contract"
+  ],
+  "author": "pch-team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azmiruddin/snoop/issues"
+  },
+  "homepage": "https://github.com/azmiruddin/snoop#readme"
+}

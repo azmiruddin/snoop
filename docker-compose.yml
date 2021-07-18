@@ -1,0 +1,18 @@
+services:
+  snoop:
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - "8545:8545"
+    entrypoint:
+      - node
+      - ./build/cli.node.js
+      - --deterministic
+      - --mnemonic
+      - 'priority nominee cloud they adapt fortune mean change boat march extra success'
+      - --networkId
+      - '5777'
+      - --hostname
+      - '0.0.0.0'
+      - --debug
+
+  # ENTRYPOINT ["node", "./build/cli.node.js"]
