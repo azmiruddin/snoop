@@ -2,6 +2,10 @@
 const mnemonic = "priority nominee cloud they adapt fortune mean change boat march extra success"
 var infuraKey = "7081e5074e514ce8b5ea8ab9e8196ac4";
 const infuraKeyStateChannel = "39b7892e38474758ab9e5f2b53c75125";
+const ropstenKey = "ba558c3dc0354a4b8eac2c76348d90f7"
+const project = "24f664a7e18744c898452056a87b480f"
+
+
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
@@ -39,6 +43,23 @@ module.exports = {
           },
           //providerOrUrl: `https://rinkeby.infura.io/v3/${infuraKey}`,
           providerOrUrl: `https://rinkeby.infura.io/v3/${infuraKeyStateChannel}`,
+          numberOfAddresses: 10,
+        })
+      },
+      
+      ropsten: {
+        host: "127.0.0.1",
+        port: 8545,
+        network_id: "*",
+        gas: 6721975, 
+        // gasPrice: 20000000000
+        gasPrice: 132000000000,
+        from:"0x02c675be7624FC682A95eB29346722E231B34863",
+        provider: () => new HDWalletProvider({
+          mnemonic: {
+            phrase: mnemonic
+          },
+          providerOrUrl: `https://ropsten.infura.io/v3/${ropstenKey}`,
           numberOfAddresses: 10,
         })
       },
