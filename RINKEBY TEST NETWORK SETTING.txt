@@ -189,6 +189,7 @@ Summary
 
 #eth_GetStorageAt
 curl https://rinkeby.infura.io/v3/39b7892e38474758ab9e5f2b53c75125 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x72EcEBD460C40aDCa5d6b14383292E469C6b0bfF", "0x0", "latest"], "id": 1}' localhost:8545
+==response==
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000091db6dce5c2584605d7aecf58b86e126118616b1"}
 
 0x00000000000000000000000091db6dce5c2584605d7aecf58b86e126118616b1
